@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ELEVIX DIGITAL | AI-Powered Marketing & Automation in Lahore, Pakistan</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "deep-obsidian": "#0A0A0A",
+              "kinetic-red": "#E8282B",
+              "stark-white": "#FDFDFD",
+              "surface-gray": "#141414",
+              "on-secondary-container": "#A3A3A3"
+            },
+            fontFamily: {
+              "display": ["'Plus Jakarta Sans'", "sans-serif"],
+              "mono": ["'Space Mono'", "monospace"],
+            }
+          },
+        },
+      }
+    </script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #FDFDFD;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+
+
+        /* 5D Full Screen Red Wave Animation */
+        .waves-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            background: radial-gradient(circle at center, #140505 0%, #0A0A0A 100%);
+            opacity: 0.6;
+        }
+
+        .wave-layer {
+            position: absolute;
+            bottom: -5%;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background-repeat: repeat-x;
+            background-position: bottom center;
+            transform-origin: bottom center;
+            will-change: transform;
+        }
+
+        .wave-1 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%234A0000" fill-opacity="0.3" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: 50% 120%;
+            animation: waveAnim 35s linear infinite;
+            z-index: 1;
+            bottom: -5%;
+            filter: blur(8px);
+        }
+
+        .wave-2 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%237A0000" fill-opacity="0.25" d="M0,96L60,112C120,128,240,160,360,170.7C480,181,600,171,720,154.7C840,139,960,117,1080,128C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>');
+            background-size: 50% 115%;
+            animation: waveAnim 28s linear infinite reverse;
+            z-index: 2;
+            bottom: -10%;
+            filter: blur(6px);
+        }
+
+        .wave-3 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23A30000" fill-opacity="0.15" d="M0,160L80,170.7C160,181,320,203,480,192C640,181,800,139,960,133.3C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
+            background-size: 50% 110%;
+            animation: waveAnim 22s linear infinite;
+            z-index: 3;
+            bottom: -15%;
+            filter: blur(4px);
+        }
+
+        .wave-4 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23CC1111" fill-opacity="0.1" d="M0,64L80,90.7C160,117,320,171,480,176C640,181,800,139,960,112C1120,85,1280,75,1360,69.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
+            background-size: 50% 105%;
+            animation: waveAnim 18s linear infinite reverse;
+            z-index: 4;
+            bottom: -20%;
+            filter: blur(2px);
+        }
+
+        .wave-5 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF2222" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,181.3C384,160,480,96,576,96C672,96,768,160,864,181.3C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: 50% 125%;
+            animation: waveAnim 15s linear infinite reverse;
+            z-index: 5;
+            bottom: -25%;
+            filter: blur(1px);
+        }
+
+        .wave-6 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23E8282B" fill-opacity="0.08" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: 50% 130%;
+            animation: waveAnim 12s linear infinite;
+            z-index: 6;
+            bottom: -30%;
+        }
+
+        .wave-7 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF6666" fill-opacity="0.03" d="M0,128L80,144C160,160,320,192,480,197.3C640,203,800,181,960,149.3C1120,117,1280,75,1360,53.3L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
+            background-size: 50% 90%;
+            animation: waveAnim 7s linear infinite;
+            z-index: 7;
+            bottom: -35%;
+        }
+
+        @keyframes waveAnim {
+            0% { transform: translateX(0) translateZ(0) scaleY(1); }
+            50% { transform: translateX(-25%) translateZ(0) scaleY(1.05); }
+            100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 12s linear infinite;
+        }
+
+        .fade-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Nav Glassmorphism */
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .tracking-ultra-tight {
+            letter-spacing: -0.04em;
+        }
+
+        /* Mouse tracking for Service Spotlight */
+        .service-card {
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+        }
+
+        /* === ELITE ANIMATIONS === */
+
+        /* SVG Line Draw for How We Work */
+        .process-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+
+        /* Character split animation */
+        .split-char {
+            display: inline-block;
+            overflow: hidden;
+        }
+        .char {
+            display: inline-block;
+            transform: translateY(110%);
+            opacity: 0;
+        }
+
+        /* Word reveal clip */
+        .word-reveal {
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        /* Glitch Effect for Banner */
+        @keyframes glitch1 {
+            0%, 100% { clip-path: inset(0 0 95% 0); transform: translate(-2px, 0); }
+            20% { clip-path: inset(10% 0 80% 0); transform: translate(2px, 0); }
+            40% { clip-path: inset(40% 0 50% 0); transform: translate(-1px, 0); }
+            60% { clip-path: inset(70% 0 20% 0); transform: translate(1px, 0); }
+            80% { clip-path: inset(90% 0 5% 0); transform: translate(-2px, 0); }
+        }
+        @keyframes glitch2 {
+            0%, 100% { clip-path: inset(50% 0 30% 0); transform: translate(2px, 0); color: #E8282B; }
+            25% { clip-path: inset(20% 0 60% 0); transform: translate(-2px, 0); }
+            50% { clip-path: inset(80% 0 5% 0); transform: translate(1px, 0); color: #fff; }
+            75% { clip-path: inset(5% 0 85% 0); transform: translate(-1px, 0); }
+        }
+        .glitch-text {
+            position: relative;
+        }
+        /* pseudo-elements HIDDEN by default, only show briefly when JS adds .glitching */
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .glitch-text.glitching::before {
+            animation: glitch1 0.25s steps(1) infinite;
+            opacity: 0.5;
+            color: #E8282B;
+        }
+        .glitch-text.glitching::after {
+            animation: glitch2 0.25s steps(1) 0.04s infinite;
+            opacity: 0.4;
+        }
+
+        /* Counter number animation */
+        .counter-num {
+            display: inline-block;
+        }
+
+        /* Red underline reveal */
+        .red-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .red-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #E8282B;
+            transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 0 10px rgba(232, 40, 43, 0.6);
+        }
+        .red-underline.active::after { width: 100%; }
+
+        /* Process section overhaul */
+        .process-step-card {
+            border-left: 2px solid transparent;
+            transition: border-color 0.4s ease, background 0.4s ease;
+            position: relative;
+        }
+        .process-step-card.active-step {
+            border-left-color: #E8282B;
+            background: rgba(232, 40, 43, 0.04);
+        }
+        .process-step-card .step-num {
+            transition: all 0.4s ease;
+        }
+        .process-step-card.active-step .step-num {
+            color: #E8282B;
+            text-shadow: 0 0 20px rgba(232,40,43,0.5);
+        }
+
+        /* Magnetic button */
+        .magnetic-btn {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Number ticker */
+        @keyframes ticker-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        /* Section entrance line */
+        .section-line-enter {
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .section-line-enter.visible { width: 100%; }
+        
+        /* 3D Logo Shine */
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+        
+        /* 6D Scanline effect */
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+    </style>
+</head>
+<body class="font-display bg-deep-obsidian">
+
+    <!-- TopNavBar (Elite Neogen Style) -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            <!-- Premium 3D Shiny Logo -->
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <div class="relative w-12 h-12 flex items-center justify-center transform transition-transform duration-500 group-hover:rotate-12">
+                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red to-[#500000] rounded-xl shadow-[0_0_20px_rgba(232,40,43,0.4)] transform rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-[2px] bg-gradient-to-tl from-[#111] to-[#333] rounded-xl transform rotate-45 z-10 overflow-hidden">
+                        <!-- Shiny glare effect -->
+                        <div class="absolute top-0 left-[-100%] w-[50%] h-[200%] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -rotate-45 translate-y-[-20%] animate-[shine_3s_infinite]"></div>
+                    </div>
+                    <span class="relative z-20 font-display font-black text-white text-2xl tracking-tighter" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(232,40,43,0.8);">E</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-black text-[20px] leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-md">Elevix</span>
+                    <span class="font-mono text-[9px] text-kinetic-red tracking-[0.3em] uppercase font-bold mt-0.5" style="text-shadow: 0 0 8px rgba(232,40,43,0.5);">Digital</span>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Our Story</a>
+                <a href="#services" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors flex items-center gap-1">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                <a href="#results" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Blogs</a>
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Careers</a>
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Contact Us</a>
+            </div>
+
+            <!-- Let's Talk CTA Button -->
+            <button class="bg-kinetic-red text-white px-8 py-3 rounded-full text-[14px] font-bold hover:bg-[#ff3333] transition-all shadow-[0_0_15px_rgba(232,40,43,0.3)] hover:shadow-[0_0_25px_rgba(232,40,43,0.5)]">
+                Let's Talk
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-10">
+        <!-- Background Waves -->
+        <div class="waves-container">
+            <div class="wave-layer wave-1"></div>
+            <div class="wave-layer wave-2"></div>
+            <div class="wave-layer wave-3"></div>
+            <div class="wave-layer wave-4"></div>
+            <div class="wave-layer wave-5"></div>
+            <div class="wave-layer wave-6"></div>
+            <div class="wave-layer wave-7"></div>
+        </div>
+        
+        <!-- Grid/Box Container -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col h-[70vh] min-h-[600px] justify-center">
+            
+            <!-- Top Boundary Line -->
+            <div class="absolute top-0 left-6 right-6 h-[1px] bg-white/5"></div>
+            
+            <!-- Top Left Tech Text inside corner -->
+            <div class="absolute top-0 left-6">
+                <div class="w-4 h-4 border-t-2 border-l-2 border-kinetic-red absolute -top-[1px] -left-[1px]"></div>
+                <div class="font-mono text-[10px] text-on-secondary-container tracking-[0.2em] uppercase mt-4 ml-4">
+                    // E-001.2026 / LAHORE PKT
+                </div>
+            </div>
+
+            <!-- Top Right Tech Text inside corner -->
+            <div class="absolute top-0 right-6">
+                <div class="w-4 h-4 border-t-2 border-r-2 border-kinetic-red absolute -top-[1px] -right-[1px]"></div>
+                <div class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase mt-4 mr-4 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></span> ONLINE
+                </div>
+            </div>
+
+            <!-- Center Content -->
+            <div class="flex flex-col items-center text-center mt-12 fade-up">
+                
+                <div class="font-mono text-kinetic-red text-[11px] font-bold uppercase tracking-[0.3em] mb-12 flex items-center gap-6">
+                    <span class="w-12 h-[1px] bg-kinetic-red/60"></span>
+                    AUTOMATING THE IMPOSSIBLE, DAILY.
+                    <span class="w-12 h-[1px] bg-kinetic-red/60"></span>
+                </div>
+                
+                <h1 id="hero-h1" class="font-display text-[50px] sm:text-[60px] md:text-[85px] lg:text-[100px] font-bold tracking-ultra-tight leading-[1.05] text-white mb-10 w-full max-w-[1100px] mx-auto" style="opacity:1;">
+                    Scale your Business with<br/>
+                    <span class="text-kinetic-red">AI Marketing</span> &amp; Automation
+                </h1>
+                
+                <p class="font-display text-on-secondary-container max-w-2xl mx-auto text-[17px] md:text-[19px] font-medium leading-[1.6]">
+                    One partner. Full growth stack. AI automation at every layer. Systems that compound over time.
+                </p>
+                
+            </div>
+
+            <!-- Bottom Boundary Line -->
+            <div class="absolute bottom-0 left-6 right-6 h-[1px] bg-white/5"></div>
+
+            <!-- Bottom Left Tech Text inside corner -->
+            <div class="absolute bottom-0 left-6">
+                <div class="w-4 h-4 border-b-2 border-l-2 border-kinetic-red absolute -bottom-[1px] -left-[1px]"></div>
+                <div class="font-mono text-[10px] text-on-secondary-container tracking-[0.2em] uppercase mb-4 ml-4">
+                    // 03.YRS • AI.FIRST
+                </div>
+            </div>
+
+            <!-- Bottom Right Floating Chat Button -->
+            <div class="absolute -bottom-6 -right-2 z-50">
+                <button class="w-14 h-14 bg-kinetic-red rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(232,40,43,0.4)] hover:scale-105 hover:bg-[#ff3333] transition-all cursor-pointer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                </button>
+            </div>
+            
+            <div class="absolute bottom-4 right-16">
+                <div class="font-mono text-[10px] text-on-secondary-container tracking-[0.2em] uppercase">
+                    // SCROLL &darr;
+                </div>
+            </div>
+
+            <!-- PERFECTLY CENTERED Bottom Center Pill intersecting the boundary line -->
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30">
+                <div class="fade-up" style="transition-delay: 200ms;">
+                    <a href="#results" class="flex items-center gap-3 border border-kinetic-red/30 bg-deep-obsidian backdrop-blur-md pl-4 pr-6 py-2.5 rounded-full font-display text-[12px] text-on-secondary-container hover:border-kinetic-red hover:shadow-[0_0_20px_rgba(232,40,43,0.3)] transition-all cursor-pointer">
+                        <span class="flex items-center gap-2 text-kinetic-red font-bold text-[10px] tracking-wider uppercase">
+                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></span> FEATURED CASE
+                        </span>
+                        <span class="w-[1px] h-3 bg-white/20 mx-1"></span>
+                        <span class="text-white font-bold tracking-wide"><span class="text-white/70">PKR</span> 52 Lakh • 41× ROI</span>
+                        <span class="ml-1 opacity-70">· Home Appliances</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ml-2 opacity-50"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Marquee Banner -->
+    <div class="w-full bg-kinetic-red py-4 overflow-hidden flex relative z-20 shadow-[0_0_20px_rgba(232,40,43,0.3)]">
+        <div class="animate-marquee flex whitespace-nowrap items-center font-display font-black text-[28px] md:text-[40px] uppercase tracking-tighter text-white w-max">
+            <!-- Set 1 -->
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <!-- Set 2 -->
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+            <span class="mx-6">AUTOMATING THE IMPOSSIBLE, DAILY</span> <span class="mx-6 text-black/50">•</span>
+        </div>
+    </div>
+
+    <!-- Trusted By Ticker -->
+    <div class="py-12 bg-deep-obsidian border-b border-white/5 overflow-hidden relative z-20 mt-10">
+        <div class="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-deep-obsidian to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-deep-obsidian to-transparent z-10"></div>
+        
+        <div class="text-center font-mono text-[10px] text-on-secondary-container tracking-[0.3em] uppercase mb-8 flex justify-center items-center gap-4">
+            <span class="w-8 h-[1px] bg-kinetic-red/50"></span>
+            // TRUSTED BY 30+ BRANDS ACROSS PAKISTAN
+            <span class="w-8 h-[1px] bg-kinetic-red/50"></span>
+        </div>
+        
+        <div class="flex animate-marquee whitespace-nowrap items-center">
+            <!-- Ticker Content 1 -->
+            <div class="flex items-center gap-24 px-12">
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">SYSTEMS LTD</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">NETSOL</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">FOLIO3</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">ARBISOFT</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">TECHLOGIX</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">GOTO</span>
+            </div>
+            <!-- Ticker Content 2 -->
+            <div class="flex items-center gap-24 px-12">
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">SYSTEMS LTD</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">NETSOL</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">FOLIO3</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">ARBISOFT</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">TECHLOGIX</span>
+                <span class="font-display text-[40px] font-bold opacity-20 uppercase tracking-tighter hover:opacity-100 hover:text-kinetic-red transition-all cursor-default">GOTO</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results / Case Studies Section -->
+    <section id="results" class="py-32 px-6 bg-deep-obsidian relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20 fade-up">
+                <h2 class="font-display text-[50px] md:text-[80px] font-bold leading-[1.0] tracking-tight text-stark-white">
+                    Results that speak<br>
+                    <span class="text-surface-gray text-stroke" style="-webkit-text-stroke: 1.5px #FDFDFD;">for themselves.</span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Case 1 -->
+                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
+                            FEATURED • HOME APPLIANCES LAHORE
+                        </span>
+                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-stark-white mb-2 leading-none tracking-tight">41× <span class="text-kinetic-red">peak roas.</span></h3>
+                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">Sept 2025 → Mar 2026.</h4>
+                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
+                            A premium home appliance store in Gulberg, Lahore selling silent chimneys and high-end kitchen systems. Strong offline, zero digital. We built the digital sales engine from scratch across three phases — March 2026 festive peak delivered <strong class="text-stark-white font-semibold">52 Lakh PKR revenue</strong> at 41× ROAS.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group" style="transition-delay: 100ms;">
+                    <div class="absolute inset-0 bg-gradient-to-bl from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
+                            HEALTHCARE • MODERN DENTAL CLINIC KARACHI
+                        </span>
+                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-kinetic-red mb-2 leading-none tracking-tight">180 appointments</h3>
+                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">booked.</h4>
+                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
+                            How a modern dental & skin clinic in DHA Karachi turned <strong class="text-stark-white">150K PKR of Meta ad spend</strong> into 1,293 leads and 180 booked appointments in ~3 months. Real numbers, full funnel execution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Figma-level Modern Spotlight Hover Animations -->
+    <section id="services" class="py-32 px-6 bg-deep-obsidian relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24 text-center md:text-left fade-up">
+                <h2 class="font-display text-[50px] md:text-[80px] font-bold leading-[1.0] tracking-tight mb-8 text-stark-white">
+                    Proprietary AI systems<br>
+                    <span class="text-surface-gray text-stroke" style="-webkit-text-stroke: 1.5px #A3A3A3;">for every growth lever.</span>
+                </h2>
+                <p class="font-display text-on-secondary-container max-w-3xl text-xl">
+                    Every service runs on custom-built AI agents and workflows. Not templates — engineered systems that compound.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 1. Web Development -->
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 fade-up relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <!-- Mouse-tracking Spotlight Background -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
+                             
+                        <!-- Background Number that slides left on hover -->
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">01</div>
+                        
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 relative z-10 tracking-tight group-hover:text-kinetic-red transition-colors duration-300">Web Development</h3>
+                        <p class="font-display text-on-secondary-container relative z-10 text-[16px] flex-grow group-hover:text-white/90 transition-colors duration-300">Next.js, WordPress, e-commerce, landing pages — performance-tuned with CRO baked in.</p>
+                        
+                        <!-- Pills that light up on hover -->
+                        <div class="relative z-10 flex flex-wrap items-center gap-2 mt-12">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em] mr-2">POWERED BY</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Node.js</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. SEO Services -->
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 fade-up relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 100ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
+                             
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">02</div>
+                        
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 relative z-10 tracking-tight group-hover:text-kinetic-red transition-colors duration-300">SEO Services</h3>
+                        <p class="font-display text-on-secondary-container relative z-10 text-[16px] flex-grow group-hover:text-white/90 transition-colors duration-300">Strategy, audits, technical, AEO + GEO, link building — the full ranking stack engineered for compound growth.</p>
+                        
+                        <div class="relative z-10 flex flex-wrap items-center gap-2 mt-12">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em] mr-2">POWERED BY</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Strategy + Audit</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Technical SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Digital Marketing -->
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 fade-up relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 200ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
+                             
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">03</div>
+                        
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 relative z-10 tracking-tight group-hover:text-kinetic-red transition-colors duration-300">Digital Marketing</h3>
+                        <p class="font-display text-on-secondary-container relative z-10 text-[16px] flex-grow group-hover:text-white/90 transition-colors duration-300">Performance, social, email, CRO, funnels — outcome-led campaigns powered by custom AI agents.</p>
+                        
+                        <div class="relative z-10 flex flex-wrap items-center gap-2 mt-12">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em] mr-2">POWERED BY</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Meta AI</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Google AI Max</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. App Development -->
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 fade-up relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 300ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
+                             
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">04</div>
+                        
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 relative z-10 tracking-tight group-hover:text-kinetic-red transition-colors duration-300">App Development</h3>
+                        <p class="font-display text-on-secondary-container relative z-10 text-[16px] flex-grow group-hover:text-white/90 transition-colors duration-300">Native iOS & Android apps, React Native cross-platform builds. Secure, scalable, and ultra-fast mobile experiences.</p>
+                        
+                        <div class="relative z-10 flex flex-wrap items-center gap-2 mt-12">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em] mr-2">POWERED BY</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">React Native</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Design Optimization -->
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 fade-up relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 400ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
+                             
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">05</div>
+                        
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 relative z-10 tracking-tight group-hover:text-kinetic-red transition-colors duration-300">Design & Creatives</h3>
+                        <p class="font-display text-on-secondary-container relative z-10 text-[16px] flex-grow group-hover:text-white/90 transition-colors duration-300">Branding, UI/UX optimization, motion graphics, and premium visual identities built at agency speed.</p>
+                        
+                        <div class="relative z-10 flex flex-wrap items-center gap-2 mt-12">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em] mr-2">POWERED BY</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Figma</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Adobe CC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. AI Automation -->
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 fade-up relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 500ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
+                             
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">06</div>
+                        
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 relative z-10 tracking-tight group-hover:text-kinetic-red transition-colors duration-300">AI Automation</h3>
+                        <p class="font-display text-on-secondary-container relative z-10 text-[16px] flex-grow group-hover:text-white/90 transition-colors duration-300">Full automation via laser-focused AI. Scan, robotic workflows, and intelligent decision systems. No one implements professional AI pipelines like we do.</p>
+                        
+                        <div class="relative z-10 flex flex-wrap items-center gap-2 mt-12">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em] mr-2">POWERED BY</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Custom AI Agents</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container border border-white/10 bg-white/5 px-3 py-1.5 rounded-full group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 group-hover:text-white transition-all duration-300">Automations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- How We Work Section — Elite Rebuild -->
+    <section id="process" class="py-32 px-6 bg-[#050505] relative border-t border-white/5 overflow-hidden">
+        <!-- Background decorative grid -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(232,40,43,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(232,40,43,0.5) 1px, transparent 1px); background-size: 60px 60px;"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Full-Width Heading on TOP -->
+            <div class="mb-24 process-heading relative">
+                <div class="font-mono text-[12px] text-kinetic-red font-bold uppercase tracking-[0.4em] mb-6 flex items-center relative">
+                    <div class="absolute left-[-100vw] right-[calc(100%+16px)] h-[1px] overflow-hidden">
+                        <div class="w-full h-full bg-kinetic-red origin-left section-line-enter" id="process-line-label" style="transform: scaleX(0); transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); width: auto;"></div>
+                    </div>
+                    <span>// AUDIT TO AUTOPILOT</span>
+                </div>
+                <h2 class="font-display text-[52px] sm:text-[70px] md:text-[90px] lg:text-[110px] font-bold tracking-tighter text-white leading-[0.92]" id="process-heading">
+                    From audit to<br/>
+                    <span class="text-kinetic-red">autopilot.</span>
+                    <span class="font-mono text-[16px] md:text-[22px] text-white/90 tracking-normal font-normal block mt-6 tracking-[0.05em]">Four moves. No fluff. Only compound results.</span>
+                </h2>
+            </div>
+
+            <!-- Steps + Animated SVG Line Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-0 relative">
+                
+                <!-- SVG Animated Red Line Column -->
+                <div class="hidden md:flex justify-center pt-4">
+                    <svg id="process-svg-line" width="2" height="100%" style="height: 100%; min-height: 400px;" viewBox="0 0 2 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <!-- Glow background track -->
+                        <line x1="1" y1="0" x2="1" y2="400" stroke="rgba(232,40,43,0.1)" stroke-width="2"/>
+                        <!-- Animated red fill line -->
+                        <line id="process-progress-line" x1="1" y1="0" x2="1" y2="0" stroke="#E8282B" stroke-width="2" stroke-linecap="round"
+                              style="filter: drop-shadow(0 0 6px rgba(232,40,43,0.8)) drop-shadow(0 0 12px rgba(232,40,43,0.4));"/>
+                    </svg>
+                </div>
+
+                <!-- Steps Column -->
+                <div class="flex flex-col pl-0 md:pl-8">
+
+                    <!-- Step 01 -->
+                    <div class="gsap-step process-step-card mb-20 p-8 rounded-2xl" data-step="1">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border-2 border-kinetic-red flex items-center justify-center shadow-[0_0_25px_rgba(232,40,43,0.4)] step-circle">
+                                    <span class="font-mono font-bold text-kinetic-red text-lg step-num">01</span>
+                                </div>
+                            </div>
+                            <div class="pt-1 flex-1">
+                                <span class="font-mono text-[10px] text-kinetic-red tracking-[0.3em] mb-3 block font-bold">// Step 01 — Deep Audit</span>
+                                <h3 class="font-display text-[28px] md:text-[36px] font-bold text-white mb-4 leading-tight">We diagnose before we prescribe.</h3>
+                                <p class="font-display text-on-secondary-container text-[17px] leading-relaxed max-w-2xl">
+                                    Your funnel, your offer, your ops — we tear it down honestly before committing. If we can't win, we tell you upfront.
+                                </p>
+                                <div class="mt-6 flex gap-3 flex-wrap">
+                                    <span class="font-mono text-[10px] border border-kinetic-red/30 text-kinetic-red px-3 py-1 rounded-full">Funnel Analysis</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/50 px-3 py-1 rounded-full">Tech Stack Review</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/50 px-3 py-1 rounded-full">Competitor Intel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="gsap-step process-step-card mb-20 p-8 rounded-2xl" data-step="2">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-white/20 flex items-center justify-center step-circle transition-all duration-500">
+                                    <span class="font-mono font-bold text-white/40 text-lg step-num transition-all duration-500">02</span>
+                                </div>
+                            </div>
+                            <div class="pt-1 flex-1">
+                                <span class="font-mono text-[10px] text-white/30 tracking-[0.3em] mb-3 block font-bold step-label transition-colors duration-500">// Step 02 — Strategy</span>
+                                <h3 class="font-display text-[28px] md:text-[36px] font-bold text-white mb-4 leading-tight">A plan mapped to your margin math.</h3>
+                                <p class="font-display text-on-secondary-container text-[17px] leading-relaxed max-w-2xl">
+                                    Full-funnel strategy built around where to compound, where to cut, and what to automate first.
+                                </p>
+                                <div class="mt-6 flex gap-3 flex-wrap">
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">90-Day Roadmap</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">Channel Mix</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">Automation Map</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="gsap-step process-step-card mb-20 p-8 rounded-2xl" data-step="3">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-white/20 flex items-center justify-center step-circle transition-all duration-500">
+                                    <span class="font-mono font-bold text-white/40 text-lg step-num transition-all duration-500">03</span>
+                                </div>
+                            </div>
+                            <div class="pt-1 flex-1">
+                                <span class="font-mono text-[10px] text-white/30 tracking-[0.3em] mb-3 block font-bold step-label transition-colors duration-500">// Step 03 — Build &amp; Deploy</span>
+                                <h3 class="font-display text-[28px] md:text-[36px] font-bold text-white mb-4 leading-tight">Week one. Not month three.</h3>
+                                <p class="font-display text-on-secondary-container text-[17px] leading-relaxed max-w-2xl">
+                                    Campaigns go live. Automations ship. CRM pipelines wire up. You see movement in days, not quarters.
+                                </p>
+                                <div class="mt-6 flex gap-3 flex-wrap">
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">Live Campaigns</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">AI Workflows</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">CRM Setup</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="gsap-step process-step-card p-8 rounded-2xl" data-step="4">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 rounded-full bg-[#0a0a0a] border border-white/20 flex items-center justify-center step-circle transition-all duration-500">
+                                    <span class="font-mono font-bold text-white/40 text-lg step-num transition-all duration-500">04</span>
+                                </div>
+                            </div>
+                            <div class="pt-1 flex-1">
+                                <span class="font-mono text-[10px] text-white/30 tracking-[0.3em] mb-3 block font-bold step-label transition-colors duration-500">// Step 04 — Compound</span>
+                                <h3 class="font-display text-[28px] md:text-[36px] font-bold text-white mb-4 leading-tight">Systems that widen your moat.</h3>
+                                <p class="font-display text-on-secondary-container text-[17px] leading-relaxed max-w-2xl">
+                                    Weekly optimisation loops. Monthly strategy reviews. AI agents that learn from every cycle. Growth that compounds.
+                                </p>
+                                <div class="mt-6 flex gap-3 flex-wrap">
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">Weekly Loops</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">AI Learning</span>
+                                    <span class="font-mono text-[10px] border border-white/10 text-white/40 px-3 py-1 rounded-full">Scale Triggers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Clients Say -->
+    <section class="py-32 px-6 bg-[#0a0a0a] border-t border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+            <!-- Left Huge Text -->
+            <div class="w-full lg:w-[40%] flex flex-col justify-start pt-4 lg:pt-12 sticky top-24 h-fit">
+                <span class="font-mono text-[12px] text-on-secondary-container tracking-[0.3em] uppercase mb-8 flex items-center gap-4">
+                    <span class="w-8 h-[1px] bg-kinetic-red/50"></span>
+                    // WHAT CLIENTS SAY
+                </span>
+                <h2 class="font-display text-[50px] md:text-[70px] font-bold tracking-tight text-white leading-[1.05] mb-12">
+                    Perfect 5.0 on Google.<br/>
+                    <span class="text-kinetic-red">Seven for seven.</span>
+                </h2>
+                
+                <div class="flex items-end gap-6 border-t border-white/10 pt-8 mt-4">
+                    <div class="font-display text-[80px] font-bold text-white leading-none tracking-tighter">5.0</div>
+                    <div class="pb-3">
+                        <div class="flex gap-1 text-kinetic-red mb-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <div class="font-mono text-[10px] text-on-secondary-container uppercase tracking-widest">// OF 7 REVIEWS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Masonry Grid of Reviews (Pakistani Clients) -->
+            <div class="w-full lg:w-[60%] columns-1 md:columns-2 gap-6 space-y-6 gs-reviews-container">
+                <!-- Review 1 -->
+                <div class="bg-[#111] border border-white/5 p-8 rounded-3xl gs-review-card h-fit hover:border-white/20 transition-all break-inside-avoid">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-kinetic-red text-white flex items-center justify-center font-display font-bold text-xl">U</div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-lg">Usman Tariq</h4>
+                                <p class="font-mono text-[10px] text-on-secondary-container uppercase">Founder, Lahore Tech</p>
+                            </div>
+                        </div>
+                        <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+                    </div>
+                    <div class="flex gap-1 text-kinetic-red mb-4 text-sm">★★★★★</div>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">
+                        "Elevix built our new AI integration and we couldn't be happier. As a software development company in Lahore they're on a different level. This wasn't a template, it was proper custom development built around how our projects & infrastructure actually sells. The site is fast, looks premium, and started converting visitors into enquiries from month one. Communication was clear throughout."
+                    </p>
+                    <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center">
+                        <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> Automation • Leads
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-[#111] border border-white/5 p-8 rounded-3xl gs-review-card h-fit hover:border-white/20 transition-all break-inside-avoid">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-display font-bold text-xl">S</div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-lg">Sarah Ali</h4>
+                                <p class="font-mono text-[10px] text-on-secondary-container uppercase">Head of Ops, KHI</p>
+                            </div>
+                        </div>
+                        <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+                    </div>
+                    <div class="flex gap-1 text-kinetic-red mb-4 text-sm">★★★★★</div>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">
+                        "We got Elevix Digital on board for our brand and they've easily been the best performance marketing agency in Karachi for us. They set up our complete digital sales system and we've been consistently hitting an average ROAS of 20x since September. The Return On Investment was way beyond what we expected."
+                    </p>
+                    <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center">
+                        <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> E-Com • Scaling
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-[#111] border border-white/5 p-8 rounded-3xl gs-review-card h-fit hover:border-white/20 transition-all break-inside-avoid">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-kinetic-red text-white flex items-center justify-center font-display font-bold text-xl">M</div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-lg">M. Bilal</h4>
+                                <p class="font-mono text-[10px] text-on-secondary-container uppercase">Founder, Home Store</p>
+                            </div>
+                        </div>
+                        <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+                    </div>
+                    <div class="flex gap-1 text-kinetic-red mb-4 text-sm">★★★★★</div>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">
+                        "Honestly, working with Elevix has been a really smooth experience. They understand exactly what a business needs when it comes to automation and managing leads. Everything feels more organized now - from handling enquiries to following up with customers. It saved us a lot of time in day-to-day work."
+                    </p>
+                    <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center">
+                        <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> AI • Operations
+                    </div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="bg-[#111] border border-white/5 p-8 rounded-3xl gs-review-card h-fit hover:border-white/20 transition-all break-inside-avoid">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-display font-bold text-xl">H</div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-lg">Hassan R.</h4>
+                                <p class="font-mono text-[10px] text-on-secondary-container uppercase">Marketing Director</p>
+                            </div>
+                        </div>
+                        <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+                    </div>
+                    <div class="flex gap-1 text-kinetic-red mb-4 text-sm">★★★★★</div>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">
+                        "From the way they understand branding to how they execute content, everything feels well thought out and result-oriented. They're not just doing posts for the sake of it - there's a clear strategy behind what they create. Highly recommend Elevix for anyone serious about growth in Pakistan."
+                    </p>
+                    <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center">
+                        <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> Strategy • Brand
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="bg-[#111] border border-white/5 p-8 rounded-3xl gs-review-card h-fit hover:border-white/20 transition-all break-inside-avoid">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-kinetic-red text-white flex items-center justify-center font-display font-bold text-xl">A</div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-lg">Ahsan Malik</h4>
+                                <p class="font-mono text-[10px] text-on-secondary-container uppercase">CEO, UrbanFit Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+                    </div>
+                    <div class="flex gap-1 text-kinetic-red mb-4 text-sm">★★★★★</div>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">"Elevix completely transformed how we handle our e-commerce. The AI WhatsApp follow-up system alone saved us 40+ hours per month. Our ROAS went from 3x to 18x in just 6 weeks. These guys are not an agency — they're a growth machine."</p>
+                    <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center"><span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> E-Com • WhatsApp AI</div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="bg-[#111] border border-white/5 p-8 rounded-3xl gs-review-card h-fit hover:border-white/20 transition-all break-inside-avoid">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-display font-bold text-xl">Z</div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-lg">Zara Qureshi</h4>
+                                <p class="font-mono text-[10px] text-on-secondary-container uppercase">Co-Founder, NinHomes</p>
+                            </div>
+                        </div>
+                        <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+                    </div>
+                    <div class="flex gap-1 text-kinetic-red mb-4 text-sm">★★★★★</div>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">"As a real estate startup in Lahore, we needed digital presence that matched our brand. Elevix delivered a stunning website, SEO setup, and full CRM automation pipeline. Our inquiry-to-booking rate improved 3x within 2 months. Absolutely top-tier."</p>
+                    <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center"><span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> Real Estate • CRM</div>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="bg-[#111] border border-white/5 p-8 rounded-3xl gs-review-card h-fit hover:border-white/20 transition-all break-inside-avoid">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-kinetic-red text-white flex items-center justify-center font-display font-bold text-xl">F</div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-lg">Faisal Nawaz</h4>
+                                <p class="font-mono text-[10px] text-on-secondary-container uppercase">Director, QuickMed Pharma</p>
+                            </div>
+                        </div>
+                        <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+                    </div>
+                    <div class="flex gap-1 text-kinetic-red mb-4 text-sm">★★★★★</div>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">"I was skeptical about AI automation for pharma distribution, but Elevix changed my mind. Their custom AI pipeline for order tracking and rep follow-ups cut our processing time by 60%. ROI visible within the first month. Exceptional team, exceptional results."</p>
+                    <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center"><span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> Pharma • AI Pipeline</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Here CTA -->
+    <section class="py-32 px-6 bg-[#050505] border-t border-white/5 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10 fade-up">
+            <span class="font-mono text-[12px] text-on-secondary-container tracking-[0.3em] uppercase mb-8 flex justify-center items-center gap-4">
+                <span class="w-8 h-[1px] bg-kinetic-red/50"></span>
+                // STILL HERE?
+                <span class="w-8 h-[1px] bg-kinetic-red/50"></span>
+            </span>
+            <h2 class="font-display text-[50px] md:text-[80px] font-bold tracking-tight text-white leading-[1.05] mb-12">
+                Let's stop pretending agencies still work the old way.
+            </h2>
+            <p class="font-display text-on-secondary-container text-[18px] md:text-[22px] max-w-2xl mx-auto mb-12 leading-relaxed">
+                Book a 30-minute strategy call. We'll audit your current stack, show you the 3 biggest leaks, and sketch what a system-first Elevix engagement would look like — free, no pitch deck.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <button class="bg-kinetic-red text-white px-10 py-5 rounded-full text-[15px] font-bold hover:bg-white hover:text-black transition-all shadow-[0_0_20px_rgba(232,40,43,0.4)] hover:shadow-none whitespace-nowrap">
+                    Book a 30-min strategy call &rarr;
+                </button>
+                <button class="bg-transparent border border-white/20 text-white px-10 py-5 rounded-full text-[15px] font-bold hover:bg-white/10 transition-all whitespace-nowrap">
+                    See how we did it for other brands &rarr;
+                </button>
+            </div>
+            
+            <div class="mt-12 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest flex flex-wrap justify-center gap-6">
+                <span>NO SALES DECK</span>
+                <span class="text-kinetic-red">•</span>
+                <span>HONEST AUDIT</span>
+                <span class="text-kinetic-red">•</span>
+                <span>WE ONLY TAKE PROJECTS WE CAN WIN</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Thinking (Blogs) -->
+    <section class="py-32 px-6 bg-deep-obsidian border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-up">
+                <div>
+                    <span class="font-mono text-[12px] text-on-secondary-container tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
+                        <span class="w-8 h-[1px] bg-kinetic-red/50"></span>
+                        // LATEST THINKING
+                    </span>
+                    <h2 class="font-display text-[40px] md:text-[60px] font-bold tracking-tight text-white leading-none">
+                        Writing for operators,<br/><span class="text-kinetic-red">not marketers.</span>
+                    </h2>
+                </div>
+                <a href="#" class="font-mono text-[12px] text-white tracking-[0.2em] uppercase mt-8 md:mt-0 hover:text-kinetic-red transition-colors border-b border-white/20 pb-1">
+                    SEE ALL POSTS ↗
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <div class="group border border-white/5 bg-[#111] hover:border-kinetic-red/50 transition-all duration-500 rounded-2xl overflow-hidden flex flex-col h-full fade-up">
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-widest mb-6 block">• BRANDING & IDENTITY</span>
+                        <h3 class="font-display text-[22px] font-bold text-white leading-tight mb-8 group-hover:text-kinetic-red transition-colors">
+                            What a Branding Agency Actually Delivers (And Why Identity Work Collapses at Month 3)
+                        </h3>
+                        <div class="mt-auto flex justify-between items-center border-t border-white/5 pt-6">
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-widest">8 MIN READ</span>
+                            <span class="font-mono text-[10px] text-white uppercase tracking-widest group-hover:text-kinetic-red transition-colors">READ ↗</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="group border border-white/5 bg-[#111] hover:border-kinetic-red/50 transition-all duration-500 rounded-2xl overflow-hidden flex flex-col h-full fade-up" style="transition-delay: 100ms;">
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-widest mb-6 block">• WEBSITE MAINTENANCE</span>
+                        <h3 class="font-display text-[22px] font-bold text-white leading-tight mb-8 group-hover:text-kinetic-red transition-colors">
+                            WordPress Maintenance Plans: What Separates a 5K/mo From a 25K/mo Retainer
+                        </h3>
+                        <div class="mt-auto flex justify-between items-center border-t border-white/5 pt-6">
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-widest">6 MIN READ</span>
+                            <span class="font-mono text-[10px] text-white uppercase tracking-widest group-hover:text-kinetic-red transition-colors">READ ↗</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="group border border-white/5 bg-[#111] hover:border-kinetic-red/50 transition-all duration-500 rounded-2xl overflow-hidden flex flex-col h-full fade-up" style="transition-delay: 200ms;">
+                    <div class="p-8 flex flex-col flex-grow">
+                        <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-widest mb-6 block">• LANDING PAGES</span>
+                        <h3 class="font-display text-[22px] font-bold text-white leading-tight mb-8 group-hover:text-kinetic-red transition-colors">
+                            Landing Page Builder Comparison: Unbounce vs Webflow vs GHL vs Next.js
+                        </h3>
+                        <div class="mt-auto flex justify-between items-center border-t border-white/5 pt-6">
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-widest">10 MIN READ</span>
+                            <span class="font-mono text-[10px] text-white uppercase tracking-widest group-hover:text-kinetic-red transition-colors">READ ↗</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HUGE Pre-Footer Banner -->
+    <section class="py-24 px-6 bg-[#050505] border-t border-white/5 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto w-full relative">
+            <div class="flex justify-between items-center mb-8 font-mono text-[10px] text-kinetic-red uppercase tracking-widest">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-kinetic-red animate-pulse"></span> ACCEPTING CLIENTS — 2026</span>
+                <span>LAHORE, PAKISTAN</span>
+            </div>
+            <h2 id="banner-glitch" class="glitch-text font-display font-black text-[60px] sm:text-[80px] md:text-[120px] lg:text-[160px] leading-[0.85] tracking-tighter text-white uppercase break-words w-full" style="word-spacing: -2vw;" data-text="AUTOMATING">
+                AUTOMATING<br/>
+                THE <span class="text-kinetic-red">IMPOSSIBLE,</span><br/>
+            <div class="mt-16 flex flex-col md:flex-row justify-between items-start md:items-center border-t border-white/10 pt-10 gap-8">
+                <div class="font-mono text-[10px] text-on-secondary-container uppercase tracking-widest flex flex-wrap gap-4 md:gap-8">
+                    <span>ONE 30-MIN AUDIT CALL</span>
+                    <span>NO DECK</span>
+                    <span>NO OBLIGATION</span>
+                </div>
+                <button class="bg-white text-black px-12 py-5 font-display font-bold text-[16px] uppercase tracking-wider hover:bg-kinetic-red hover:text-white transition-colors flex items-center gap-4">
+                    BOOK STRATEGY CALL <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-32 bg-[#050505] relative border-t border-white/10 z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between pb-24 border-b border-white/5">
+            <!-- Left Info -->
+            <div class="w-full md:w-1/2 mb-16 md:mb-0 pr-8">
+                <!-- Premium 3D Shiny Logo (Grayscale unless hovered) -->
+                <div class="flex items-center gap-3 group cursor-pointer mb-8 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 w-fit">
+                    <div class="relative w-12 h-12 flex items-center justify-center transform transition-transform duration-500 group-hover:rotate-12">
+                        <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red to-[#500000] rounded-xl shadow-[0_0_20px_rgba(232,40,43,0.4)] transform rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute inset-[2px] bg-gradient-to-tl from-[#111] to-[#333] rounded-xl transform rotate-45 z-10 overflow-hidden">
+                            <div class="absolute top-0 left-[-100%] w-[50%] h-[200%] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -rotate-45 translate-y-[-20%] animate-[shine_3s_infinite]"></div>
+                        </div>
+                        <span class="relative z-20 font-display font-black text-white text-2xl tracking-tighter" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(232,40,43,0.8);">E</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-black text-[20px] leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-md">Elevix</span>
+                        <span class="font-mono text-[9px] text-kinetic-red tracking-[0.3em] uppercase font-bold mt-0.5" style="text-shadow: 0 0 8px rgba(232,40,43,0.5);">Digital</span>
+                    </div>
+                </div>
+                
+                <p class="font-display text-[15px] text-on-secondary-container leading-relaxed max-w-sm mb-12">
+                    Engineering digital-first systems that generate revenue and scale businesses in Pakistan and globally.
+                </p>
+                <div class="font-mono text-stark-white text-[11px] uppercase tracking-[0.2em]">
+                    <span class="text-kinetic-red block mb-2 font-bold">HEADQUARTERS</span>
+                    Lahore, Pakistan
+                </div>
+            </div>
+            
+            <div class="text-left md:text-right w-full md:w-1/2 flex flex-col justify-between h-full">
+                <div class="mb-16">
+                    <span class="font-mono text-kinetic-red block mb-4 text-[11px] font-bold tracking-[0.2em] uppercase">NEW BUSINESS</span>
+                    <p class="font-display font-bold text-stark-white text-[28px] md:text-[36px] tracking-tight hover:text-kinetic-red transition-colors cursor-pointer mb-2">
+                        HELLO@ELEVIXDIGITAL.COM
+                    </p>
+                    <p class="font-mono text-on-secondary-container text-[16px] tracking-widest cursor-pointer hover:text-white transition-colors">
+                        +92 300 000 0000
+                    </p>
+                </div>
+                
+                <div class="flex gap-8 md:justify-end mb-12 font-mono text-[11px] uppercase tracking-[0.2em]">
+                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">LinkedIn</a>
+                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">Instagram</a>
+                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">Twitter</a>
+                </div>
+                
+                <div class="font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] opacity-40">
+                    © 2026 ELEVIX DIGITAL. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+
+        <!-- 6D Scanline Massive Footer Logotype -->
+        <div class="w-full relative overflow-hidden bg-black flex flex-col items-center justify-center pt-24 pb-12">
+            <!-- 6D Grid & Scanline Background -->
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)]" style="background-size: 50px 50px;"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-kinetic-red/10 to-transparent h-[100%] animate-[scan_4s_linear_infinite] pointer-events-none"></div>
+            
+            <!-- Massive Text -->
+            <h1 class="relative z-10 w-full text-center px-4 font-display font-black leading-[0.8] tracking-tighter text-transparent opacity-90 transition-all duration-700 hover:opacity-100 hover:scale-105" style="-webkit-text-stroke: 2px rgba(255,255,255,0.9); font-size: clamp(4rem, 15vw, 15vw); background: linear-gradient(180deg, #ffffff 0%, #333333 100%); -webkit-background-clip: text;">
+                ELEVIX<br/>DIGITAL
+            </h1>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+        // =============================================
+        // 1. GSAP SCROLL REVEAL — ALL SECTIONS
+        // =============================================
+        // Animate section headings on scroll
+        gsap.utils.toArray('section').forEach((section) => {
+            const heading = section.querySelector('h2');
+            if (heading) {
+                gsap.from(heading, {
+                    scrollTrigger: { trigger: heading, start: 'top 88%', once: true },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.9,
+                    ease: 'power3.out'
+                });
+            }
+            const paras = section.querySelectorAll('p');
+            if (paras.length) {
+                gsap.from(paras, {
+                    scrollTrigger: { trigger: section, start: 'top 85%', once: true },
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.7,
+                    stagger: 0.08,
+                    ease: 'power2.out'
+                });
+            }
+        });
+
+        // Hero H1 — simple elegant fade-in, NO SplitType (avoids flash)
+        window.addEventListener('load', () => {
+            const h1 = document.getElementById('hero-h1');
+            if (h1) {
+                gsap.from(h1, {
+                    opacity: 0,
+                    y: 40,
+                    duration: 1.1,
+                    ease: 'power3.out',
+                    delay: 0.2
+                });
+            }
+        });
+
+        // Section line enter observer (for red lines)
+        const lineObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { 
+                if (e.isIntersecting) { 
+                    if (e.target.id === 'process-line-label') {
+                        e.target.style.transform = 'scaleX(1)';
+                    } else {
+                        e.target.style.width = '100%'; 
+                    }
+                    lineObs.unobserve(e.target); 
+                } 
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.section-line-enter').forEach(el => {
+            if (el.id !== 'process-line-label') {
+                el.style.transition = 'width 1.2s cubic-bezier(0.16,1,0.3,1)';
+            }
+            lineObs.observe(el);
+        });
+
+        // =============================================
+        // 3. COUNTER ANIMATION (41x, 180, 5.0, 7)
+        // =============================================
+        function animateCounter(el, target, suffix, duration = 2) {
+            let start = 0;
+            const step = target / (duration * 60);
+            const timer = setInterval(() => {
+                start = Math.min(start + step, target);
+                el.textContent = (Number.isInteger(target) ? Math.floor(start) : start.toFixed(1)) + suffix;
+                if (start >= target) clearInterval(timer);
+            }, 1000 / 60);
+        }
+
+        // Trigger counters on scroll into view
+        const counterTargets = [
+            { selector: 'h3.font-display', pattern: /41/, target: 41, suffix: '×', extra: ' peak roas.' },
+            { selector: '.font-display.text-\\[80px\\]', pattern: /5\.0/, target: 5.0, suffix: '' }
+        ];
+
+        ScrollTrigger.create({
+            trigger: '#results',
+            start: 'top 70%',
+            once: true,
+            onEnter: () => {
+                document.querySelectorAll('#results h3').forEach(el => {
+                    if (el.textContent.includes('41')) {
+                        el.innerHTML = '<span class="counter" data-target="41" data-suffix="×">0×</span> <span class="text-kinetic-red">peak roas.</span>';
+                        animateCounter(el.querySelector('.counter'), 41, '×');
+                    }
+                    if (el.textContent.includes('180')) {
+                        el.innerHTML = '<span class="counter" data-target="180" data-suffix="">0</span> appointments';
+                        animateCounter(el.querySelector('.counter'), 180, '');
+                    }
+                });
+            }
+        });
+
+        // 5.0 review counter
+        ScrollTrigger.create({
+            trigger: '.gs-reviews-container',
+            start: 'top 70%',
+            once: true,
+            onEnter: () => {
+                const scoreEl = document.querySelector('.font-display.text-\\[80px\\]');
+                if (scoreEl && scoreEl.textContent.trim() === '5.0') {
+                    animateCounter(scoreEl, 5.0, '', 1.5);
+                }
+            }
+        });
+
+        // =============================================
+        // 4. SERVICE CARDS — MOUSE SPOTLIGHT + MAGNETIC
+        // =============================================
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+            });
+
+            // Magnetic tilt
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                gsap.to(card, {
+                    rotateY: x * 6,
+                    rotateX: -y * 6,
+                    transformPerspective: 800,
+                    duration: 0.4,
+                    ease: 'power2.out'
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power2.out' });
+            });
+        });
+
+        // =============================================
+        // 5. HOW WE WORK — SVG LINE DRAW + STEP REVEAL
+        // =============================================
+        const progressLine = document.getElementById('process-progress-line');
+        const processSection = document.getElementById('process');
+
+        if (progressLine && processSection) {
+            const totalHeight = 700;
+            ScrollTrigger.create({
+                trigger: processSection,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                scrub: 1,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+                    const newY2 = Math.round(progress * totalHeight);
+                    progressLine.setAttribute('y2', newY2);
+                }
+            });
+        }
+
+        // Step-by-step card animation + light up on scroll
+        const steps = gsap.utils.toArray('.gsap-step');
+        steps.forEach((step, i) => {
+            // Slide in from right
+            gsap.from(step, {
+                scrollTrigger: {
+                    trigger: step,
+                    start: 'top 85%',
+                    once: true
+                },
+                opacity: 0,
+                x: 60,
+                duration: 0.9,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
+
+            // Activate step on scroll
+            ScrollTrigger.create({
+                trigger: step,
+                start: 'top 55%',
+                onEnter: () => {
+                    step.classList.add('active-step');
+                    const circle = step.querySelector('.step-circle');
+                    const num = step.querySelector('.step-num');
+                    const label = step.querySelector('.step-label');
+                    if (circle) {
+                        circle.style.borderColor = '#E8282B';
+                        circle.style.boxShadow = '0 0 25px rgba(232,40,43,0.5)';
+                    }
+                    if (num) { num.style.color = '#E8282B'; }
+                    if (label) { label.style.color = '#E8282B'; }
+                    // Activate pill tags
+                    step.querySelectorAll('span[class*="border-white/10"]').forEach(pill => {
+                        pill.style.borderColor = 'rgba(232,40,43,0.4)';
+                        pill.style.color = 'rgba(253,253,253,0.8)';
+                    });
+                }
+            });
+        });
+
+        // =============================================
+        // 6. SECTION HEADINGS — RED UNDERLINE REVEAL
+        // =============================================
+        document.querySelectorAll('h2').forEach(h2 => {
+            ScrollTrigger.create({
+                trigger: h2,
+                start: 'top 80%',
+                once: true,
+                onEnter: () => h2.classList.add('active')
+            });
+        });
+
+        // =============================================
+        // 7. CASE STUDY CARDS — 3D TILT
+        // =============================================
+        document.querySelectorAll('#results .rounded-\\[2rem\\]').forEach(card => {
+            card.style.transformStyle = 'preserve-3d';
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                gsap.to(card, {
+                    rotateY: x * 8,
+                    rotateX: -y * 8,
+                    transformPerspective: 1000,
+                    duration: 0.4,
+                    ease: 'power2.out'
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.7, ease: 'elastic.out(1, 0.6)' });
+            });
+        });
+
+        // =============================================
+        // 8. REVIEW CARDS — STAGGERED FADE (safe version)
+        // =============================================
+        // Set all cards visible immediately (no blank state)
+        document.querySelectorAll('.gs-review-card').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+        // Then animate those not yet in view
+        gsap.utils.toArray('.gs-review-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 90%', once: true },
+                y: 40,
+                opacity: 0,
+                duration: 0.7,
+                delay: i * 0.08,
+                ease: 'power3.out'
+            });
+        });
+
+        // =============================================
+        // 9. PRE-FOOTER BANNER & CTA REVEAL
+        // =============================================
+        const bannerEl = document.getElementById('banner-glitch');
+        if (bannerEl) {
+            bannerEl.style.opacity = '1';
+            ScrollTrigger.create({
+                trigger: bannerEl,
+                start: 'top 85%',
+                once: true,
+                onEnter: () => {
+                    bannerEl.classList.add('glitching');
+                    setTimeout(() => bannerEl.classList.remove('glitching'), 1200);
+                }
+            });
+        }
+
+        // =============================================
+        // 10. PROCESS HEADING — REMOVED GSAP OPACITY
+        // =============================================
+        // Fix: completely removed GSAP opacity fade to guarantee text is bright and never gets stuck at 0 opacity.
+
+        // =============================================
+        // 11. MAGNETIC BUTTONS
+        // =============================================
+        document.querySelectorAll('button, a[class*="rounded-full"]').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                gsap.to(btn, { x: x * 0.25, y: y * 0.25, duration: 0.3, ease: 'power2.out' });
+            });
+            btn.addEventListener('mouseleave', () => {
+                gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
+            });
+        });
+
+        // =============================================
+        // 12. NAV SCROLL BEHAVIOR
+        // =============================================
+        ScrollTrigger.create({
+            start: 'top -80',
+            end: 99999,
+            toggleClass: { className: 'scrolled', targets: 'nav' }
+        });
+
+        // =============================================
+        // 13. MARQUEE (PURE CSS, SMOOTH)
+        // =============================================
+        // GSAP scroll-velocity logic removed to guarantee perfect smoothness
+    </script>
+</body>
+</html>
