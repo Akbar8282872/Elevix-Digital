@@ -187,7 +187,21 @@ The brand is defined by "High-Velocity Engineering." It uses a deep obsidian bas
 - **Max-Width:** Content is capped at 1440px with 80px side margins on desktop.
 - **3-Column Architecture:** Standard grid for services, portfolio items, and case study cards.
 
-## Interactive Rules
+### Multiple Pages & Routing
+- `index.html` — The main landing page.
+- `our-story.html` — The "Our Story" page featuring the founders, core team, and company values.
+
+### The Team (Our Story)
+- **Akbar Ali**: Highlighted as the core identity in the Our Story heading.
+- **Aziz Heema**: Founder & CEO
+- **Ali Raja**: Manager & Vibe Coder
+
+### Core Values (Our Story)
+- **// 04 Radical Ownership**: Responsibility without excuses. Client numbers miss, we own it. A deadline slips, we own it. No finger-pointing at platforms, vendors, or algorithms.
+- **// 05 Transparent Partnership**: Honest communication on progress and ROI. If the campaign isn't working, you hear it from us before you notice it in the dashboard.
+- **// 06 Relentless Improvement**: Compounding systems that improve monthly. Every retrospective ships at least one process upgrade into the next sprint.
+
+## 6. Implementation Notes
 - **Navigation:** Links utilize a Kinetic Red line-through decoration on hover.
 - **CTAs:** Primary buttons are solid red; secondary buttons are ghosted with 1px white or red borders.
 - **Glass Effects:** Overlays and dropdowns use a 90% obsidian fill with a 12px backdrop blur.

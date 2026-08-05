@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ELEVIX DIGITAL | AI-Powered Marketing & Automation in Lahore, Pakistan</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "deep-obsidian": "#0A0A0A",
+              "kinetic-red": "#E8282B",
+              "stark-white": "#FDFDFD",
+              "surface-gray": "#141414",
+              "on-secondary-container": "#A3A3A3"
+            },
+            fontFamily: {
+              "display": ["'Plus Jakarta Sans'", "sans-serif"],
+              "mono": ["'Space Mono'", "monospace"],
+            }
+          },
+        },
+      }
+    </script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #FDFDFD;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+
+
+        /* 5D Full Screen Red Wave Animation */
+        .waves-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            background: radial-gradient(circle at center, #140505 0%, #0A0A0A 100%);
+            opacity: 0.6;
+        }
+
+        .wave-layer {
+            position: absolute;
+            bottom: -5%;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background-repeat: repeat-x;
+            background-position: bottom center;
+            transform-origin: bottom center;
+            will-change: transform;
+        }
+
+        .wave-1 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%234A0000" fill-opacity="0.3" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: 50% 120%;
+            animation: waveAnim 35s linear infinite;
+            z-index: 1;
+            bottom: -5%;
+            filter: blur(8px);
+        }
+
+        .wave-2 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%237A0000" fill-opacity="0.25" d="M0,96L60,112C120,128,240,160,360,170.7C480,181,600,171,720,154.7C840,139,960,117,1080,128C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>');
+            background-size: 50% 115%;
+            animation: waveAnim 28s linear infinite reverse;
+            z-index: 2;
+            bottom: -10%;
+            filter: blur(6px);
+        }
+
+        .wave-3 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23A30000" fill-opacity="0.15" d="M0,160L80,170.7C160,181,320,203,480,192C640,181,800,139,960,133.3C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
+            background-size: 50% 110%;
+            animation: waveAnim 22s linear infinite;
+            z-index: 3;
+            bottom: -15%;
+            filter: blur(4px);
+        }
+
+        .wave-4 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23CC1111" fill-opacity="0.1" d="M0,64L80,90.7C160,117,320,171,480,176C640,181,800,139,960,112C1120,85,1280,75,1360,69.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
+            background-size: 50% 105%;
+            animation: waveAnim 18s linear infinite reverse;
+            z-index: 4;
+            bottom: -20%;
+            filter: blur(2px);
+        }
+
+        .wave-5 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF2222" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,181.3C384,160,480,96,576,96C672,96,768,160,864,181.3C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: 50% 125%;
+            animation: waveAnim 15s linear infinite reverse;
+            z-index: 5;
+            bottom: -25%;
+            filter: blur(1px);
+        }
+
+        .wave-6 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23E8282B" fill-opacity="0.08" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: 50% 130%;
+            animation: waveAnim 12s linear infinite;
+            z-index: 6;
+            bottom: -30%;
+        }
+
+        .wave-7 {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF6666" fill-opacity="0.03" d="M0,128L80,144C160,160,320,192,480,197.3C640,203,800,181,960,149.3C1120,117,1280,75,1360,53.3L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
+            background-size: 50% 90%;
+            animation: waveAnim 7s linear infinite;
+            z-index: 7;
+            bottom: -35%;
+        }
+
+        @keyframes waveAnim {
+            0% { transform: translateX(0) translateZ(0) scaleY(1); }
+            50% { transform: translateX(-25%) translateZ(0) scaleY(1.05); }
+            100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 12s linear infinite;
+        }
+
+        .fade-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Nav Glassmorphism */
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .tracking-ultra-tight {
+            letter-spacing: -0.04em;
+        }
+
+        /* Mouse tracking for Service Spotlight */
+        .service-card {
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+        }
+
+        /* === ELITE ANIMATIONS === */
+
+        /* SVG Line Draw for How We Work */
+        .process-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+
+        /* Character split animation */
+        .split-char {
+            display: inline-block;
+            overflow: hidden;
+        }
+        .char {
+            display: inline-block;
+            transform: translateY(110%);
+            opacity: 0;
+        }
+
+        /* Word reveal clip */
+        .word-reveal {
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        /* Glitch Effect for Banner */
+        @keyframes glitch1 {
+            0%, 100% { clip-path: inset(0 0 95% 0); transform: translate(-2px, 0); }
+            20% { clip-path: inset(10% 0 80% 0); transform: translate(2px, 0); }
+            40% { clip-path: inset(40% 0 50% 0); transform: translate(-1px, 0); }
+            60% { clip-path: inset(70% 0 20% 0); transform: translate(1px, 0); }
+            80% { clip-path: inset(90% 0 5% 0); transform: translate(-2px, 0); }
+        }
+        @keyframes glitch2 {
+            0%, 100% { clip-path: inset(50% 0 30% 0); transform: translate(2px, 0); color: #E8282B; }
+            25% { clip-path: inset(20% 0 60% 0); transform: translate(-2px, 0); }
+            50% { clip-path: inset(80% 0 5% 0); transform: translate(1px, 0); color: #fff; }
+            75% { clip-path: inset(5% 0 85% 0); transform: translate(-1px, 0); }
+        }
+        .glitch-text {
+            position: relative;
+        }
+        /* pseudo-elements HIDDEN by default, only show briefly when JS adds .glitching */
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .glitch-text.glitching::before {
+            animation: glitch1 0.25s steps(1) infinite;
+            opacity: 0.5;
+            color: #E8282B;
+        }
+        .glitch-text.glitching::after {
+            animation: glitch2 0.25s steps(1) 0.04s infinite;
+            opacity: 0.4;
+        }
+
+        /* Counter number animation */
+        .counter-num {
+            display: inline-block;
+        }
+
+        /* Red underline reveal */
+        .red-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .red-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #E8282B;
+            transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 0 10px rgba(232, 40, 43, 0.6);
+        }
+        .red-underline.active::after { width: 100%; }
+
+        /* Process section overhaul */
+        .process-step-card {
+            border-left: 2px solid transparent;
+            transition: border-color 0.4s ease, background 0.4s ease;
+            position: relative;
+        }
+        .process-step-card.active-step {
+            border-left-color: #E8282B;
+            background: rgba(232, 40, 43, 0.04);
+        }
+        .process-step-card .step-num {
+            transition: all 0.4s ease;
+        }
+        .process-step-card.active-step .step-num {
+            color: #E8282B;
+            text-shadow: 0 0 20px rgba(232,40,43,0.5);
+        }
+
+        /* Magnetic button */
+        .magnetic-btn {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Number ticker */
+        @keyframes ticker-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        /* Section entrance line */
+        .section-line-enter {
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .section-line-enter.visible { width: 100%; }
+        
+        /* 3D Logo Shine */
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+        
+        /* 6D Scanline effect */
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+    </style>
+</head>
+<body class="font-display bg-deep-obsidian">
+
+    <!-- TopNavBar (Elite Neogen Style) -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            <!-- Premium 3D Shiny Logo -->
+            <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+                <div class="relative w-12 h-12 flex items-center justify-center transform transition-transform duration-500 group-hover:rotate-12">
+                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red to-[#500000] rounded-xl shadow-[0_0_20px_rgba(232,40,43,0.4)] transform rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-[2px] bg-gradient-to-tl from-[#111] to-[#333] rounded-xl transform rotate-45 z-10 overflow-hidden">
+                        <!-- Shiny glare effect -->
+                        <div class="absolute top-0 left-[-100%] w-[50%] h-[200%] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -rotate-45 translate-y-[-20%] animate-[shine_3s_infinite]"></div>
+                    </div>
+                    <span class="relative z-20 font-display font-black text-white text-2xl tracking-tighter" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(232,40,43,0.8);">E</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-black text-[20px] leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-md">Elevix</span>
+                    <span class="font-mono text-[9px] text-kinetic-red tracking-[0.3em] uppercase font-bold mt-0.5" style="text-shadow: 0 0 8px rgba(232,40,43,0.5);">Digital</span>
+                </div>
+            </a>
+
+            <!-- Links -->
+            <div class="hidden md:flex items-center gap-10">
+                <a href="our-story.html" class="text-on-secondary-container text-[14px] font-medium text-white transition-colors">Our Story</a>
+                <a href="#services" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors flex items-center gap-1">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                <a href="#results" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Blogs</a>
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Careers</a>
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Contact Us</a>
+            </div>
+
+            <!-- Let's Talk CTA Button -->
+            <button class="bg-kinetic-red text-white px-8 py-3 rounded-full text-[14px] font-bold hover:bg-[#ff3333] transition-all shadow-[0_0_15px_rgba(232,40,43,0.3)] hover:shadow-[0_0_25px_rgba(232,40,43,0.5)]">
+                Let's Talk
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] pt-32 pb-16 px-6 overflow-hidden flex items-center">
+        <!-- Animated Background Mesh/Orb -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <!-- Pulsing Red Core -->
+            <div class="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-kinetic-red rounded-full mix-blend-screen filter blur-[150px] opacity-20 animate-[pulse_4s_ease-in-out_infinite]"></div>
+            <!-- Rotating Dark Core -->
+            <div class="absolute bottom-[0%] right-[10%] w-[500px] h-[500px] bg-[#500000] rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-[spin_10s_linear_infinite]"></div>
+            <!-- Grid overlay -->
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]" style="background-size: 50px 50px;"></div>
+            <!-- Scanline -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent h-[200%] animate-[scan_6s_linear_infinite]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16 relative z-10 w-full mt-12">
+            <!-- Left Side -->
+            <div class="w-full md:w-[60%] hero-content-left perspective-1000">
+                <div class="flex items-center gap-4 text-on-secondary-container text-sm font-mono tracking-widest mb-12">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <span class="text-white/30">/</span>
+                    <span class="text-white">Our Story</span>
+                </div>
+                
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-kinetic-red"></span>
+                    <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] font-bold">OUR STORY</span>
+                </div>
+                
+                <h1 id="banner-glitch" class="font-display font-black text-[50px] md:text-[70px] lg:text-[100px] leading-[0.9] tracking-tighter mb-8">
+                    <div class="glitch-text text-white" data-text="Automating the impossible,">Automating the impossible,</div>
+                    <div class="text-kinetic-red drop-shadow-[0_0_15px_rgba(232,40,43,0.5)] mt-2">daily.</div>
+                </h1>
+                
+                <p class="font-display text-on-secondary-container text-[16px] md:text-[18px] leading-[1.6] max-w-xl">
+                    Elevix Digital is an AI automation and growth agency built to replace fragmented vendors with one system that ships — performance marketing, CRM, AI chatbots, and automation, engineered as a single revenue engine for ambitious businesses.
+                </p>
+                
+                <div class="mt-12 flex items-center gap-6">
+                    <button class="bg-kinetic-red text-white px-8 py-3 rounded-full text-[14px] font-bold hover:bg-[#ff3333] transition-all flex items-center gap-2">
+                        Book a Strategy Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-widest cursor-pointer hover:text-white transition-colors">See what we ship ↘</span>
+                </div>
+            </div>
+            
+            <!-- Right Side (At A Glance) -->
+            <div class="w-full md:w-[35%] border border-white/10 bg-[#050505]/80 backdrop-blur-xl p-10 rounded-2xl hero-content-right relative overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div class="flex justify-between items-center mb-10 pb-6 border-b border-white/10">
+                    <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em]">— ELEVIX // AT A GLANCE</span>
+                    <div class="flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></span>
+                        <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-widest font-bold">LIVE</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-6 font-mono text-[11px] uppercase tracking-widest text-on-secondary-container">
+                    <div class="flex justify-between items-center">
+                        <span>FOUNDED</span>
+                        <span class="text-white">2026</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>TEAM</span>
+                        <span class="text-white">8</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>HQ</span>
+                        <span class="text-white">LAHORE</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>CLIENTS SHIPPED</span>
+                        <span class="text-white">75+</span>
+                    </div>
+                </div>
+                
+                <div class="mt-12 pt-6 border-t border-white/10">
+                    <a href="#" class="font-mono text-[10px] text-white uppercase tracking-[0.2em] hover:text-kinetic-red transition-colors flex items-center justify-between">
+                        BOOK A 30-MIN AUDIT <span>↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Elevix exists -->
+    <section class="py-24 px-6 border-t border-white/5 relative bg-[#050505]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16">
+            <div class="w-full md:w-1/3">
+                <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
+                    // 01. ORIGIN
+                </div>
+                <h2 class="font-display font-bold text-[40px] md:text-[50px] text-white leading-[1.1] mb-12">
+                    Why Elevix<br/>exists.
+                </h2>
+                
+                <!-- Graphic -->
+                <div class="border border-white/10 bg-[#0A0A0A] p-8">
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="font-display font-bold text-white text-[20px]">One team. One system.</span>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+                            <span class="font-mono text-[9px] text-[#10b981] uppercase tracking-widest font-bold">INTEGRATED</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between gap-2 mb-6">
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">ADS</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">DESIGN</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">WEB</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">SEO</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">CRM</div>
+                        <div class="w-10 h-10 border border-kinetic-red/30 bg-kinetic-red/10 flex items-center justify-center font-mono text-[9px] text-kinetic-red font-bold">AI</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-mono text-[9px] text-kinetic-red uppercase tracking-widest font-bold">1 ACCOUNTABILITY LINE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-[60%] space-y-6 font-display text-[16px] text-on-secondary-container leading-[1.8]">
+                <p>
+                    It started with a pattern I kept seeing: fragmented marketing tools, zero automation in growth, and businesses quietly leaving money on the table every month. An agency for ads. A freelancer for design. Someone's cousin on the website. No CRM. No follow-up. Nothing connected.
+                </p>
+                <p>
+                    The obvious answer wasn't another vendor in the stack — it was to build the partner that didn't exist yet. One team that owns performance marketing, CRM, AI chatbots, and automation as a single integrated system. Not five agencies pretending to coordinate. One accountability line, one revenue target, one operating cadence.
+                </p>
+                <p>
+                    Elevix is AI-first from day zero. Automation isn't a module bolted on — it's the operating system the agency runs on. That conviction lets a small team do the output of a big one, and lets clients compound results instead of rebuilding every quarter.
+                    <br/><br/>
+                    That's the promise: <strong class="text-white">automating the impossible, <span class="text-kinetic-red">daily.</span></strong>
+                </p>
+                <div class="pt-8">
+                    <span class="font-mono text-[10px] text-white uppercase tracking-widest">— AKBAR ALI, FOUNDER</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Refuse to compromise -->
+    <section class="py-24 px-6 bg-[#0A0A0A] border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-6">
+                        // 04 VALUES, 0 SLOGANS
+                    </div>
+                    <h2 class="font-display font-bold text-[40px] md:text-[50px] text-white leading-[1.1]">
+                        What we refuse to<br/>compromise on.
+                    </h2>
+                </div>
+                <div class="hidden md:block font-mono text-[10px] text-on-secondary-container uppercase tracking-widest">
+                    ELEVIX OPERATING PRINCIPLES
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-white/10">
+                <!-- Value 1 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 01</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Automation Over Manual</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Systems beat busy work. Every repeatable task gets a workflow — voice agent, n8n flow, CRM routine — so the team compounds instead of burning out.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 02</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Outcomes Over Outputs</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">We measure revenue impact, not deliverables shipped. A campaign that books zero leads is failed work, regardless of how polished the asset deck looks.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 03</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Systems Over Hustle</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Reliability comes from documented processes, not from heroics. If a win can't be repeated next quarter, it wasn't really a win.</p>
+                </div>
+                <!-- Value 4 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="w-3 h-3 border-t border-l border-kinetic-red absolute top-0 left-0"></div>
+                    <div class="w-3 h-3 border-b border-r border-kinetic-red absolute bottom-0 right-0"></div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 04</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Radical Ownership</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Responsibility without excuses. Client numbers miss, we own it. A deadline slips, we own it. No finger-pointing at platforms, vendors, or algorithms.</p>
+                </div>
+                <!-- Value 5 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="w-3 h-3 border-t border-l border-kinetic-red absolute top-0 left-0"></div>
+                    <div class="w-3 h-3 border-b border-r border-kinetic-red absolute bottom-0 right-0"></div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 05</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Transparent Partnership</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Honest communication on progress and ROI. If the campaign isn't working, you hear it from us before you notice it in the dashboard.</p>
+                </div>
+                <!-- Value 6 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="w-3 h-3 border-t border-l border-kinetic-red absolute top-0 left-0"></div>
+                    <div class="w-3 h-3 border-b border-r border-kinetic-red absolute bottom-0 right-0"></div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 06</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Relentless Improvement</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Compounding systems that improve monthly. Every retrospective ships at least one process upgrade into the next sprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Team -->
+    <section class="py-24 px-6 bg-[#050505] border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
+                // THE TEAM
+            </div>
+            <h2 class="font-display font-bold text-[40px] md:text-[50px] text-white leading-[1.1] mb-6">
+                The humans behind the<br/>systems
+            </h2>
+            <p class="font-display text-on-secondary-container text-[16px] leading-[1.6] max-w-2xl mb-16">
+                Small team, big throughput. Every member owns a craft end-to-end and ships directly to clients — no agency layers between you and the people doing the work.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 border-t border-l border-white/10 max-w-4xl mx-auto">
+                <!-- Team 1 -->
+                <div class="service-card p-10 border-r border-b border-white/10 flex flex-col items-start hover:bg-white/5 transition-all duration-700 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(232,40,43,0.3)] relative group cursor-pointer overflow-hidden transform-gpu">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x)_var(--mouse-y),rgba(232,40,43,0.15)_0%,transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+                    <div class="w-12 h-12 rounded-full border-2 border-kinetic-red/50 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(232,40,43,0.3)]">AC</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-2 group-hover:text-kinetic-red transition-colors relative z-10">Aziz Cheema</h3>
+                    <p class="font-mono text-[11px] text-on-secondary-container tracking-widest uppercase mb-6 relative z-10">Founder & CEO</p>
+                    <p class="font-display text-[14px] text-white/50 leading-[1.6] relative z-10">Revenue strategy, partnerships, and the business engine behind Elevix growth.</p>
+                </div>
+                <!-- Team 2 -->
+                <div class="service-card p-10 border-r border-b border-white/10 flex flex-col items-start hover:bg-white/5 transition-all duration-700 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(232,40,43,0.3)] relative group cursor-pointer overflow-hidden transform-gpu">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x)_var(--mouse-y),rgba(232,40,43,0.15)_0%,transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+                    <div class="w-12 h-12 rounded-full border-2 border-kinetic-red/50 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(232,40,43,0.3)]">AR</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-2 group-hover:text-kinetic-red transition-colors relative z-10">Ali Raja</h3>
+                    <p class="font-mono text-[11px] text-on-secondary-container tracking-widest uppercase mb-6 relative z-10">Manager & Vibe Coder</p>
+                    <p class="font-display text-[14px] text-white/50 leading-[1.6] relative z-10">Operations, delivery systems, and the rhythm that keeps every client engagement on track.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Force Multiplier Section -->
+    <section class="py-32 px-6 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8 flex items-center gap-4 fade-up">
+                <div class="w-8 h-[1px] bg-kinetic-red"></div> // 02. FORCE MULTIPLIER
+            </div>
+            
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24">
+                <div class="w-full lg:w-3/4">
+                    <h2 class="font-display font-bold text-[50px] md:text-[70px] lg:text-[90px] text-white leading-[1.05] tracking-tighter fade-up" style="font-weight: 800;">
+                        Two humans. A hundred agents. One operating system.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="mb-24 fade-up">
+                <p class="font-display text-on-secondary-container text-[18px] md:text-[22px] leading-[1.6] max-w-4xl font-medium">
+                    We built 100+ custom AI agents for ourselves. Every operator commands a squad of them — research, drafting, QA, reporting, follow-up, analytics. Humans bring strategy and taste. Agents handle the grind at machine speed. That's how two of us deliver like a hundred.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Humans Box -->
+                <div class="border border-white/10 bg-[#0A0A0A] p-10 md:p-12 rounded-2xl relative overflow-hidden group fade-up transition-all duration-700 hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] hover:-translate-y-2">
+                    <div class="flex justify-between items-center mb-16 font-mono text-[10px] tracking-[0.2em] uppercase text-kinetic-red font-bold">
+                        <div>// HUMANS • 2</div>
+                        <div class="text-on-secondary-container">LAHORE • PAKISTAN</div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 mb-20">
+                        <!-- AC -->
+                        <div class="w-[80px] h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:scale-110 cursor-pointer">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20"></div>
+                            AC
+                        </div>
+                        <!-- AR -->
+                        <div class="w-[80px] h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:scale-110 cursor-pointer">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20" style="animation-delay: 1s;"></div>
+                            AR
+                        </div>
+                    </div>
+                    
+                    <p class="font-display text-[15px] text-on-secondary-container leading-[1.7] max-w-sm">
+                        Strategy, taste, accountability. Every operator runs 12+ agents in parallel across their client portfolio.
+                    </p>
+                </div>
+                
+                <!-- AI Agents Box -->
+                <div class="border border-white/10 bg-[#0A0A0A] p-10 md:p-12 rounded-2xl relative overflow-hidden group fade-up transition-all duration-700 hover:border-kinetic-red/30 hover:shadow-[0_0_40px_rgba(232,40,43,0.1)] hover:-translate-y-2">
+                    <div class="flex justify-between items-center mb-12 font-mono text-[10px] tracking-[0.2em] uppercase text-kinetic-red font-bold">
+                        <div>// AI AGENTS • 100+</div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse shadow-[0_0_8px_rgba(232,40,43,0.8)]"></div>
+                            LIVE • 24 / 7
+                        </div>
+                    </div>
+                    
+                    <!-- 64 Squares Grid -->
+                    <div class="grid grid-cols-8 gap-2 w-full max-w-[320px]">
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Huge CTA Banner -->
+    <section class="py-32 px-6 bg-[#050505] relative z-10 border-t border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-10 font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 fade-up">
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-kinetic-red shadow-[0_0_10px_rgba(232,40,43,0.8)] animate-pulse"></div>
+                    ACCEPTING CLIENTS • 2026
+                </div>
+                <div>LAHORE, PAKISTAN</div>
+            </div>
+            <h1 class="font-display font-black text-[60px] sm:text-[90px] md:text-[130px] lg:text-[150px] leading-[0.85] tracking-tighter text-white uppercase glitch-text fade-up" data-text="READY TO AUTOMATE THE IMPOSSIBLE?">
+                READY TO <span class="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">AUTOMATE</span><br/>
+                THE <span class="text-kinetic-red drop-shadow-[0_0_20px_rgba(232,40,43,0.5)]">IMPOSSIBLE?</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Address & Global Reach Map Section -->
+    <section class="py-24 px-6 bg-[#080808] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- Text / Address -->
+                <div class="w-full lg:w-1/3 z-10">
+                    <div class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.3em] font-bold mb-6 fade-up">// GLOBAL HQ</div>
+                    <h2 class="font-display font-bold text-[40px] text-white leading-tight mb-8 fade-up">Where we build the future.</h2>
+                    
+                    <div class="border border-white/10 bg-[#050505] p-8 rounded-2xl relative group hover:border-kinetic-red/30 transition-all duration-500 fade-up">
+                        <div class="absolute top-0 right-0 p-6 opacity-30 group-hover:opacity-100 transition-opacity">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="font-display text-[22px] font-bold text-white mb-2">Lahore, Pakistan</div>
+                        <p class="font-mono text-[12px] text-on-secondary-container tracking-widest leading-[1.8] mb-6">
+                            TECH DISTRICT<br/>
+                            INNOVATION HUB<br/>
+                            PK 54000
+                        </p>
+                        <a href="https://maps.google.com/?q=Lahore,Pakistan" target="_blank" class="inline-flex items-center gap-2 text-[11px] font-mono font-bold text-kinetic-red tracking-widest uppercase hover:text-white transition-colors">
+                            VIEW ON CHART / MAP <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Animated Map / Chart Graphic -->
+                <div class="w-full lg:w-2/3 relative h-[400px] border border-white/10 bg-[#050505] rounded-2xl overflow-hidden fade-up flex items-center justify-center group">
+                    <!-- Radar Sweep -->
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,40,43,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-kinetic-red/20 opacity-20 animate-[spin_10s_linear_infinite]" style="border-right-color: transparent; border-bottom-color: transparent;"></div>
+                    
+                    <!-- Dotted Map Concept -->
+                    <div class="absolute inset-0 opacity-40 mix-blend-screen" style="background-image: radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px); background-size: 20px 20px; background-position: center;"></div>
+                    
+                    <!-- Lahore Ping -->
+                    <div class="absolute top-[45%] left-[65%] flex flex-col items-center">
+                        <div class="relative flex justify-center items-center group-hover:scale-125 transition-transform duration-500">
+                            <div class="absolute w-16 h-16 rounded-full bg-kinetic-red/20 animate-ping"></div>
+                            <div class="absolute w-32 h-32 rounded-full border border-kinetic-red/30 animate-[ping_3s_ease-out_infinite]"></div>
+                            <div class="w-4 h-4 rounded-full bg-kinetic-red shadow-[0_0_20px_rgba(232,40,43,1)] z-10"></div>
+                        </div>
+                        <div class="mt-4 font-mono text-[10px] font-bold text-white tracking-[0.2em] bg-black/80 px-3 py-1.5 rounded border border-kinetic-red/50 shadow-[0_0_10px_rgba(232,40,43,0.3)]">LAHORE: LIVE</div>
+                    </div>
+
+                    <!-- Connection Lines -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-1000" viewBox="0 0 1000 400" preserveAspectRatio="none">
+                        <style>
+                            @keyframes dash { to { stroke-dashoffset: -100; } }
+                            .anim-line { animation: dash 20s linear infinite; stroke-dasharray: 4 6; stroke: #E8282B; stroke-width: 1.5; fill: none; }
+                        </style>
+                        <path d="M 650 180 Q 500 50 300 150" class="anim-line"/>
+                        <path d="M 650 180 Q 400 350 200 250" class="anim-line" style="animation-duration: 15s; stroke-dasharray: 2 4;"/>
+                        <path d="M 650 180 Q 800 100 900 200" class="anim-line" style="animation-duration: 25s; stroke-dasharray: 6 8;"/>
+                    </svg>
+
+                    <!-- Overlay Data -->
+                    <div class="absolute bottom-6 left-6 font-mono text-[9px] text-kinetic-red tracking-widest uppercase">
+                        <div>LAT: 31.5204° N</div>
+                        <div>LONG: 74.3587° E</div>
+                        <div class="text-white/50 mt-2">SYSTEM STATUS: OPTIMAL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-32 bg-[#050505] relative border-t border-white/10 z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between pb-24 border-b border-white/5">
+            <!-- Left Info -->
+            <div class="w-full md:w-1/2 mb-16 md:mb-0 pr-8">
+                <!-- Premium 3D Shiny Logo (Grayscale unless hovered) -->
+                <div class="flex items-center gap-3 group cursor-pointer mb-8 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 w-fit">
+                    <div class="relative w-12 h-12 flex items-center justify-center transform transition-transform duration-500 group-hover:rotate-12">
+                        <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red to-[#500000] rounded-xl shadow-[0_0_20px_rgba(232,40,43,0.4)] transform rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute inset-[2px] bg-gradient-to-tl from-[#111] to-[#333] rounded-xl transform rotate-45 z-10 overflow-hidden">
+                            <div class="absolute top-0 left-[-100%] w-[50%] h-[200%] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -rotate-45 translate-y-[-20%] animate-[shine_3s_infinite]"></div>
+                        </div>
+                        <span class="relative z-20 font-display font-black text-white text-2xl tracking-tighter" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(232,40,43,0.8);">E</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-black text-[20px] leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-md">Elevix</span>
+                        <span class="font-mono text-[9px] text-kinetic-red tracking-[0.3em] uppercase font-bold mt-0.5" style="text-shadow: 0 0 8px rgba(232,40,43,0.5);">Digital</span>
+                    </div>
+                </div>
+                
+                <p class="font-display text-[15px] text-on-secondary-container leading-relaxed max-w-sm mb-12">
+                    Engineering digital-first systems that generate revenue and scale businesses in Pakistan and globally.
+                </p>
+                <div class="font-mono text-stark-white text-[11px] uppercase tracking-[0.2em]">
+                    <span class="text-kinetic-red block mb-2 font-bold">HEADQUARTERS</span>
+                    Lahore, Pakistan
+                </div>
+            </div>
+            
+            <div class="text-left md:text-right w-full md:w-1/2 flex flex-col justify-between h-full">
+                <div class="mb-16">
+                    <span class="font-mono text-kinetic-red block mb-4 text-[11px] font-bold tracking-[0.2em] uppercase">NEW BUSINESS</span>
+                    <p class="font-display font-bold text-stark-white text-[28px] md:text-[36px] tracking-tight hover:text-kinetic-red transition-colors cursor-pointer mb-2">
+                        HELLO@ELEVIXDIGITAL.COM
+                    </p>
+                    <p class="font-mono text-on-secondary-container text-[16px] tracking-widest cursor-pointer hover:text-white transition-colors">
+                        +92 300 000 0000
+                    </p>
+                </div>
+                
+                <div class="flex gap-8 md:justify-end mb-12 font-mono text-[11px] uppercase tracking-[0.2em]">
+                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">LinkedIn</a>
+                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">Instagram</a>
+                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">Twitter</a>
+                </div>
+                
+                <div class="font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] opacity-40">
+                    Â© 2026 ELEVIX DIGITAL. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+
+        <!-- 6D Scanline Massive Footer Logotype -->
+        <div class="w-full relative overflow-hidden bg-black flex flex-col items-center justify-center pt-24 pb-12">
+            <!-- 6D Grid & Scanline Background -->
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)]" style="background-size: 50px 50px;"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-kinetic-red/10 to-transparent h-[100%] animate-[scan_4s_linear_infinite] pointer-events-none"></div>
+            
+            <!-- Massive Text -->
+            <h1 class="relative z-10 w-full text-center px-4 font-display font-black leading-[0.8] tracking-tighter text-transparent opacity-90 transition-all duration-700 hover:opacity-100 hover:scale-105" style="-webkit-text-stroke: 2px rgba(255,255,255,0.9); font-size: clamp(4rem, 15vw, 15vw); background: linear-gradient(180deg, #ffffff 0%, #333333 100%); -webkit-background-clip: text;">
+                ELEVIX<br/>DIGITAL
+            </h1>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+        // =============================================
+        // 1. GSAP SCROLL REVEAL â€” ALL SECTIONS
+        // =============================================
+        // Animate section headings on scroll
+        gsap.utils.toArray('section').forEach((section) => {
+            const heading = section.querySelector('h2');
+            if (heading) {
+                gsap.from(heading, {
+                    scrollTrigger: { trigger: heading, start: 'top 88%', once: true },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.9,
+                    ease: 'power3.out'
+                });
+            }
+            const paras = section.querySelectorAll('p');
+            if (paras.length) {
+                gsap.from(paras, {
+                    scrollTrigger: { trigger: section, start: 'top 85%', once: true },
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.7,
+                    stagger: 0.08,
+                    ease: 'power2.out'
+                });
+            }
+        });
+
+        // Hero H1 â€” simple elegant fade-in, NO SplitType (avoids flash)
+        window.addEventListener('load', () => {
+            // Intense Hero Reveal
+            gsap.from('.hero-content-left > *', {
+                y: 60,
+                opacity: 0,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: 'expo.out',
+                delay: 0.2
+            });
+
+            gsap.from('.hero-content-right', {
+                x: 60,
+                opacity: 0,
+                duration: 1.4,
+                ease: 'expo.out',
+                delay: 0.6
+            });
+
+            // 3D Tilt for the At A Glance Box
+            const box = document.querySelector('.hero-content-right');
+            if (box) {
+                box.addEventListener('mousemove', e => {
+                    const rect = box.getBoundingClientRect();
+                    const x = (e.clientX - rect.left) / rect.width - 0.5;
+                    const y = (e.clientY - rect.top) / rect.height - 0.5;
+                    gsap.to(box, { 
+                        rotateY: x * 15, 
+                        rotateX: -y * 15, 
+                        duration: 0.5, 
+                        transformPerspective: 1000,
+                        ease: 'power2.out'
+                    });
+                });
+                box.addEventListener('mouseleave', () => {
+                    gsap.to(box, { 
+                        rotateY: 0, 
+                        rotateX: 0, 
+                        duration: 0.8, 
+                        ease: 'elastic.out(1, 0.5)' 
+                    });
+                });
+            }
+
+            // Magnetic Button Effect in Hero
+            const heroBtn = document.querySelector('.hero-content-left button');
+            if (heroBtn) {
+                heroBtn.addEventListener('mousemove', e => {
+                    const rect = heroBtn.getBoundingClientRect();
+                    const x = (e.clientX - rect.left - rect.width / 2) * 0.3;
+                    const y = (e.clientY - rect.top - rect.height / 2) * 0.3;
+                    gsap.to(heroBtn, { x, y, duration: 0.3, ease: 'power2.out' });
+                });
+                heroBtn.addEventListener('mouseleave', () => {
+                    gsap.to(heroBtn, { x: 0, y: 0, duration: 0.7, ease: 'elastic.out(1, 0.5)' });
+                });
+            }
+        });
+
+        // Section line enter observer (for red lines)
+        const lineObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { 
+                if (e.isIntersecting) { 
+                    if (e.target.id === 'process-line-label') {
+                        e.target.style.transform = 'scaleX(1)';
+                    } else {
+                        e.target.style.width = '100%'; 
+                    }
+                    lineObs.unobserve(e.target); 
+                } 
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.section-line-enter').forEach(el => {
+            if (el.id !== 'process-line-label') {
+                el.style.transition = 'width 1.2s cubic-bezier(0.16,1,0.3,1)';
+            }
+            lineObs.observe(el);
+        });
+
+        // =============================================
+        // 3. COUNTER ANIMATION (41x, 180, 5.0, 7)
+        // =============================================
+        function animateCounter(el, target, suffix, duration = 2) {
+            let start = 0;
+            const step = target / (duration * 60);
+            const timer = setInterval(() => {
+                start = Math.min(start + step, target);
+                el.textContent = (Number.isInteger(target) ? Math.floor(start) : start.toFixed(1)) + suffix;
+                if (start >= target) clearInterval(timer);
+            }, 1000 / 60);
+        }
+
+        // Trigger counters on scroll into view
+        const counterTargets = [
+            { selector: 'h3.font-display', pattern: /41/, target: 41, suffix: 'Ã—', extra: ' peak roas.' },
+            { selector: '.font-display.text-\\[80px\\]', pattern: /5\.0/, target: 5.0, suffix: '' }
+        ];
+
+        ScrollTrigger.create({
+            trigger: '#results',
+            start: 'top 70%',
+            once: true,
+            onEnter: () => {
+                document.querySelectorAll('#results h3').forEach(el => {
+                    if (el.textContent.includes('41')) {
+                        el.innerHTML = '<span class="counter" data-target="41" data-suffix="Ã—">0Ã—</span> <span class="text-kinetic-red">peak roas.</span>';
+                        animateCounter(el.querySelector('.counter'), 41, 'Ã—');
+                    }
+                    if (el.textContent.includes('180')) {
+                        el.innerHTML = '<span class="counter" data-target="180" data-suffix="">0</span> appointments';
+                        animateCounter(el.querySelector('.counter'), 180, '');
+                    }
+                });
+            }
+        });
+
+        // 5.0 review counter
+        ScrollTrigger.create({
+            trigger: '.gs-reviews-container',
+            start: 'top 70%',
+            once: true,
+            onEnter: () => {
+                const scoreEl = document.querySelector('.font-display.text-\\[80px\\]');
+                if (scoreEl && scoreEl.textContent.trim() === '5.0') {
+                    animateCounter(scoreEl, 5.0, '', 1.5);
+                }
+            }
+        });
+
+        // =============================================
+        // 4. SERVICE CARDS â€” MOUSE SPOTLIGHT + MAGNETIC
+        // =============================================
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+            });
+
+            // Magnetic tilt
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                gsap.to(card, {
+                    rotateY: x * 6,
+                    rotateX: -y * 6,
+                    transformPerspective: 800,
+                    duration: 0.4,
+                    ease: 'power2.out'
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power2.out' });
+            });
+        });
+
+        // =============================================
+        // 5. HOW WE WORK â€” SVG LINE DRAW + STEP REVEAL
+        // =============================================
+        const progressLine = document.getElementById('process-progress-line');
+        const processSection = document.getElementById('process');
+
+        if (progressLine && processSection) {
+            const totalHeight = 700;
+            ScrollTrigger.create({
+                trigger: processSection,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                scrub: 1,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+                    const newY2 = Math.round(progress * totalHeight);
+                    progressLine.setAttribute('y2', newY2);
+                }
+            });
+        }
+
+        // Step-by-step card animation + light up on scroll
+        const steps = gsap.utils.toArray('.gsap-step');
+        steps.forEach((step, i) => {
+            // Slide in from right
+            gsap.from(step, {
+                scrollTrigger: {
+                    trigger: step,
+                    start: 'top 85%',
+                    once: true
+                },
+                opacity: 0,
+                x: 60,
+                duration: 0.9,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
+
+            // Activate step on scroll
+            ScrollTrigger.create({
+                trigger: step,
+                start: 'top 55%',
+                onEnter: () => {
+                    step.classList.add('active-step');
+                    const circle = step.querySelector('.step-circle');
+                    const num = step.querySelector('.step-num');
+                    const label = step.querySelector('.step-label');
+                    if (circle) {
+                        circle.style.borderColor = '#E8282B';
+                        circle.style.boxShadow = '0 0 25px rgba(232,40,43,0.5)';
+                    }
+                    if (num) { num.style.color = '#E8282B'; }
+                    if (label) { label.style.color = '#E8282B'; }
+                    // Activate pill tags
+                    step.querySelectorAll('span[class*="border-white/10"]').forEach(pill => {
+                        pill.style.borderColor = 'rgba(232,40,43,0.4)';
+                        pill.style.color = 'rgba(253,253,253,0.8)';
+                    });
+                }
+            });
+        });
+
+        // =============================================
+        // 6. SECTION HEADINGS â€” RED UNDERLINE REVEAL
+        // =============================================
+        document.querySelectorAll('h2').forEach(h2 => {
+            ScrollTrigger.create({
+                trigger: h2,
+                start: 'top 80%',
+                once: true,
+                onEnter: () => h2.classList.add('active')
+            });
+        });
+
+        // =============================================
+        // 7. CASE STUDY CARDS â€” 3D TILT
+        // =============================================
+        document.querySelectorAll('#results .rounded-\\[2rem\\]').forEach(card => {
+            card.style.transformStyle = 'preserve-3d';
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                gsap.to(card, {
+                    rotateY: x * 8,
+                    rotateX: -y * 8,
+                    transformPerspective: 1000,
+                    duration: 0.4,
+                    ease: 'power2.out'
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.7, ease: 'elastic.out(1, 0.6)' });
+            });
+        });
+
+        // =============================================
+        // 8. REVIEW CARDS â€” STAGGERED FADE (safe version)
+        // =============================================
+        // Set all cards visible immediately (no blank state)
+        document.querySelectorAll('.gs-review-card').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+        // Then animate those not yet in view
+        gsap.utils.toArray('.gs-review-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 90%', once: true },
+                y: 40,
+                opacity: 0,
+                duration: 0.7,
+                delay: i * 0.08,
+                ease: 'power3.out'
+            });
+        });
+
+        // =============================================
+        // 9. PRE-FOOTER BANNER & CTA REVEAL
+        // =============================================
+        const bannerEl = document.getElementById('banner-glitch');
+        if (bannerEl) {
+            bannerEl.style.opacity = '1';
+            ScrollTrigger.create({
+                trigger: bannerEl,
+                start: 'top 85%',
+                once: true,
+                onEnter: () => {
+                    bannerEl.classList.add('glitching');
+                    setTimeout(() => bannerEl.classList.remove('glitching'), 1200);
+                }
+            });
+        }
+
+        // =============================================
+        // 10. PROCESS HEADING â€” REMOVED GSAP OPACITY
+        // =============================================
+        // Fix: completely removed GSAP opacity fade to guarantee text is bright and never gets stuck at 0 opacity.
+
+        // =============================================
+        // 11. MAGNETIC BUTTONS
+        // =============================================
+        document.querySelectorAll('button, a[class*="rounded-full"]').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                gsap.to(btn, { x: x * 0.25, y: y * 0.25, duration: 0.3, ease: 'power2.out' });
+            });
+            btn.addEventListener('mouseleave', () => {
+                gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
+            });
+        });
+
+        // =============================================
+        // 12. NAV SCROLL BEHAVIOR
+        // =============================================
+        ScrollTrigger.create({
+            start: 'top -80',
+            end: 99999,
+            toggleClass: { className: 'scrolled', targets: 'nav' }
+        });
+
+        // =============================================
+        // 13. MARQUEE (PURE CSS, SMOOTH)
+        // =============================================
+        // GSAP scroll-velocity logic removed to guarantee perfect smoothness
+    </script>
+</body>
+</html>
