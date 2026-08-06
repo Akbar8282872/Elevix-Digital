@@ -41,109 +41,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* 5D Full Screen Red Wave Animation */
-        .waves-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-            background: radial-gradient(circle at center, #140505 0%, #0A0A0A 100%);
-            opacity: 0.6;
-        }
-
-        .wave-layer {
-            position: absolute;
-            bottom: -5%;
-            left: 0;
-            width: 200%;
-            height: 100%;
-            background-repeat: repeat-x;
-            background-position: bottom center;
-            transform-origin: bottom center;
-            will-change: transform;
-        }
-
-        .wave-1 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%234A0000" fill-opacity="0.3" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: 50% 120%;
-            animation: waveAnim 35s linear infinite;
-            z-index: 1;
-            bottom: -5%;
-            filter: blur(8px);
-        }
-
-        .wave-2 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%237A0000" fill-opacity="0.25" d="M0,96L60,112C120,128,240,160,360,170.7C480,181,600,171,720,154.7C840,139,960,117,1080,128C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>');
-            background-size: 50% 115%;
-            animation: waveAnim 28s linear infinite reverse;
-            z-index: 2;
-            bottom: -10%;
-            filter: blur(6px);
-        }
-
-        .wave-3 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23A30000" fill-opacity="0.15" d="M0,160L80,170.7C160,181,320,203,480,192C640,181,800,139,960,133.3C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
-            background-size: 50% 110%;
-            animation: waveAnim 22s linear infinite;
-            z-index: 3;
-            bottom: -15%;
-            filter: blur(4px);
-        }
-
-        .wave-4 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23CC1111" fill-opacity="0.1" d="M0,64L80,90.7C160,117,320,171,480,176C640,181,800,139,960,112C1120,85,1280,75,1360,69.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
-            background-size: 50% 105%;
-            animation: waveAnim 18s linear infinite reverse;
-            z-index: 4;
-            bottom: -20%;
-            filter: blur(2px);
-        }
-
-        .wave-5 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF2222" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,181.3C384,160,480,96,576,96C672,96,768,160,864,181.3C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: 50% 125%;
-            animation: waveAnim 15s linear infinite reverse;
-            z-index: 5;
-            bottom: -25%;
-            filter: blur(1px);
-        }
-
-        .wave-6 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23E8282B" fill-opacity="0.08" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: 50% 130%;
-            animation: waveAnim 12s linear infinite;
-            z-index: 6;
-            bottom: -30%;
-        }
-
-        .wave-7 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF6666" fill-opacity="0.03" d="M0,128L80,144C160,160,320,192,480,197.3C640,203,800,181,960,149.3C1120,117,1280,75,1360,53.3L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
-            background-size: 50% 90%;
-            animation: waveAnim 7s linear infinite;
-            z-index: 7;
-            bottom: -35%;
-        }
-
-        @keyframes waveAnim {
-            0% { transform: translateX(0) translateZ(0) scaleY(1); }
-            50% { transform: translateX(-25%) translateZ(0) scaleY(1.05); }
-            100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
-        }
-
-        @keyframes scan {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-        
-        @keyframes shine {
-            0% { left: -100%; }
-            20% { left: 200%; }
-            100% { left: 200%; }
-        }
-
         /* Nav Glassmorphism */
         .glass-nav {
             background: rgba(10, 10, 10, 0.7);
@@ -151,14 +48,23 @@
             -webkit-backdrop-filter: blur(12px);
         }
 
-        /* Card Spotlight & Glow Styles */
+        /* Mouse tracking for Service Spotlight */
         .service-card {
             --mouse-x: 50%;
             --mouse-y: 50%;
-            background-color: rgba(23, 23, 23, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* 6D Scanline effect */
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        
+        /* 3D Logo Shine */
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
         }
     </style>
 </head>
@@ -202,15 +108,16 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-[90vh] pt-32 pb-16 px-6 overflow-hidden flex items-center">
-        <!-- Animated Background Mesh/Orb (exactly like Our Story SVG waves) -->
-        <div class="waves-container">
-            <div class="wave-layer wave-1"></div>
-            <div class="wave-layer wave-2"></div>
-            <div class="wave-layer wave-3"></div>
-            <div class="wave-layer wave-4"></div>
-            <div class="wave-layer wave-5"></div>
-            <div class="wave-layer wave-6"></div>
-            <div class="wave-layer wave-7"></div>
+        <!-- Animated Background Mesh/Orb (exactly like Our Story) -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <!-- Pulsing Red Core -->
+            <div class="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-kinetic-red rounded-full mix-blend-screen filter blur-[150px] opacity-20 animate-[pulse_4s_ease-in-out_infinite]"></div>
+            <!-- Rotating Dark Core -->
+            <div class="absolute bottom-[0%] right-[10%] w-[500px] h-[500px] bg-[#500000] rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-[spin_10s_linear_infinite]"></div>
+            <!-- Grid overlay -->
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]" style="background-size: 50px 50px;"></div>
+            <!-- Scanline -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent h-[200%] animate-[scan_6s_linear_infinite]"></div>
         </div>
 
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 relative z-10 w-full mt-12">
@@ -248,27 +155,27 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <!-- Card 1: Web Development -->
-                <div class="service-card group rounded-2xl border border-neutral-800 p-10 relative overflow-hidden cursor-pointer hover:-translate-y-1 hover:border-kinetic-red/60 hover:shadow-[0_0_30px_rgba(232,40,43,0.15)]">
-                    <!-- mouse-tracking spotlight effect -->
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
-                         style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.08), transparent 40%);"></div>
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <!-- Mouse-tracking Spotlight Background -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
 
-                    <!-- background sequence number -->
-                    <div class="font-display text-[150px] font-black text-neutral-800/10 absolute -bottom-10 -right-4 leading-none pointer-events-none group-hover:text-kinetic-red/10 transition-all duration-500 z-0">01</div>
-                    
-                    <div class="relative z-10 flex flex-col h-full">
+                        <!-- Background Number that slides left on hover -->
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">01</div>
+                        
                         <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
-                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest">
+                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest relative z-10">
                                 8 Services
                             </span>
-                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider">Node.js · React · WordPress · Webflow</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider relative z-10">Node.js · React · WordPress · Webflow</span>
                         </div>
                         
-                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase">Web Development</h3>
-                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10">Next.js, WordPress, e-commerce, landing pages — performance-tuned with CRO baked in.</p>
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase relative z-10">Web Development</h3>
+                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10 relative z-10">Next.js, WordPress, e-commerce, landing pages — performance-tuned with CRO baked in.</p>
                         
                         <!-- capability deliverables pills -->
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        <div class="flex flex-wrap gap-2 mt-auto relative z-10">
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Custom E-Commerce</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Performance Landing Pages</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">CMS Platforms</span>
@@ -278,24 +185,24 @@
                 </div>
 
                 <!-- Card 2: SEO Services -->
-                <div class="service-card group rounded-2xl border border-neutral-800 p-10 relative overflow-hidden cursor-pointer hover:-translate-y-1 hover:border-kinetic-red/60 hover:shadow-[0_0_30px_rgba(232,40,43,0.15)]" style="transition-delay: 50ms;">
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
-                         style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.08), transparent 40%);"></div>
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 50ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
 
-                    <div class="font-display text-[150px] font-black text-neutral-800/10 absolute -bottom-10 -right-4 leading-none pointer-events-none group-hover:text-kinetic-red/10 transition-all duration-500 z-0">02</div>
-                    
-                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">02</div>
+                        
                         <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
-                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest">
+                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest relative z-10">
                                 6 Services
                             </span>
-                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider">SEMrush · Ahrefs · Search Console</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider relative z-10">SEMrush · Ahrefs · Search Console</span>
                         </div>
                         
-                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase">SEO Services</h3>
-                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10">Strategy, audits, technical, AEO + GEO, link building — the full ranking stack engineered for compound growth.</p>
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase relative z-10">SEO Services</h3>
+                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10 relative z-10">Strategy, audits, technical, AEO + GEO, link building — the full ranking stack engineered for compound growth.</p>
                         
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        <div class="flex flex-wrap gap-2 mt-auto relative z-10">
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Technical Audits</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">On-Page Optimization</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Content Strategy</span>
@@ -305,24 +212,24 @@
                 </div>
 
                 <!-- Card 3: Digital Marketing -->
-                <div class="service-card group rounded-2xl border border-neutral-800 p-10 relative overflow-hidden cursor-pointer hover:-translate-y-1 hover:border-kinetic-red/60 hover:shadow-[0_0_30px_rgba(232,40,43,0.15)]" style="transition-delay: 100ms;">
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
-                         style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.08), transparent 40%);"></div>
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 100ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
 
-                    <div class="font-display text-[150px] font-black text-neutral-800/10 absolute -bottom-10 -right-4 leading-none pointer-events-none group-hover:text-kinetic-red/10 transition-all duration-500 z-0">03</div>
-                    
-                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">03</div>
+                        
                         <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
-                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest">
+                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest relative z-10">
                                 5 Services
                             </span>
-                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider">Meta Ads · Google Max · Klaviyo</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider relative z-10">Meta Ads · Google Max · Klaviyo</span>
                         </div>
                         
-                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase">Digital Marketing</h3>
-                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10">Performance campaigns, social scaling, email automation, CRO, and high-conversion funnels powered by AI insights.</p>
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase relative z-10">Digital Marketing</h3>
+                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10 relative z-10">Performance campaigns, social scaling, email automation, CRO, and high-conversion funnels powered by AI insights.</p>
                         
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        <div class="flex flex-wrap gap-2 mt-auto relative z-10">
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">PPC Campaigns</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Social Media Growth</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Email Campaigns</span>
@@ -332,24 +239,24 @@
                 </div>
 
                 <!-- Card 4: App Development -->
-                <div class="service-card group rounded-2xl border border-neutral-800 p-10 relative overflow-hidden cursor-pointer hover:-translate-y-1 hover:border-kinetic-red/60 hover:shadow-[0_0_30px_rgba(232,40,43,0.15)]" style="transition-delay: 150ms;">
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
-                         style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.08), transparent 40%);"></div>
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 150ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
 
-                    <div class="font-display text-[150px] font-black text-neutral-800/10 absolute -bottom-10 -right-4 leading-none pointer-events-none group-hover:text-kinetic-red/10 transition-all duration-500 z-0">04</div>
-                    
-                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">04</div>
+                        
                         <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
-                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest">
+                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest relative z-10">
                                 4 Services
                             </span>
-                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider">React Native · Flutter · Swift</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider relative z-10">React Native · Flutter · Swift</span>
                         </div>
                         
-                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase">App Development</h3>
-                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10">Native iOS & Android apps, React Native cross-platform builds. Secure, scalable, and ultra-fast mobile experiences.</p>
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase relative z-10">App Development</h3>
+                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10 relative z-10">Native iOS & Android apps, React Native cross-platform builds. Secure, scalable, and ultra-fast mobile experiences.</p>
                         
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        <div class="flex flex-wrap gap-2 mt-auto relative z-10">
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">iOS Applications</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Android Applications</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Cross-Platform Builds</span>
@@ -359,24 +266,24 @@
                 </div>
 
                 <!-- Card 5: Design Optimization -->
-                <div class="service-card group rounded-2xl border border-neutral-800 p-10 relative overflow-hidden cursor-pointer hover:-translate-y-1 hover:border-kinetic-red/60 hover:shadow-[0_0_30px_rgba(232,40,43,0.15)]" style="transition-delay: 200ms;">
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
-                         style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.08), transparent 40%);"></div>
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 200ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
 
-                    <div class="font-display text-[150px] font-black text-neutral-800/10 absolute -bottom-10 -right-4 leading-none pointer-events-none group-hover:text-kinetic-red/10 transition-all duration-500 z-0">05</div>
-                    
-                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">05</div>
+                        
                         <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
-                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest">
+                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest relative z-10">
                                 6 Services
                             </span>
-                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider">Figma · Creative Cloud · Framer</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider relative z-10">Figma · Creative Cloud · Framer</span>
                         </div>
                         
-                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase">Design & Creatives</h3>
-                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10">Branding, UI/UX optimization, motion graphics, and premium visual identities built at agency speed.</p>
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase relative z-10">Design & Creatives</h3>
+                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10 relative z-10">Branding, UI/UX optimization, motion graphics, and premium visual identities built at agency speed.</p>
                         
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        <div class="flex flex-wrap gap-2 mt-auto relative z-10">
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Brand Identity</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">UI/UX Design</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Landing Page Optimization</span>
@@ -386,24 +293,24 @@
                 </div>
 
                 <!-- Card 6: AI Automation -->
-                <div class="service-card group rounded-2xl border border-neutral-800 p-10 relative overflow-hidden cursor-pointer hover:-translate-y-1 hover:border-kinetic-red/60 hover:shadow-[0_0_30px_rgba(232,40,43,0.15)]" style="transition-delay: 250ms;">
-                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
-                         style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.08), transparent 40%);"></div>
+                <div class="service-card group rounded-[20px] p-[1px] bg-gradient-to-b from-white/10 to-transparent hover:from-kinetic-red/60 hover:to-kinetic-red/5 transition-all duration-500 relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_10_40px_rgba(232,40,43,0.15)] cursor-pointer" style="transition-delay: 250ms;">
+                    <div class="p-10 rounded-[20px] bg-[#0A0A0A] h-full flex flex-col relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" 
+                             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(232,40,43,0.12), transparent 40%);"></div>
 
-                    <div class="font-display text-[150px] font-black text-neutral-800/10 absolute -bottom-10 -right-4 leading-none pointer-events-none group-hover:text-kinetic-red/10 transition-all duration-500 z-0">06</div>
-                    
-                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="font-display text-[140px] font-bold text-white/5 absolute -bottom-6 -right-2 leading-none pointer-events-none group-hover:scale-110 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:text-kinetic-red/10 transition-all duration-700 ease-out z-0">06</div>
+                        
                         <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
-                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest">
+                            <span class="font-mono text-[10px] text-kinetic-red border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-1.5 rounded-full font-bold uppercase tracking-widest relative z-10">
                                 7 Services
                             </span>
-                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider">AI Agents · Make · n8n · Claude</span>
+                            <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-wider relative z-10">AI Agents · Make · n8n · Claude</span>
                         </div>
                         
-                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase">AI Automation</h3>
-                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10">Full automation via custom AI agents. Workflow automation, robotic processes, and intelligent decision systems.</p>
+                        <h3 class="font-display text-[28px] font-bold text-stark-white mb-4 group-hover:text-kinetic-red transition-colors duration-300 uppercase relative z-10">AI Automation</h3>
+                        <p class="font-display text-on-secondary-container text-[16px] leading-relaxed mb-10 relative z-10">Full automation via custom AI agents. Workflow automation, robotic processes, and intelligent decision systems.</p>
                         
-                        <div class="flex flex-wrap gap-2 mt-auto">
+                        <div class="flex flex-wrap gap-2 mt-auto relative z-10">
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Custom AI Agents</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Automated Workflows</span>
                             <span class="rounded-full bg-neutral-900 border border-neutral-700 px-3 py-1.5 text-xs text-neutral-300 group-hover:border-kinetic-red/30 group-hover:bg-kinetic-red/10 transition-colors">Lead Gen Bots</span>
@@ -412,6 +319,72 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Address & Global Reach Map Section (identical to homepage layout) -->
+    <section class="py-24 px-6 bg-[#080808] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- Text / Address -->
+                <div class="w-full lg:w-1/3 z-10">
+                    <div class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.3em] font-bold mb-6">// GLOBAL HQ</div>
+                    <h2 class="font-display font-bold text-[40px] text-white leading-tight mb-8">Where we build the future.</h2>
+                    
+                    <div class="border border-white/10 bg-[#050505] p-8 rounded-2xl relative group hover:border-kinetic-red/30 transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-6 opacity-30 group-hover:opacity-100 transition-opacity">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="font-display text-[22px] font-bold text-white mb-2">Lahore, Pakistan</div>
+                        <p class="font-mono text-[12px] text-on-secondary-container tracking-widest leading-[1.8] mb-6">
+                            TECH DISTRICT<br/>
+                            INNOVATION HUB<br/>
+                            PK 54000
+                        </p>
+                        <a href="https://maps.google.com/?q=Lahore,Pakistan" target="_blank" class="inline-flex items-center gap-2 text-[11px] font-mono font-bold text-kinetic-red tracking-widest uppercase hover:text-white transition-colors">
+                            VIEW ON CHART / MAP <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Animated Map / Chart Graphic -->
+                <div class="w-full lg:w-2/3 relative h-[400px] border border-white/10 bg-[#050505] rounded-2xl overflow-hidden flex items-center justify-center group">
+                    <!-- Radar Sweep -->
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,40,43,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-kinetic-red/20 opacity-20 animate-[spin_10s_linear_infinite]" style="border-right-color: transparent; border-bottom-color: transparent;"></div>
+                    
+                    <!-- Dotted Map Concept -->
+                    <div class="absolute inset-0 opacity-40 mix-blend-screen" style="background-image: radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px); background-size: 20px 20px; background-position: center;"></div>
+                    
+                    <!-- Lahore Ping -->
+                    <div class="absolute top-[45%] left-[65%] flex flex-col items-center">
+                        <div class="relative flex justify-center items-center group-hover:scale-125 transition-transform duration-500">
+                            <div class="absolute w-16 h-16 rounded-full bg-kinetic-red/20 animate-ping"></div>
+                            <div class="absolute w-32 h-32 rounded-full border border-kinetic-red/30 animate-[ping_3s_ease-out_infinite]"></div>
+                            <div class="w-4 h-4 rounded-full bg-kinetic-red shadow-[0_0_20px_rgba(232,40,43,1)] z-10"></div>
+                        </div>
+                        <div class="mt-4 font-mono text-[10px] font-bold text-white tracking-[0.2em] bg-black/80 px-3 py-1.5 rounded border border-kinetic-red/50 shadow-[0_0_10px_rgba(232,40,43,0.3)]">LAHORE: LIVE</div>
+                    </div>
+
+                    <!-- Connection Lines -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-1000" viewBox="0 0 1000 400" preserveAspectRatio="none">
+                        <style>
+                            @keyframes dash { to { stroke-dashoffset: -100; } }
+                            .anim-line { animation: dash 20s linear infinite; stroke-dasharray: 4 6; stroke: #E8282B; stroke-width: 1.5; fill: none; }
+                        </style>
+                        <path d="M 650 180 Q 500 50 300 150" class="anim-line"/>
+                        <path d="M 650 180 Q 400 350 200 250" class="anim-line" style="animation-duration: 15s; stroke-dasharray: 2 4;"/>
+                        <path d="M 650 180 Q 800 100 900 200" class="anim-line" style="animation-duration: 25s; stroke-dasharray: 6 8;"/>
+                    </svg>
+
+                    <!-- Overlay Data -->
+                    <div class="absolute bottom-6 left-6 font-mono text-[9px] text-kinetic-red tracking-widest uppercase">
+                        <div>LAT: 31.5204° N</div>
+                        <div>LONG: 74.3587° E</div>
+                        <div class="text-white/50 mt-2">SYSTEM STATUS: OPTIMAL</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -515,7 +488,7 @@
             });
         });
 
-        // Spotlight effect and magnetic tilt on hover
+        // Spotlight effect and magnetic tilt on hover (identical to homepage style)
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mousemove', e => {
                 const rect = card.getBoundingClientRect();
