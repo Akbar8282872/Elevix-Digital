@@ -794,53 +794,194 @@
     </section>
 
     <!-- Footer -->
-    <footer class="pt-32 bg-[#050505] relative border-t border-white/10 z-10">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between pb-24 border-b border-white/5">
-            <!-- Left Info -->
-            <div class="w-full md:w-1/2 mb-16 md:mb-0 pr-8">
-                <!-- Premium 3D Shiny Logo (Grayscale unless hovered) -->
-                <div class="flex items-center gap-3 group cursor-pointer mb-8 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500 w-fit">
-                    <div class="relative w-12 h-12 flex items-center justify-center transform transition-transform duration-500 group-hover:rotate-12">
-                        <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red to-[#500000] rounded-xl shadow-[0_0_20px_rgba(232,40,43,0.4)] transform rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
-                        <div class="absolute inset-[2px] bg-gradient-to-tl from-[#111] to-[#333] rounded-xl transform rotate-45 z-10 overflow-hidden">
-                            <div class="absolute top-0 left-[-100%] w-[50%] h-[200%] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -rotate-45 translate-y-[-20%] animate-[shine_3s_infinite]"></div>
-                        </div>
-                        <span class="relative z-20 font-display font-black text-white text-2xl tracking-tighter" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(232,40,43,0.8);">E</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-display font-black text-[20px] leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-md">Elevix</span>
-                        <span class="font-mono text-[9px] text-kinetic-red tracking-[0.3em] uppercase font-bold mt-0.5" style="text-shadow: 0 0 8px rgba(232,40,43,0.5);">Digital</span>
-                    </div>
+    <footer id="footer" class="bg-[#050505] relative z-10 border-t border-white/10">
+        <!-- Top Info Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 border-b border-white/10">
+            <!-- HQ -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 flex flex-col items-start justify-center">
+                <div class="flex items-center gap-3 mb-4">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span class="font-mono text-[10px] text-white/50 tracking-[0.2em] uppercase font-bold">HQ</span>
                 </div>
-                
-                <p class="font-display text-[15px] text-on-secondary-container leading-relaxed max-w-sm mb-12">
-                    Engineering digital-first systems that generate revenue and scale businesses in Pakistan and globally.
-                </p>
-                <div class="font-mono text-stark-white text-[11px] uppercase tracking-[0.2em]">
-                    <span class="text-kinetic-red block mb-2 font-bold">HEADQUARTERS</span>
+                <p class="font-display text-white text-[16px] leading-relaxed font-medium">
                     Lahore, Pakistan
-                </div>
+                </p>
             </div>
             
-            <div class="text-left md:text-right w-full md:w-1/2 flex flex-col justify-between h-full">
-                <div class="mb-16">
-                    <span class="font-mono text-kinetic-red block mb-4 text-[11px] font-bold tracking-[0.2em] uppercase">NEW BUSINESS</span>
-                    <p class="font-display font-bold text-stark-white text-[28px] md:text-[36px] tracking-tight hover:text-kinetic-red transition-colors cursor-pointer mb-2">
-                        HELLO@ELEVIXDIGITAL.COM
-                    </p>
-                    <p class="font-mono text-on-secondary-container text-[16px] tracking-widest cursor-pointer hover:text-white transition-colors">
-                        +92 300 000 0000
-                    </p>
+            <!-- CALL -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 flex flex-col items-start justify-center">
+                <div class="flex items-center gap-3 mb-4">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span class="font-mono text-[10px] text-white/50 tracking-[0.2em] uppercase font-bold">CALL</span>
                 </div>
-                
-                <div class="flex gap-8 md:justify-end mb-12 font-mono text-[11px] uppercase tracking-[0.2em]">
-                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">LinkedIn</a>
-                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">Instagram</a>
-                    <a href="#" class="text-on-secondary-container hover:text-kinetic-red transition-colors">Twitter</a>
+                <p class="font-display text-white text-[16px] leading-relaxed font-bold">
+                    +92 300 000
+                </p>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="p-8 md:p-12 flex flex-col items-start justify-center">
+                <div class="flex items-center gap-3 mb-4">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span class="font-mono text-[10px] text-white/50 tracking-[0.2em] uppercase font-bold">EMAIL</span>
                 </div>
-                
-                <div class="font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] opacity-40">
-                    Â© 2026 ELEVIX DIGITAL. ALL RIGHTS RESERVED.
+                <p class="font-display text-white text-[16px] leading-relaxed font-medium">
+                    info@elevix.com
+                </p>
+            </div>
+        </div>
+
+        <!-- Services Header -->
+        <div class="px-8 md:px-12 py-6 border-b border-white/10 flex justify-between items-center bg-[#080808]">
+            <span class="font-mono text-[10px] text-white/40 tracking-[0.3em] uppercase font-bold">SERVICES / 6 PILLARS / 36 CAPABILITIES</span>
+            <a href="#" class="font-mono text-[10px] text-white hover:text-kinetic-red transition-colors tracking-[0.2em] uppercase font-bold flex items-center gap-2">VIEW ALL ↗</a>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 border-b border-white/10">
+            <!-- 01 -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 group hover:border-kinetic-red/50 hover:bg-[#080808] hover:shadow-[0_0_40px_rgba(232,40,43,0.15)] transition-all duration-700 relative h-full flex flex-col overflow-hidden hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kinetic-red/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="flex justify-between items-start mb-10 font-mono text-[10px] text-white/30 tracking-[0.2em] font-bold relative z-10">
+                    <span>01 / 06</span>
+                    <span class="group-hover:text-kinetic-red group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300">↗</span>
+                </div>
+                <h3 class="font-display text-[22px] font-bold text-white mb-10 uppercase tracking-wide relative z-10 group-hover:text-kinetic-red transition-colors duration-500 group-hover:drop-shadow-[0_0_10px_rgba(232,40,43,0.8)]">WEB DEVELOPMENT</h3>
+                <ul class="space-y-5 font-mono text-[11px] text-white/50 tracking-[0.1em] uppercase mt-auto relative z-10">
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> NEXT.JS DEVELOPMENT</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> WORDPRESS WEBSITES</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> E-COMMERCE WEBSITES</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> LANDING PAGES</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> MAINTENANCE & SUPPORT</li>
+                </ul>
+            </div>
+            
+            <!-- 02 -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 group hover:border-kinetic-red/50 hover:bg-[#080808] hover:shadow-[0_0_40px_rgba(232,40,43,0.15)] transition-all duration-700 relative h-full flex flex-col overflow-hidden hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kinetic-red/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="flex justify-between items-start mb-10 font-mono text-[10px] text-white/30 tracking-[0.2em] font-bold relative z-10">
+                    <span>02 / 06</span>
+                    <span class="group-hover:text-kinetic-red group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300">↗</span>
+                </div>
+                <h3 class="font-display text-[22px] font-bold text-white mb-10 uppercase tracking-wide relative z-10 group-hover:text-kinetic-red transition-colors duration-500 group-hover:drop-shadow-[0_0_10px_rgba(232,40,43,0.8)]">APP DEVELOPMENT</h3>
+                <ul class="space-y-5 font-mono text-[11px] text-white/50 tracking-[0.1em] uppercase mt-auto relative z-10">
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> NATIVE IOS & ANDROID</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> REACT NATIVE APPS</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> FLUTTER DEVELOPMENT</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> UI/UX APP DESIGN</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> SCALABLE ARCHITECTURE</li>
+                </ul>
+            </div>
+
+            <!-- 03 -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 border-white/10 md:border-transparent group hover:border-kinetic-red/50 hover:bg-[#080808] hover:shadow-[0_0_40px_rgba(232,40,43,0.15)] transition-all duration-700 relative h-full flex flex-col overflow-hidden hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kinetic-red/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="flex justify-between items-start mb-10 font-mono text-[10px] text-white/30 tracking-[0.2em] font-bold relative z-10">
+                    <span>03 / 06</span>
+                    <span class="group-hover:text-kinetic-red group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300">↗</span>
+                </div>
+                <h3 class="font-display text-[22px] font-bold text-white mb-10 uppercase tracking-wide relative z-10 group-hover:text-kinetic-red transition-colors duration-500 group-hover:drop-shadow-[0_0_10px_rgba(232,40,43,0.8)]">AI AUTOMATION</h3>
+                <ul class="space-y-5 font-mono text-[11px] text-white/50 tracking-[0.1em] uppercase mt-auto relative z-10">
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> AI VOICE AGENTS</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> WHATSAPP AUTOMATION</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> AI WEBSITE CHATBOTS</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> CRM & LEAD AUTOMATION</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> CUSTOM N8N WORKFLOWS</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 border-b border-white/10">
+            <!-- 04 -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 group hover:border-kinetic-red/50 hover:bg-[#080808] hover:shadow-[0_0_40px_rgba(232,40,43,0.15)] transition-all duration-700 relative h-full flex flex-col overflow-hidden hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kinetic-red/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="flex justify-between items-start mb-10 font-mono text-[10px] text-white/30 tracking-[0.2em] font-bold relative z-10">
+                    <span>04 / 06</span>
+                    <span class="group-hover:text-kinetic-red group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300">↗</span>
+                </div>
+                <h3 class="font-display text-[22px] font-bold text-white mb-10 uppercase tracking-wide relative z-10 group-hover:text-kinetic-red transition-colors duration-500 group-hover:drop-shadow-[0_0_10px_rgba(232,40,43,0.8)]">DESIGN & CREATIVES</h3>
+                <ul class="space-y-5 font-mono text-[11px] text-white/50 tracking-[0.1em] uppercase mt-auto relative z-10">
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> BRANDING & IDENTITY</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> GRAPHIC DESIGN</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> MOTION GRAPHICS</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> AI VIDEO PRODUCTION</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> PRINT & PACKAGING</li>
+                </ul>
+            </div>
+            
+            <!-- 05 -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 group hover:border-kinetic-red/50 hover:bg-[#080808] hover:shadow-[0_0_40px_rgba(232,40,43,0.15)] transition-all duration-700 relative h-full flex flex-col overflow-hidden hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kinetic-red/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="flex justify-between items-start mb-10 font-mono text-[10px] text-white/30 tracking-[0.2em] font-bold relative z-10">
+                    <span>05 / 06</span>
+                    <span class="group-hover:text-kinetic-red group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300">↗</span>
+                </div>
+                <h3 class="font-display text-[22px] font-bold text-white mb-10 uppercase tracking-wide relative z-10 group-hover:text-kinetic-red transition-colors duration-500 group-hover:drop-shadow-[0_0_10px_rgba(232,40,43,0.8)]">SEO SERVICES</h3>
+                <ul class="space-y-5 font-mono text-[11px] text-white/50 tracking-[0.1em] uppercase mt-auto relative z-10">
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> SEO STRATEGY & ROADMAP</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> SEO AUDIT & GROWTH PLAN</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> LOCAL SEO</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> TECHNICAL SEO</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> AI SEARCH OPTIMIZATION</li>
+                </ul>
+            </div>
+
+            <!-- 06 -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 border-white/10 md:border-transparent group hover:border-kinetic-red/50 hover:bg-[#080808] hover:shadow-[0_0_40px_rgba(232,40,43,0.15)] transition-all duration-700 relative h-full flex flex-col overflow-hidden hover:-translate-y-2">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kinetic-red/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="flex justify-between items-start mb-10 font-mono text-[10px] text-white/30 tracking-[0.2em] font-bold relative z-10">
+                    <span>06 / 06</span>
+                    <span class="group-hover:text-kinetic-red group-hover:translate-x-1 group-hover:-translate-y-1 transform transition-all duration-300">↗</span>
+                </div>
+                <h3 class="font-display text-[22px] font-bold text-white mb-10 uppercase tracking-wide relative z-10 group-hover:text-kinetic-red transition-colors duration-500 group-hover:drop-shadow-[0_0_10px_rgba(232,40,43,0.8)]">DIGITAL MARKETING</h3>
+                <ul class="space-y-5 font-mono text-[11px] text-white/50 tracking-[0.1em] uppercase mt-auto relative z-10">
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> PERFORMANCE MARKETING</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> SOCIAL MEDIA MANAGEMENT</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> EMAIL MARKETING</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> CONVERSION RATE OPTIMIZATION</li>
+                    <li class="flex items-center gap-4 hover:text-white transition-colors cursor-pointer"><span class="w-4 h-[1px] bg-white/20 group-hover:bg-kinetic-red/50 transition-colors"></span> MARKETING FUNNELS</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Links -->
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <!-- COMPANY -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 flex flex-col">
+                <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] font-bold uppercase mb-10 block">COMPANY</span>
+                <div class="grid grid-cols-2 gap-y-8 mt-auto">
+                    <a href="#" class="font-display text-[14px] font-bold text-white hover:text-kinetic-red transition-colors uppercase">OUR STORY</a>
+                    <a href="#" class="font-display text-[14px] font-bold text-white hover:text-kinetic-red transition-colors uppercase">CASE STUDIES</a>
+                    <a href="#" class="font-display text-[14px] font-bold text-white hover:text-kinetic-red transition-colors uppercase">CAREERS</a>
+                    <a href="#" class="font-display text-[14px] font-bold text-white hover:text-kinetic-red transition-colors uppercase">CONTACT</a>
+                    <a href="#" class="font-display text-[14px] font-bold text-white hover:text-kinetic-red transition-colors uppercase">BLOGS</a>
+                </div>
+            </div>
+
+            <!-- LEGAL -->
+            <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10 flex flex-col">
+                <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] font-bold uppercase mb-10 block">LEGAL</span>
+                <div class="flex flex-col gap-y-8 mt-auto">
+                    <a href="#" class="font-display text-[14px] font-bold text-white hover:text-kinetic-red transition-colors uppercase">PRIVACY POLICY</a>
+                    <a href="#" class="font-display text-[14px] font-bold text-white hover:text-kinetic-red transition-colors uppercase">TERMS OF SERVICE</a>
+                </div>
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="p-8 md:p-12 flex flex-col">
+                <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] font-bold uppercase mb-10 block">SOCIAL</span>
+                <div class="flex flex-wrap gap-4 mt-auto">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center border border-white/10 rounded hover:border-kinetic-red hover:bg-kinetic-red hover:text-white transition-all text-white/60 font-bold uppercase text-[12px]">f</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center border border-white/10 rounded hover:border-kinetic-red hover:bg-kinetic-red hover:text-white transition-all text-white/60 font-bold uppercase text-[12px]">in</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center border border-white/10 rounded hover:border-kinetic-red hover:bg-kinetic-red hover:text-white transition-all text-white/60 font-bold uppercase text-[12px]">yt</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center border border-white/10 rounded hover:border-kinetic-red hover:bg-kinetic-red hover:text-white transition-all text-white/60 font-bold uppercase text-[12px]">x</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center border border-white/10 rounded hover:border-kinetic-red hover:bg-kinetic-red hover:text-white transition-all text-white/60 font-bold uppercase text-[12px]">be</a>
                 </div>
             </div>
         </div>
@@ -858,361 +999,7 @@
         </div>
     </footer>
 
-    <script>
-        gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
-        // =============================================
-        // 1. GSAP SCROLL REVEAL â€” ALL SECTIONS
-        // =============================================
-        // Animate section headings on scroll
-        gsap.utils.toArray('section').forEach((section) => {
-            const heading = section.querySelector('h2');
-            if (heading) {
-                gsap.from(heading, {
-                    scrollTrigger: { trigger: heading, start: 'top 88%', once: true },
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.9,
-                    ease: 'power3.out'
-                });
-            }
-            const paras = section.querySelectorAll('p');
-            if (paras.length) {
-                gsap.from(paras, {
-                    scrollTrigger: { trigger: section, start: 'top 85%', once: true },
-                    opacity: 0,
-                    y: 30,
-                    duration: 0.7,
-                    stagger: 0.08,
-                    ease: 'power2.out'
-                });
-            }
-        });
-
-        // Hero H1 â€” simple elegant fade-in, NO SplitType (avoids flash)
-        window.addEventListener('load', () => {
-            // Intense Hero Reveal
-            gsap.from('.hero-content-left > *', {
-                y: 60,
-                opacity: 0,
-                duration: 1.2,
-                stagger: 0.15,
-                ease: 'expo.out',
-                delay: 0.2
-            });
-
-            gsap.from('.hero-content-right', {
-                x: 60,
-                opacity: 0,
-                duration: 1.4,
-                ease: 'expo.out',
-                delay: 0.6
-            });
-
-            // 3D Tilt for the At A Glance Box
-            const box = document.querySelector('.hero-content-right');
-            if (box) {
-                box.addEventListener('mousemove', e => {
-                    const rect = box.getBoundingClientRect();
-                    const x = (e.clientX - rect.left) / rect.width - 0.5;
-                    const y = (e.clientY - rect.top) / rect.height - 0.5;
-                    gsap.to(box, { 
-                        rotateY: x * 15, 
-                        rotateX: -y * 15, 
-                        duration: 0.5, 
-                        transformPerspective: 1000,
-                        ease: 'power2.out'
-                    });
-                });
-                box.addEventListener('mouseleave', () => {
-                    gsap.to(box, { 
-                        rotateY: 0, 
-                        rotateX: 0, 
-                        duration: 0.8, 
-                        ease: 'elastic.out(1, 0.5)' 
-                    });
-                });
-            }
-
-            // Magnetic Button Effect in Hero
-            const heroBtn = document.querySelector('.hero-content-left button');
-            if (heroBtn) {
-                heroBtn.addEventListener('mousemove', e => {
-                    const rect = heroBtn.getBoundingClientRect();
-                    const x = (e.clientX - rect.left - rect.width / 2) * 0.3;
-                    const y = (e.clientY - rect.top - rect.height / 2) * 0.3;
-                    gsap.to(heroBtn, { x, y, duration: 0.3, ease: 'power2.out' });
-                });
-                heroBtn.addEventListener('mouseleave', () => {
-                    gsap.to(heroBtn, { x: 0, y: 0, duration: 0.7, ease: 'elastic.out(1, 0.5)' });
-                });
-            }
-        });
-
-        // Section line enter observer (for red lines)
-        const lineObs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { 
-                if (e.isIntersecting) { 
-                    if (e.target.id === 'process-line-label') {
-                        e.target.style.transform = 'scaleX(1)';
-                    } else {
-                        e.target.style.width = '100%'; 
-                    }
-                    lineObs.unobserve(e.target); 
-                } 
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.section-line-enter').forEach(el => {
-            if (el.id !== 'process-line-label') {
-                el.style.transition = 'width 1.2s cubic-bezier(0.16,1,0.3,1)';
-            }
-            lineObs.observe(el);
-        });
-
-        // =============================================
-        // 3. COUNTER ANIMATION (41x, 180, 5.0, 7)
-        // =============================================
-        function animateCounter(el, target, suffix, duration = 2) {
-            let start = 0;
-            const step = target / (duration * 60);
-            const timer = setInterval(() => {
-                start = Math.min(start + step, target);
-                el.textContent = (Number.isInteger(target) ? Math.floor(start) : start.toFixed(1)) + suffix;
-                if (start >= target) clearInterval(timer);
-            }, 1000 / 60);
-        }
-
-        // Trigger counters on scroll into view
-        const counterTargets = [
-            { selector: 'h3.font-display', pattern: /41/, target: 41, suffix: 'Ã—', extra: ' peak roas.' },
-            { selector: '.font-display.text-\\[80px\\]', pattern: /5\.0/, target: 5.0, suffix: '' }
-        ];
-
-        ScrollTrigger.create({
-            trigger: '#results',
-            start: 'top 70%',
-            once: true,
-            onEnter: () => {
-                document.querySelectorAll('#results h3').forEach(el => {
-                    if (el.textContent.includes('41')) {
-                        el.innerHTML = '<span class="counter" data-target="41" data-suffix="Ã—">0Ã—</span> <span class="text-kinetic-red">peak roas.</span>';
-                        animateCounter(el.querySelector('.counter'), 41, 'Ã—');
-                    }
-                    if (el.textContent.includes('180')) {
-                        el.innerHTML = '<span class="counter" data-target="180" data-suffix="">0</span> appointments';
-                        animateCounter(el.querySelector('.counter'), 180, '');
-                    }
-                });
-            }
-        });
-
-        // 5.0 review counter
-        ScrollTrigger.create({
-            trigger: '.gs-reviews-container',
-            start: 'top 70%',
-            once: true,
-            onEnter: () => {
-                const scoreEl = document.querySelector('.font-display.text-\\[80px\\]');
-                if (scoreEl && scoreEl.textContent.trim() === '5.0') {
-                    animateCounter(scoreEl, 5.0, '', 1.5);
-                }
-            }
-        });
-
-        // =============================================
-        // 4. SERVICE CARDS â€” MOUSE SPOTLIGHT + MAGNETIC
-        // =============================================
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-            });
-
-            // Magnetic tilt
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                gsap.to(card, {
-                    rotateY: x * 6,
-                    rotateX: -y * 6,
-                    transformPerspective: 800,
-                    duration: 0.4,
-                    ease: 'power2.out'
-                });
-            });
-            card.addEventListener('mouseleave', () => {
-                gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power2.out' });
-            });
-        });
-
-        // =============================================
-        // 5. HOW WE WORK â€” SVG LINE DRAW + STEP REVEAL
-        // =============================================
-        const progressLine = document.getElementById('process-progress-line');
-        const processSection = document.getElementById('process');
-
-        if (progressLine && processSection) {
-            const totalHeight = 700;
-            ScrollTrigger.create({
-                trigger: processSection,
-                start: 'top 80%',
-                end: 'bottom 20%',
-                scrub: 1,
-                onUpdate: (self) => {
-                    const progress = self.progress;
-                    const newY2 = Math.round(progress * totalHeight);
-                    progressLine.setAttribute('y2', newY2);
-                }
-            });
-        }
-
-        // Step-by-step card animation + light up on scroll
-        const steps = gsap.utils.toArray('.gsap-step');
-        steps.forEach((step, i) => {
-            // Slide in from right
-            gsap.from(step, {
-                scrollTrigger: {
-                    trigger: step,
-                    start: 'top 85%',
-                    once: true
-                },
-                opacity: 0,
-                x: 60,
-                duration: 0.9,
-                delay: i * 0.1,
-                ease: 'power3.out'
-            });
-
-            // Activate step on scroll
-            ScrollTrigger.create({
-                trigger: step,
-                start: 'top 55%',
-                onEnter: () => {
-                    step.classList.add('active-step');
-                    const circle = step.querySelector('.step-circle');
-                    const num = step.querySelector('.step-num');
-                    const label = step.querySelector('.step-label');
-                    if (circle) {
-                        circle.style.borderColor = '#E8282B';
-                        circle.style.boxShadow = '0 0 25px rgba(232,40,43,0.5)';
-                    }
-                    if (num) { num.style.color = '#E8282B'; }
-                    if (label) { label.style.color = '#E8282B'; }
-                    // Activate pill tags
-                    step.querySelectorAll('span[class*="border-white/10"]').forEach(pill => {
-                        pill.style.borderColor = 'rgba(232,40,43,0.4)';
-                        pill.style.color = 'rgba(253,253,253,0.8)';
-                    });
-                }
-            });
-        });
-
-        // =============================================
-        // 6. SECTION HEADINGS â€” RED UNDERLINE REVEAL
-        // =============================================
-        document.querySelectorAll('h2').forEach(h2 => {
-            ScrollTrigger.create({
-                trigger: h2,
-                start: 'top 80%',
-                once: true,
-                onEnter: () => h2.classList.add('active')
-            });
-        });
-
-        // =============================================
-        // 7. CASE STUDY CARDS â€” 3D TILT
-        // =============================================
-        document.querySelectorAll('#results .rounded-\\[2rem\\]').forEach(card => {
-            card.style.transformStyle = 'preserve-3d';
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width - 0.5;
-                const y = (e.clientY - rect.top) / rect.height - 0.5;
-                gsap.to(card, {
-                    rotateY: x * 8,
-                    rotateX: -y * 8,
-                    transformPerspective: 1000,
-                    duration: 0.4,
-                    ease: 'power2.out'
-                });
-            });
-            card.addEventListener('mouseleave', () => {
-                gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.7, ease: 'elastic.out(1, 0.6)' });
-            });
-        });
-
-        // =============================================
-        // 8. REVIEW CARDS â€” STAGGERED FADE (safe version)
-        // =============================================
-        // Set all cards visible immediately (no blank state)
-        document.querySelectorAll('.gs-review-card').forEach(el => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        });
-        // Then animate those not yet in view
-        gsap.utils.toArray('.gs-review-card').forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: { trigger: card, start: 'top 90%', once: true },
-                y: 40,
-                opacity: 0,
-                duration: 0.7,
-                delay: i * 0.08,
-                ease: 'power3.out'
-            });
-        });
-
-        // =============================================
-        // 9. PRE-FOOTER BANNER & CTA REVEAL
-        // =============================================
-        const bannerEl = document.getElementById('banner-glitch');
-        if (bannerEl) {
-            bannerEl.style.opacity = '1';
-            ScrollTrigger.create({
-                trigger: bannerEl,
-                start: 'top 85%',
-                once: true,
-                onEnter: () => {
-                    bannerEl.classList.add('glitching');
-                    setTimeout(() => bannerEl.classList.remove('glitching'), 1200);
-                }
-            });
-        }
-
-        // =============================================
-        // 10. PROCESS HEADING â€” REMOVED GSAP OPACITY
-        // =============================================
-        // Fix: completely removed GSAP opacity fade to guarantee text is bright and never gets stuck at 0 opacity.
-
-        // =============================================
-        // 11. MAGNETIC BUTTONS
-        // =============================================
-        document.querySelectorAll('button, a[class*="rounded-full"]').forEach(btn => {
-            btn.addEventListener('mousemove', e => {
-                const rect = btn.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                gsap.to(btn, { x: x * 0.25, y: y * 0.25, duration: 0.3, ease: 'power2.out' });
-            });
-            btn.addEventListener('mouseleave', () => {
-                gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.5)' });
-            });
-        });
-
-        // =============================================
-        // 12. NAV SCROLL BEHAVIOR
-        // =============================================
-        ScrollTrigger.create({
-            start: 'top -80',
-            end: 99999,
-            toggleClass: { className: 'scrolled', targets: 'nav' }
-        });
-
-        // =============================================
-        // 13. MARQUEE (PURE CSS, SMOOTH)
-        // =============================================
-        // GSAP scroll-velocity logic removed to guarantee perfect smoothness
-    </script>
+    <!-- Custom Scripts -->
+    <script src="services.js"></script>
 </body>
 </html>
