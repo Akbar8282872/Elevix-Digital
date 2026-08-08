@@ -71,29 +71,37 @@
 <body class="font-display bg-deep-obsidian">
 
     <!-- TopNavBar (Elite Neogen Style) -->
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/5 transition-all">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 glass-nav border border-white/10 rounded-[20px] transition-all overflow-hidden shadow-[0_10_30px_rgba(0,0,0,0.5)]">
+        <div class="px-8 h-20 flex justify-between items-center w-full">
             
-            <!-- Premium 3D Shiny Logo -->
-            <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
-                <div class="relative w-12 h-12 flex items-center justify-center transform transition-transform duration-500 group-hover:rotate-12">
-                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red to-[#500000] rounded-xl shadow-[0_0_20px_rgba(232,40,43,0.4)] transform rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
-                    <div class="absolute inset-[2px] bg-gradient-to-tl from-[#111] to-[#333] rounded-xl transform rotate-45 z-10 overflow-hidden">
-                        <div class="absolute top-0 left-[-100%] w-[50%] h-[200%] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -rotate-45 translate-y-[-20%] animate-[shine_3s_infinite]"></div>
+            <!-- Premium 8D Hyper-Cube Logo -->
+            <a href="index.html" class="flex items-center gap-4 group cursor-pointer">
+                <div class="relative w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-700" style="perspective: 800px;">
+                    <!-- Outer Infinity Rings -->
+                    <div class="absolute inset-0 rounded-full border border-kinetic-red/30 border-t-kinetic-red animate-[spin_4s_linear_infinite] group-hover:shadow-[0_0_20px_rgba(232,40,43,0.5)] transition-all"></div>
+                    <div class="absolute inset-[3px] rounded-full border border-white/10 border-b-white animate-[spin_3s_linear_infinite_reverse]"></div>
+                    <div class="absolute inset-[6px] rounded-full border border-kinetic-red/10 border-l-kinetic-red animate-[spin_5s_linear_infinite]"></div>
+                    
+                    <!-- Inner 3D Diamond Core -->
+                    <div class="relative w-6 h-6 animate-[spin_8s_linear_infinite]" style="transform-style: preserve-3d;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red to-[#500000] opacity-80 rounded shadow-[0_0_20px_rgba(232,40,43,0.8)]" style="transform: rotate(45deg) translateZ(-5px);"></div>
+                        <div class="absolute inset-[1px] bg-[#0A0A0A] rounded border border-kinetic-red/50" style="transform: rotate(45deg) translateZ(5px);"></div>
                     </div>
-                    <span class="relative z-20 font-display font-black text-white text-2xl tracking-tighter" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(232,40,43,0.8);">E</span>
+                    
+                    <!-- Floating 'E' -->
+                    <span class="absolute z-20 font-display font-black text-white text-[22px] tracking-tighter" style="text-shadow: 0 0 15px rgba(232,40,43,1), 0 0 30px rgba(255,255,255,0.5);">E</span>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-display font-black text-[20px] leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-md">Elevix</span>
-                    <span class="font-mono text-[9px] text-kinetic-red tracking-[0.3em] uppercase font-bold mt-0.5" style="text-shadow: 0 0 8px rgba(232,40,43,0.5);">Digital</span>
+                    <span class="font-display font-black text-[20px] leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">Elevix</span>
+                    <span class="font-mono text-[8px] text-kinetic-red tracking-[0.4em] uppercase font-bold mt-0.5" style="text-shadow: 0 0 8px rgba(232,40,43,0.8);">Digital</span>
                 </div>
             </a>
 
             <!-- Links -->
-            <div class="hidden md:flex items-center gap-10">
+            <div class="hidden lg:flex items-center gap-10">
                 <a href="our-story.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Our Story</a>
-                <a href="services.html" class="text-[14px] font-medium text-white transition-colors flex items-center gap-1">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-                <a href="case-studies.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
+                <a href="services.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors flex items-center gap-1">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                <a href="#results" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
                 <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Blogs</a>
                 <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Careers</a>
                 <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Contact Us</a>
