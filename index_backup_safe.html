@@ -216,30 +216,12 @@
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-20px) scale(1.1); }
         }
-        /* ===== SERVICES MEGA MENU ===== */
-        @keyframes megaFadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        #services-trigger-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0; }
-        #services-trigger-btn:hover, #services-trigger-btn.active { color: #FDFDFD; }
-        .mega-chevron-icon { display: inline-block; transition: transform 0.3s ease; }
-        #services-trigger-btn.active .mega-chevron-icon { transform: rotate(180deg); }
-        .mega-col { padding: 28px 24px 32px; border-right: 1px solid rgba(255,255,255,0.06); transition: all 0.4s ease; position: relative; overflow: hidden; }
-        .mega-col:nth-child(3n) { border-right: none; }
-        .mega-col:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,0.07); }
-        .mega-col:hover { background: rgba(6,6,6,0.95); transform: translateY(-4px); box-shadow: 0 0 40px rgba(232,40,43,0.15); }
-        .mega-col-num { font-family: 'Space Mono', monospace; font-size: 9px; color: rgba(232,40,43,0.65); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 12px; }
-        .mega-col-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 800; color: #FDFDFD; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 16px 0; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.25s; }
-        .mega-col:hover .mega-col-title { color: #E8282B; }
-        .mega-col-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-        .mega-col-item { display: flex; align-items: center; gap: 12px; font-family: 'Space Mono', monospace; font-size: 9.5px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: color 0.2s; line-height: 1.4; }
-        .mega-col-item:hover { color: rgba(255,255,255,0.9); }
-        .mega-col-item:hover .mega-dash { background: #E8282B; }
-        .mega-dash { width: 16px; height: 1px; background: rgba(255,255,255,0.2); flex-shrink: 0; display: inline-block; transition: background 0.2s; }
     </style>
 </head>
 <body class="font-display bg-deep-obsidian">
 
     <!-- TopNavBar (Elite Neogen Style) -->
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 glass-nav border border-white/10 rounded-[20px] transition-all shadow-[0_10_30px_rgba(0,0,0,0.5)]">
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 glass-nav border border-white/10 rounded-[20px] transition-all overflow-hidden shadow-[0_10_30px_rgba(0,0,0,0.5)]">
         <div class="px-8 h-20 flex justify-between items-center w-full">
             
             <!-- Premium 8D Hyper-Cube Logo -->
@@ -268,9 +250,9 @@
             <!-- Links -->
             <div class="hidden lg:flex items-center gap-10">
                 <a href="our-story.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Our Story</a>
-                <button id="services-trigger-btn">Services <svg class="mega-chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-                <a href="case-studies.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
-                <a href="blog.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Blogs</a>
+                <a href="services.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors flex items-center gap-1">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                <a href="#results" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
+                <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Blogs</a>
                 <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Careers</a>
                 <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Contact Us</a>
             </div>
@@ -280,27 +262,6 @@
                 Let's Talk
             </button>
         </div>
-
-    <!-- SERVICES MEGA MENU — FULL WIDTH -->
-    <div id="services-mega-panel" style="display:none; position:fixed; top:104px; left:0; right:0; z-index:9999;">
-        <div style="background:rgba(8,8,8,0.98); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-top:2px solid #E8282B; border-bottom:1px solid rgba(255,255,255,0.07); box-shadow:0 20px 60px rgba(0,0,0,0.85);">
-            <div style="padding:12px 48px; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; gap:12px;">
-                <span style="width:6px;height:6px;border-radius:50%;background:#E8282B;display:inline-block;box-shadow:0 0 8px rgba(232,40,43,0.7);"></span>
-                <span style="font-family:'Space Mono',monospace;font-size:9px;color:#E8282B;text-transform:uppercase;letter-spacing:0.28em;font-weight:700;">SERVICES / 6 PILLARS / 36 CAPABILITIES</span>
-                <a href="services.html" style="margin-left:auto;font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.15em;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#E8282B'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">VIEW ALL &#8599;</a>
-            </div>
-            <div style="display:grid; grid-template-columns:repeat(3,1fr);">
-                <div class="mega-col"><div class="mega-col-num">01 / 06</div><h3 class="mega-col-title">WEB DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NEXT.JS DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> WORDPRESS WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> E-COMMERCE WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> LANDING PAGES</li><li class="mega-col-item"><span class="mega-dash"></span> MAINTENANCE &amp; SUPPORT</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">02 / 06</div><h3 class="mega-col-title">APP DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NATIVE IOS &amp; ANDROID</li><li class="mega-col-item"><span class="mega-dash"></span> REACT NATIVE APPS</li><li class="mega-col-item"><span class="mega-dash"></span> FLUTTER DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> UI/UX APP DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> SCALABLE ARCHITECTURE</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">03 / 06</div><h3 class="mega-col-title">AI AUTOMATION</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> AI VOICE AGENTS</li><li class="mega-col-item"><span class="mega-dash"></span> WHATSAPP AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> AI WEBSITE CHATBOTS</li><li class="mega-col-item"><span class="mega-dash"></span> CRM &amp; LEAD AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> CUSTOM N8N WORKFLOWS</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">04 / 06</div><h3 class="mega-col-title">DESIGN &amp; CREATIVES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> BRANDING &amp; IDENTITY</li><li class="mega-col-item"><span class="mega-dash"></span> GRAPHIC DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> MOTION GRAPHICS</li><li class="mega-col-item"><span class="mega-dash"></span> AI VIDEO PRODUCTION</li><li class="mega-col-item"><span class="mega-dash"></span> PRINT &amp; PACKAGING</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">05 / 06</div><h3 class="mega-col-title">SEO SERVICES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> SEO STRATEGY &amp; ROADMAP</li><li class="mega-col-item"><span class="mega-dash"></span> SEO AUDIT &amp; GROWTH PLAN</li><li class="mega-col-item"><span class="mega-dash"></span> LOCAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> TECHNICAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> AI SEARCH OPTIMIZATION</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">06 / 06</div><h3 class="mega-col-title">DIGITAL MARKETING</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> PERFORMANCE MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> SOCIAL MEDIA MANAGEMENT</li><li class="mega-col-item"><span class="mega-dash"></span> EMAIL MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> CONVERSION RATE OPTIMIZATION</li><li class="mega-col-item"><span class="mega-dash"></span> MARKETING FUNNELS</li></ul></div>
-            </div>
-        </div>
-    </div>
-    <script>(function(){var t=document.getElementById('services-trigger-btn'),p=document.getElementById('services-mega-panel');if(!t||!p)return;var h;function s(){clearTimeout(h);p.style.display='block';p.style.animation='none';p.offsetHeight;p.style.animation='megaFadeIn 0.2s ease forwards';t.classList.add('active');}function d(){h=setTimeout(function(){p.style.display='none';t.classList.remove('active');},180);}t.addEventListener('mouseenter',s);t.addEventListener('mouseleave',d);p.addEventListener('mouseenter',s);p.addEventListener('mouseleave',d);})();</script>
-
     </nav>
 
     <!-- Hero Section -->

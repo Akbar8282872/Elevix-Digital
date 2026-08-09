@@ -216,11 +216,29 @@
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-20px) scale(1.1); }
         }
+        /* ===== SERVICES MEGA MENU ===== */
+        @keyframes megaFadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        #services-trigger-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0; }
+        #services-trigger-btn:hover, #services-trigger-btn.active { color: #FDFDFD; }
+        .mega-chevron-icon { display: inline-block; transition: transform 0.3s ease; }
+        #services-trigger-btn.active .mega-chevron-icon { transform: rotate(180deg); }
+        .mega-col { padding: 28px 24px 32px; border-right: 1px solid rgba(255,255,255,0.06); transition: all 0.4s ease; position: relative; overflow: hidden; }
+        .mega-col:nth-child(3n) { border-right: none; }
+        .mega-col:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .mega-col:hover { background: rgba(6,6,6,0.95); transform: translateY(-4px); box-shadow: 0 0 40px rgba(232,40,43,0.15); }
+        .mega-col-num { font-family: 'Space Mono', monospace; font-size: 9px; color: rgba(232,40,43,0.65); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 12px; }
+        .mega-col-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 800; color: #FDFDFD; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 16px 0; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.25s; }
+        .mega-col:hover .mega-col-title { color: #E8282B; }
+        .mega-col-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+        .mega-col-item { display: flex; align-items: center; gap: 12px; font-family: 'Space Mono', monospace; font-size: 9.5px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: color 0.2s; line-height: 1.4; }
+        .mega-col-item:hover { color: rgba(255,255,255,0.9); }
+        .mega-col-item:hover .mega-dash { background: #E8282B; }
+        .mega-dash { width: 16px; height: 1px; background: rgba(255,255,255,0.2); flex-shrink: 0; display: inline-block; transition: background 0.2s; }
     </style>
 </head>
 <body class="font-display bg-deep-obsidian">
 
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 glass-nav border border-white/10 rounded-[20px] transition-all overflow-hidden shadow-[0_10_30px_rgba(0,0,0,0.5)]">
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 glass-nav border border-white/10 rounded-[20px] transition-all shadow-[0_10_30px_rgba(0,0,0,0.5)]">
         <div class="px-8 h-20 flex justify-between items-center w-full">
             
             <!-- Premium 8D Hyper-Cube Logo -->
@@ -249,7 +267,7 @@
             <!-- Links -->
             <div class="hidden lg:flex items-center gap-10">
                 <a href="our-story.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Our Story</a>
-                <a href="services.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors flex items-center gap-1">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                <button id="services-trigger-btn">Services <svg class="mega-chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
                 <a href="case-studies.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
                 <a href="blog.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Blogs</a>
                 <a href="#" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Careers</a>
@@ -261,6 +279,27 @@
                 Let's Talk
             </button>
         </div>
+
+    <!-- SERVICES MEGA MENU — FULL WIDTH -->
+    <div id="services-mega-panel" style="display:none; position:fixed; top:104px; left:0; right:0; z-index:9999;">
+        <div style="background:rgba(8,8,8,0.98); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-top:2px solid #E8282B; border-bottom:1px solid rgba(255,255,255,0.07); box-shadow:0 20px 60px rgba(0,0,0,0.85);">
+            <div style="padding:12px 48px; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; gap:12px;">
+                <span style="width:6px;height:6px;border-radius:50%;background:#E8282B;display:inline-block;box-shadow:0 0 8px rgba(232,40,43,0.7);"></span>
+                <span style="font-family:'Space Mono',monospace;font-size:9px;color:#E8282B;text-transform:uppercase;letter-spacing:0.28em;font-weight:700;">SERVICES / 6 PILLARS / 36 CAPABILITIES</span>
+                <a href="services.html" style="margin-left:auto;font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.15em;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#E8282B'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">VIEW ALL &#8599;</a>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(3,1fr);">
+                <div class="mega-col"><div class="mega-col-num">01 / 06</div><h3 class="mega-col-title">WEB DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NEXT.JS DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> WORDPRESS WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> E-COMMERCE WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> LANDING PAGES</li><li class="mega-col-item"><span class="mega-dash"></span> MAINTENANCE &amp; SUPPORT</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">02 / 06</div><h3 class="mega-col-title">APP DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NATIVE IOS &amp; ANDROID</li><li class="mega-col-item"><span class="mega-dash"></span> REACT NATIVE APPS</li><li class="mega-col-item"><span class="mega-dash"></span> FLUTTER DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> UI/UX APP DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> SCALABLE ARCHITECTURE</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">03 / 06</div><h3 class="mega-col-title">AI AUTOMATION</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> AI VOICE AGENTS</li><li class="mega-col-item"><span class="mega-dash"></span> WHATSAPP AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> AI WEBSITE CHATBOTS</li><li class="mega-col-item"><span class="mega-dash"></span> CRM &amp; LEAD AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> CUSTOM N8N WORKFLOWS</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">04 / 06</div><h3 class="mega-col-title">DESIGN &amp; CREATIVES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> BRANDING &amp; IDENTITY</li><li class="mega-col-item"><span class="mega-dash"></span> GRAPHIC DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> MOTION GRAPHICS</li><li class="mega-col-item"><span class="mega-dash"></span> AI VIDEO PRODUCTION</li><li class="mega-col-item"><span class="mega-dash"></span> PRINT &amp; PACKAGING</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">05 / 06</div><h3 class="mega-col-title">SEO SERVICES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> SEO STRATEGY &amp; ROADMAP</li><li class="mega-col-item"><span class="mega-dash"></span> SEO AUDIT &amp; GROWTH PLAN</li><li class="mega-col-item"><span class="mega-dash"></span> LOCAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> TECHNICAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> AI SEARCH OPTIMIZATION</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">06 / 06</div><h3 class="mega-col-title">DIGITAL MARKETING</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> PERFORMANCE MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> SOCIAL MEDIA MANAGEMENT</li><li class="mega-col-item"><span class="mega-dash"></span> EMAIL MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> CONVERSION RATE OPTIMIZATION</li><li class="mega-col-item"><span class="mega-dash"></span> MARKETING FUNNELS</li></ul></div>
+            </div>
+        </div>
+    </div>
+    <script>(function(){var t=document.getElementById('services-trigger-btn'),p=document.getElementById('services-mega-panel');if(!t||!p)return;var h;function s(){clearTimeout(h);p.style.display='block';p.style.animation='none';p.offsetHeight;p.style.animation='megaFadeIn 0.2s ease forwards';t.classList.add('active');}function d(){h=setTimeout(function(){p.style.display='none';t.classList.remove('active');},180);}t.addEventListener('mouseenter',s);t.addEventListener('mouseleave',d);p.addEventListener('mouseenter',s);p.addEventListener('mouseleave',d);})();</script>
+
     </nav>
 
     <!-- Hero Section -->
@@ -360,5 +399,827 @@
 
         </div>
     </section>
+    
+    
+    <!-- LATEST DROPS SECTION -->
+    <section class="relative bg-[#080808] py-24 px-6 z-10 border-t border-white/5 overflow-hidden">
+        
+        <!-- Background Accents -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-kinetic-red/5 rounded-full mix-blend-screen filter blur-[150px] opacity-30"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-kinetic-red/5 rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto relative z-10">
+            <!-- Header -->
+            <div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-[1px] bg-kinetic-red"></div>
+                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.3em]">// 01. LATEST</span>
+                    </div>
+                    <h2 class="font-display font-black text-4xl md:text-5xl lg:text-[64px] leading-[1.05] tracking-tighter text-white">
+                        The Elevix Digital Brief —<br/><span class="text-neutral-500">latest drops.</span>
+                    </h2>
+                </div>
+            </div>
+            
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 md:gap-10">
+
+                <!-- Card 1 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="blog_wordpress_1785439028977.png" alt="Why Custom WordPress Still Rules the Enterprise Web" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">WORDPRESS DEV</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">7 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Why Custom WordPress Still Rules the Enterprise Web
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            A no-BS breakdown of why heavily customized WordPress beats modern JS frameworks for high-velocity marketing teams.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">10 JUL 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="blog_ecommerce_1785439047944.png" alt="E-commerce Website Development: Shopify vs WooCommerce" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">E-COMMERCE WEBSITES</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">8 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            E-commerce Website Development: Shopify vs WooCommerce
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Shopify has won the platform war, but WooCommerce is still the choice for complex integrations. Here is the exact matrix we use.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">04 JUL 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="blog_seo_1785439037774.png" alt="The 90-Day SEO Growth Plan: What Moves in Month 1" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">SEO STRATEGY</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">7 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            The 90-Day SEO Growth Plan: What Moves in Month 1
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            What a 90-day SEO growth plan really delivers: crawling, canonicals, schema markup, and foundational elements that move the needle.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">29 JUN 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="blog_dev_1785439070169.png" alt="Next.js Architecture: Building Scalable Frontend Systems" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">NEXT.JS DEVELOPMENT</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">6 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Next.js Architecture: Building Scalable Frontend Systems
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            How migrating to Next.js and Vercel transforms site speed and developer velocity. A technical teardown of App Router.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">22 JUN 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="blog_branding_1785439080670.png" alt="Visual Systems That Actually Convert: Beyond the Logo" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">BRANDING & IDENTITY</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">5 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Visual Systems That Actually Convert: Beyond the Logo
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            A logo is not a brand. How we build comprehensive design systems that dictate UI/UX, motion graphics, and consistency.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">15 JUN 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="blog_automation_1785439095302.png" alt="Saving 40 Hours a Week: The Anatomy of n8n Workflows" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">CUSTOM N8N WORKFLOWS</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">9 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Saving 40 Hours a Week: The Anatomy of n8n Workflows
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Connecting CRMs, billing systems, and Slack without Zapier taxes. The blueprint for self-hosted automation infrastructure.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">08 JUN 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="ai_automation_1_1785438881826.png" alt="Never Lose a Qualified Lead Again: AI Routing Protocols" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">CRM AUTOMATION</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">7 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Never Lose a Qualified Lead Again: AI Routing Protocols
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            How integrating AI voice agents and WhatsApp bots directly into your CRM guarantees a sub-5-minute response time.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">01 JUN 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="ai_dashboard_2_1785438891161.png" alt="Dashboards That Tell the Truth: Tracking What Matters" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">PERFORMANCE MARKETING</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">8 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Dashboards That Tell the Truth: Tracking What Matters
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Vanity metrics kill ad spend. How to set up server-side tracking, custom GA4 events, and Looker Studio dashboards.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">25 MAY 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="ai_growth_3_1785438901613.png" alt="Scaling Systems from $10k to $100k MRR: Engineering Growth" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">GROWTH STRATEGY</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">12 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Scaling Systems from $10k to $100k MRR: Engineering Growth
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Growth isn't hacking, it's engineering. The sequential systems of CRO, technical SEO, and automated marketing funnels.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">18 MAY 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="ai_gears_5_1785438912644.png" alt="Deep Dive into Schema & Canonical Fixes That Saved Traffic" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">TECHNICAL AUDITS</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">10 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Deep Dive into Schema & Canonical Fixes That Saved Traffic
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            A technical post-mortem on fixing catastrophic JavaScript rendering errors, duplicate content loops, and broken data.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">11 MAY 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="ai_brain_7_1785438937276.png" alt="Preparing Your Brand for the SGE Era: AI Overviews" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">AI SEARCH</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">7 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Preparing Your Brand for the SGE Era: AI Overviews
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Google is fundamentally changing how users search. How to structure your content and authority to appear in AI Overviews.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">04 MAY 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="ai_mobile_8_1785438946358.png" alt="Native vs Flutter in 2026: Choosing Your App Tech Stack" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">NATIVE APPS</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">8 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Native vs Flutter in 2026: Choosing Your App Tech Stack
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            When to go full Native Swift/Kotlin, and when Flutter's cross-platform capabilities are the smart business decision.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">27 APR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="local_seo_blog_1786285922453.png" alt="Dominate Google Business: The 2026 Local Ranking Blueprint" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">LOCAL SEO</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">6 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Dominate Google Business: The 2026 Local Ranking Blueprint
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Why hyper-local citations, review velocity, and geo-tagged schema are outperforming traditional backlinks in local maps.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">20 APR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="meta_ads_blog_1786285936244.png" alt="Performance Creative: Engineering Meta Ads That Convert" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">META ADS</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">9 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Performance Creative: Engineering Meta Ads That Convert
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Bidding algorithms are commoditized. The only leverage left is creative. How we build high-converting hook-driven video ads.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">13 APR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 15 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="advanced_n8n_blog_1786285951410.png" alt="Advanced n8n: Building Unbreakable AI Data Pipelines" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">AI AUTOMATION</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">11 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Advanced n8n: Building Unbreakable AI Data Pipelines
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Beyond simple triggers. How to use webhooks, complex JSON parsing, and AI summarization nodes to replace human data entry.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">06 APR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 16 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="voice_ai_blog_1786285968209.png" alt="Deploying AI Voice Agents for High-Ticket Real Estate" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">VOICE AI</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">8 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Deploying AI Voice Agents for High-Ticket Real Estate
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            How conversational AI agents are qualifying inbound leads 24/7 and booking appointments straight into agent calendars.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">30 MAR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 17 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="cro_blog_1786285985524.png" alt="Conversion Rate Optimization: Finding the Hidden Revenue" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">CRO MASTERCLASS</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">14 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Conversion Rate Optimization: Finding the Hidden Revenue
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            A 1% increase in conversion rate can double your profit. The multivariate testing frameworks we use to turn clicks into cash.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">23 MAR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 18 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="b2b_linkedin_blog_1786285998349.png" alt="LinkedIn Automation That Doesn't Look Like Spam" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">B2B OUTREACH</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">7 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            LinkedIn Automation That Doesn't Look Like Spam
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Cold outreach is dead. Hyper-personalized, AI-researched, account-based outreach is the new standard for B2B pipeline.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">16 MAR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 19 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="web_vitals_blog_1786286009842.png" alt="Technical Audits: Achieving 99+ Core Web Vitals Scores" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">CORE WEB VITALS</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">10 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Technical Audits: Achieving 99+ Core Web Vitals Scores
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            LCP, CLS, and INP decoded. Why shaving 300ms off your Time to First Byte directly correlates with enterprise sales volume.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">09 MAR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 20 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="ai_video_blog_1786286023269.png" alt="Scaling Ad Creative with AI Video Generation Tools" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">VIDEO MARKETING</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">8 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Scaling Ad Creative with AI Video Generation Tools
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            How Sora, Runway, and Midjourney are transforming the economics of video production for direct response marketing.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">02 MAR 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 21 -->
+                <div class="group relative flex flex-col bg-deep-obsidian backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(232,40,43,0.25)] hover:border-kinetic-red/50 cursor-pointer h-full z-10 hover:z-20">
+                    <!-- Neon Sweep Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-kinetic-red/0 via-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                    
+                    <!-- Image -->
+                    <div class="w-full h-60 overflow-hidden relative border-b border-white/10">
+                        <div class="absolute inset-0 bg-deep-obsidian z-0"></div>
+                        <img src="analytics_blog_1786286035899.png" alt="Attribution Modeling: Connecting Offline Sales to Online Ads" class="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 relative z-10 opacity-90 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal">
+                        <!-- Glow overlay -->
+                        <div class="absolute inset-0 bg-kinetic-red mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-700 z-20 pointer-events-none"></div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8 flex flex-col flex-grow relative z-30">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-mono text-[9px] text-kinetic-red font-bold uppercase tracking-[0.2em]">MARKETING ANALYTICS</span>
+                            <span class="font-mono text-[9px] text-neutral-500 uppercase tracking-[0.2em]">12 MIN READ</span>
+                        </div>
+                        
+                        <h3 class="font-display text-[22px] font-bold text-white leading-[1.2] mb-4 group-hover:text-kinetic-red transition-colors duration-500 line-clamp-2">
+                            Attribution Modeling: Connecting Offline Sales to Online Ads
+                        </h3>
+                        
+                        <p class="font-display text-[14px] text-on-secondary-container leading-[1.6] mb-8 flex-grow line-clamp-3">
+                            Solving the iOS14 attribution nightmare. How to use server-to-server tracking to finally understand your true Customer Acquisition Cost.
+                        </p>
+                        
+                        <div class="flex justify-between items-center pt-6 border-t border-white/10 mt-auto group-hover:border-kinetic-red/30 transition-colors duration-500">
+                            <span class="font-mono text-[9px] text-neutral-500 tracking-[0.2em] uppercase">23 FEB 2026</span>
+                            <span class="font-mono text-[10px] text-white font-bold tracking-[0.2em] uppercase flex items-center gap-2 group-hover:text-kinetic-red transition-colors duration-500">
+                                READ <span class="group-hover:translate-x-2 transition-transform duration-500 ease-out">↗</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- View All Button -->
+            <div class="mt-20 text-center">
+                <a href="#contact" class="inline-flex items-center gap-3 bg-transparent border border-white/20 text-white px-10 py-5 rounded-[40px] font-display font-bold text-[14px] uppercase tracking-wide hover:border-kinetic-red hover:bg-kinetic-red hover:shadow-[0_0_30px_rgba(232,40,43,0.5)] transition-all duration-500 group">
+                    Book an Audit <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chat Button -->
+    <div class="fixed bottom-6 right-6 w-14 h-14 bg-kinetic-red rounded-full flex items-center justify-center cursor-pointer z-[100] shadow-[0_0_20px_rgba(232,40,43,0.4)] hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+    </div>
 </body>
 </html>

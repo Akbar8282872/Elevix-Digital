@@ -46,7 +46,7 @@
 - All interactive links and buttons MUST remain clickable above background overlays (`pointer-events-auto`).
 # Elevix Digital Global Design & Graphics Rules
 
-# Nexbit Agency Structural & Content Rules
+# ELEVIX Agency Structural & Content Rules
 
 ## 1. Services Page Layout & Component Structure
 - **Header Section:**
@@ -69,3 +69,24 @@
 ## 3. Data Integrity Directive
 - Treat the video clip purely as a **UI/UX layout and structural reference**.
 - NEVER copy client names, phone numbers, addresses, or specific service counts verbatim from the screen recording. Always inject Nexbit agency content into the structured layout.u have to make same address map location as in our services and home page 
+#####
+# ELEVIX Digital AG Engineering & Content Safeguards
+
+## 1. Zero-Hallucination & Content Safeguard Directive
+- **No Unapproved AI Hallucinations:** Never inject random placeholder data, fake client testimonials, or unverified AI features into code files.
+- **Reference Video Isolation:** The Neogen reference video serves strictly as a **UI/UX layout and structural reference**. Do NOT copy phone numbers, Indian addresses, client names (e.g., Faber Kerala, EME Education), or text verbatim from the clip.in location u add lahore pak and number leave empty footer should be same as neogen 
+- **Brand Identity Lockdown:** Preserve LUX Digital's approved branding, copy, headquarter location (Lahore, Pakistan), and site navigation at all times.
+
+## 2. Workspace & Code Integrity Guardrails
+- **Scope Control:** Modify only the requested page or component. Do NOT alter global site config or unaffected pages.
+- **CSS Strictness:** Strictly use Tailwind CSS classes and approved theme variables. Inline styles are prohibited unless managing 3D canvas variables.
+- **Z-Index Layering Order:**
+  - Level 0 (`z-0`): WebGL canvas or ambient background glow elements (`pointer-events-none`).
+  - Level 10 (`z-10`): Main content containers, grids, and cards (`relative pointer-events-auto`).
+  - Level 50 (`z-50`): Top navigation bar and sticky UI overlays.
+
+## 3. Execution Verification Checklist
+- Before finalizing code, verify:
+  1. All links and buttons maintain `pointer-events-auto` accessibility.
+  2. Mobile responsiveness (`grid-cols-1` on mobile, expanding to `md:grid-cols-2` / `lg:grid-cols-4`).
+  3. Strict visual continuity with existing ELEVIX Digital dark dark-mode aesthetics.
