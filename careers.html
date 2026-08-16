@@ -300,8 +300,16 @@
             100% { transform: translateY(100%); }
         }
         /* ===== SERVICES MEGA MENU ===== */
-        @keyframes megaFadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        #services-trigger-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0; }
+        @keyframes megaFadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        #services-trigger-btn {
+            background: none; border: none; cursor: pointer;
+            display: flex; align-items: center; gap: 4px;
+            color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0;
+        }
         #services-trigger-btn:hover, #services-trigger-btn.active { color: #FDFDFD; }
         .mega-chevron-icon { display: inline-block; transition: transform 0.3s ease; }
         #services-trigger-btn.active .mega-chevron-icon { transform: rotate(180deg); }
@@ -366,7 +374,7 @@
             </button>
         </div>
 
-    <!-- SERVICES MEGA MENU — FULL WIDTH -->
+    <!-- ===== SERVICES MEGA MENU — FULL WIDTH ===== -->
     <div id="services-mega-panel" style="display:none; position:fixed; top:104px; left:0; right:0; z-index:9999;">
         <div style="background:rgba(8,8,8,0.98); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,0.07); box-shadow:0 20px 60px rgba(0,0,0,0.85);">
             <div style="padding:12px 48px; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; gap:12px;">
@@ -386,12 +394,25 @@
     </div>
 
 
-    <script>(function(){var t=document.getElementById('services-trigger-btn'),p=document.getElementById('services-mega-panel');if(!t||!p)return;var h;function s(){clearTimeout(h);p.style.display='block';p.style.animation='none';p.offsetHeight;p.style.animation='megaFadeIn 0.2s ease forwards';t.classList.add('active');}function d(){h=setTimeout(function(){p.style.display='none';t.classList.remove('active');},180);}t.addEventListener('mouseenter',s);t.addEventListener('mouseleave',d);p.addEventListener('mouseenter',s);p.addEventListener('mouseleave',d);})();</script>
+    <script>
+        (function() {
+            var trigger = document.getElementById('services-trigger-btn');
+            var panel   = document.getElementById('services-mega-panel');
+            if (!trigger || !panel) return;
+            var hideTimer;
+            function showMega() { clearTimeout(hideTimer); panel.style.display = 'block'; panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = 'megaFadeIn 0.2s ease forwards'; trigger.classList.add('active'); }
+            function hideMega() { hideTimer = setTimeout(function() { panel.style.display = 'none'; trigger.classList.remove('active'); }, 180); }
+            trigger.addEventListener('mouseenter', showMega);
+            trigger.addEventListener('mouseleave', hideMega);
+            panel.addEventListener('mouseenter', showMega);
+            panel.addEventListener('mouseleave', hideMega);
+        })();
+    </script>
 
     </nav>
-    <!-- MAIN HERO (WITH ORB BG) -->
-    <header class="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 min-h-[70vh] flex items-center overflow-hidden">
-        <!-- Animated Background Mesh/Orb -->
+
+<section id="hero-section" class="relative min-h-[120vh] flex flex-col pt-40 overflow-hidden bg-[#0a0a0a] z-10" style="padding-bottom: 250px;">
+        <!-- Animated Background Mesh/Orb (exactly like Our Story) -->
         <div class="absolute inset-0 z-0 pointer-events-none">
             <!-- Pulsing Red Core -->
             <div class="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-kinetic-red rounded-full mix-blend-screen filter blur-[150px] opacity-20 animate-[pulse_4s_ease-in-out_infinite]"></div>
@@ -401,381 +422,554 @@
             <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]" style="background-size: 50px 50px;"></div>
             <!-- Scanline -->
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent h-[200%] animate-[scan_6s_linear_infinite]"></div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pointer-events-auto">
+       
+                        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-start justify-between mt-8 mb-12">
             
-            <!-- Left Column: Hero Text -->
-            <div class="lg:col-span-7">
+            <!-- Left Content -->
+            <div class="w-full md:w-1/2 flex flex-col items-start pr-0 md:pr-12 fade-up">
+                <!-- Breadcrumb -->
+                <div class="relative z-50 font-display text-[13px] text-[#71717a] mt-32 mb-12 flex items-center gap-2">
+                    <a href="index.html" onclick="window.location.href='index.html'; return false;" class="hover:text-white transition-colors cursor-pointer relative z-50 pointer-events-auto block px-2 py-1">Home</a> 
+                    <span class="text-white/20">/</span> 
+                    <a href="careers.html" onclick="window.location.href='careers.html'; return false;" class="hover:text-white transition-colors text-white font-medium cursor-pointer relative z-50 pointer-events-auto block px-2 py-1">Career</a>
+                </div>
                 
-                <div class="flex items-center gap-4 text-on-secondary-container text-sm font-mono tracking-widest mb-12">
-                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
-                    <span class="text-white/30">/</span>
-                    <span class="text-white">Case Studies</span>
+                <!-- Pill -->
+                <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-[#111] mb-8">
+                    <span class="w-2 h-2 rounded-full bg-kinetic-red animate-pulse"></span>
+                    <span class="font-mono text-white text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase">WE'RE HIRING ALWAYS</span>
                 </div>
-            
-                <div class="flex items-center gap-2 inline-block py-1 px-3 border border-white/10 rounded-full bg-white/5 mb-6 w-max">
-                    <div class="w-2 h-2 rounded-full bg-kinetic-red"></div>
-                    <span class="font-mono text-stark-white text-[10px] font-bold tracking-[0.2em] uppercase">
-                        PROOF
-                    </span>
-                </div>
-                <h1 class="font-display font-black text-5xl md:text-7xl lg:text-[70px] xl:text-[85px] leading-[1.0] tracking-tighter text-white mb-6">
-                    <span class="whitespace-nowrap">Results we can ship</span><br />on a screenshot.
+                
+                <!-- Heading -->
+                <h1 class="font-display text-[42px] sm:text-[50px] md:text-[60px] lg:text-[70px] font-bold tracking-tight leading-[1.05] text-white mb-6">
+                    <span class="whitespace-nowrap">Build systems,</span><br/>not hustle.
                 </h1>
-                <p class="text-lg text-on-secondary-container font-display leading-relaxed max-w-2xl mb-10">
-                    Campaigns, builds, and automation systems that moved real numbers — with the numbers still attached.
-                </p>
-                <div class="flex flex-wrap items-center gap-6">
-                    <a href="#contact" class="px-8 py-4 bg-kinetic-red text-white font-display font-bold text-sm tracking-wide hover:bg-red-600 transition-colors rounded-[24px] flex items-center gap-2">
-                        Book a Strategy Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-                    </a>
-                    <a href="#the-work" class="text-neutral-400 font-display font-medium text-sm hover:text-white transition-colors flex items-center gap-2">
-                        See case studies <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Column: Status Widget -->
-            <div class="lg:col-span-5 relative">
-                <div class="absolute inset-0 bg-kinetic-red/10 blur-[100px] rounded-full pointer-events-none"></div>
                 
-                <div class="relative border border-white/5 bg-[#111] p-8 rounded-[16px] shadow-2xl pointer-events-auto">
-                    <!-- Rows -->
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em] flex items-center gap-4">
-                            <span class="w-8 h-[1px] bg-kinetic-red/50"></span> STATE
-                        </span>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></div>
-                            <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.2em]">LIVE</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">FEATURED</span>
-                        <span class="font-mono text-sm text-white">2</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">TOTAL ATTRIBUTED</span>
-                        <span class="font-mono text-sm text-kinetic-red font-bold">$2M+</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">PEAK ROAS</span>
-                        <span class="font-mono text-sm text-white">41x</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">SECTORS</span>
-                        <span class="font-mono text-[10px] font-bold text-white uppercase tracking-[0.2em]">ECOMMERCE • SAAS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-
-    <!-- PORTFOLIO METRICS SECTION (SCREENSHOT 1) -->
-    <section class="w-full bg-[#0a0a0a] border-t border-kinetic-red border-b border-white/5 relative z-10">
-        <div class="max-w-[1400px] mx-auto">
-            <!-- Top Bar -->
-            <div class="flex justify-between items-center py-4 px-8 border-b border-white/5 text-[10px] font-mono tracking-[0.2em] uppercase">
-                <div class="flex items-center gap-3 text-neutral-500">
-                    <span class="w-2 h-2 rounded-full bg-kinetic-red shadow-[0_0_10px_rgba(232,40,43,0.8)]"></span> LIVE // PORTFOLIO METRICS
-                </div>
-                <div class="text-neutral-600 font-bold">
-                    ELEVIX DIGITAL • 2026
+                <!-- Paragraph -->
+                <p class="font-display text-[15px] md:text-[17px] text-[#a1a1aa] leading-relaxed mb-10 max-w-xl">
+                    Elevix hires exceptional people first and writes the job description second. Every role on this page is permanently open &mdash; we interview every month and the founder picks the best in the room, even when no seat is formally vacant. If you build with taste and own your craft, the door is open.
+                </p>
+                
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <a href="#roles" class="bg-kinetic-red text-white px-8 py-3.5 rounded-[30px] text-[15px] font-bold hover:bg-[#ff3333] transition-all flex items-center gap-2">
+                        Send a general application <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#roles" class="text-on-secondary-container hover:text-white transition-colors text-[14px] font-medium flex items-center gap-2">
+                        See open roles <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </div>
             
-            <!-- 4 Grid Columns -->
-            <div class="grid grid-cols-1 md:grid-cols-4">
-                <!-- Col 1 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
+            <!-- Right Content (Stats Card) -->
+            <div class="w-full md:w-[450px] mt-16 md:mt-[100px] fade-up" style="transition-delay: 200ms;">
+                <div class="bg-[#111]/80 backdrop-blur-xl border border-white/5 rounded-[12px] p-8 hover:border-white/10 transition-colors">
                     
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 01</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
+                    <!-- Row 1 -->
+                    <div class="flex items-center justify-between py-4 border-b border-white/5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-[1px] bg-kinetic-red"></div>
+                            <span class="font-mono text-[10px] text-[#a1a1aa] tracking-[0.2em] uppercase font-bold">CAREERS</span>
+                        </div>
+                        <div class="flex items-center gap-2 font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></span> LIVE
+                        </div>
                     </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        23.75x
+                    
+                    <!-- Row 2 -->
+                    <div class="flex items-center justify-between py-4 border-b border-white/5 font-mono text-[10px] tracking-[0.2em] uppercase font-bold">
+                        <span class="text-[#a1a1aa]">OPEN ROLES</span>
+                        <span class="text-kinetic-red">13</span>
                     </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ROAS • EME EDUCATION
+                    
+                    <!-- Row 3 -->
+                    <div class="flex items-center justify-between py-4 border-b border-white/5 font-mono text-[10px] tracking-[0.2em] uppercase font-bold">
+                        <span class="text-[#a1a1aa]">TEAM</span>
+                        <span class="text-white">8</span>
+                    </div>
+                    
+                    <!-- Row 4 -->
+                    <div class="flex items-center justify-between py-4 border-b border-white/5 font-mono text-[10px] tracking-[0.2em] uppercase font-bold">
+                        <span class="text-[#a1a1aa]">HQ</span>
+                        <span class="text-white">INFOPARK KOCHI</span>
+                    </div>
+                    
+                    <!-- Row 5 -->
+                    <div class="flex items-center justify-between py-4 border-b border-white/5 font-mono text-[10px] tracking-[0.2em] uppercase font-bold">
+                        <span class="text-[#a1a1aa]">WORK MODE</span>
+                        <span class="text-white">IN-PERSON</span>
+                    </div>
+                    
+                    <!-- Row 6 -->
+                    <div class="flex items-center justify-between py-4 border-b border-white/5 font-mono text-[10px] tracking-[0.2em] uppercase font-bold">
+                        <span class="text-[#a1a1aa]">INTERVIEW CADENCE</span>
+                        <span class="text-white">MONTHLY</span>
+                    </div>
+                    
+                    <!-- Row 7 -->
+                    <a href="#contact" class="flex items-center justify-between pt-6 mt-2 font-mono text-[10px] tracking-[0.2em] uppercase text-white hover:text-kinetic-red transition-colors group font-bold">
+                        <span class="tracking-[0.2em]">BOOK A 30-MIN AUDIT</span>
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Results / Case Studies Section -->
+    
+
+
+    <!-- Why Us Section -->
+    <section id="roles" class="relative bg-[#050505] border-t border-white/5 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-kinetic-red/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-8 h-[1px] bg-kinetic-red"></span>
+                <span class="font-mono text-[10px] md:text-[12px] text-kinetic-red tracking-[0.2em] uppercase font-bold">// 01. WHY US</span>
+            </div>
+            
+            <h2 class="font-display text-[40px] md:text-[56px] lg:text-[72px] font-bold text-white uppercase leading-[1.1] tracking-[-0.02em] mb-20 max-w-4xl">
+                Why engineers, designers, and ops leads stay.
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-[#0e0e0e] border border-white/5 rounded-2xl p-8 md:p-10 hover:border-kinetic-red/30 transition-colors duration-300">
+                    <span class="font-mono text-[10px] md:text-[12px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-8">// 01</span>
+                    <h3 class="font-display text-[24px] md:text-[28px] font-bold text-white mb-4">Culture before skill</h3>
+                    <p class="text-[#a1a1aa] text-[15px] md:text-[16px] leading-relaxed">
+                        We hire the human first. Skill we can level up in a quarter &mdash; integrity, curiosity, and ownership we can't teach. The room matters more than the r&eacute;sum&eacute;.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#0e0e0e] border border-white/5 rounded-2xl p-8 md:p-10 hover:border-kinetic-red/30 transition-colors duration-300">
+                    <span class="font-mono text-[10px] md:text-[12px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-8">// 02</span>
+                    <h3 class="font-display text-[24px] md:text-[28px] font-bold text-white mb-4">Systems over hustle</h3>
+                    <p class="text-[#a1a1aa] text-[15px] md:text-[16px] leading-relaxed">
+                        We don't reward late nights. We reward engineers, designers, and operators who build the checklist that makes the late night unnecessary next sprint.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#0e0e0e] border border-white/5 rounded-2xl p-8 md:p-10 hover:border-kinetic-red/30 transition-colors duration-300">
+                    <span class="font-mono text-[10px] md:text-[12px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-8">// 03</span>
+                    <h3 class="font-display text-[24px] md:text-[28px] font-bold text-white mb-4">Radical ownership</h3>
+                    <p class="text-[#a1a1aa] text-[15px] md:text-[16px] leading-relaxed">
+                        Every teammate owns a craft end-to-end and ships directly to the client &mdash; no agency layers, no hand-offs, no hiding behind a project manager.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-[#050505] border-t border-white/5 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-kinetic-red/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 mb-20">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 rounded bg-kinetic-red animate-pulse"></span>
+                        <span class="font-mono text-[10px] md:text-[12px] text-kinetic-red tracking-[0.2em] uppercase font-bold">// OPEN ROLES &middot; PERMANENT</span>
+                    </div>
+                    <h2 class="font-display font-bold text-[50px] md:text-[70px] leading-[1] tracking-tight text-white hover:text-kinetic-red transition-colors duration-500">
+                        13 roles, always open.
+                    </h2>
+                </div>
+                <div class="max-w-md">
+                    <p class="font-display text-[16px] text-[#888] leading-relaxed">
+                        We interview every month and the founder picks the best in the room &mdash; even when no seat is formally vacant that week. Exceptional people always have a door here.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Roles List -->
+            <div class="flex flex-col">
+                <!-- Role Item 1 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// ENGINEERING</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Vibe-coder</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Ship at AI velocity.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
                     </div>
                 </div>
 
-                <!-- Col 2 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 02</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
+                <!-- Role Item 2 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// ENGINEERING</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Web Developer</h3>
                     </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        41x
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
                     </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ROAS • NAYATEL LAHORE
-                    </div>
-                </div>
-
-                <!-- Col 3 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 03</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        450L+
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ATTRIBUTED REVENUE
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Build Elevix Digital's client websites on Next.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
                     </div>
                 </div>
 
-                <!-- Col 4 -->
-                <div class="p-10 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 04</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
+                <!-- Role Item 3 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// AI</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">AI Generalist</h3>
                     </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        53K
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
                     </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        AD SPEND → 22L RETURN
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Build the AI layer for every Elevix Digital client.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 4 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// OPERATIONS</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Projects Manager</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Own client delivery end-to-end.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 5 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// GROWTH</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Social Media Intern</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Join Elevix Digital and master the socials.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 6 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// GROWTH</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Performance Marketer</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Run paid media across Meta and Google ads &mdash; Make our Elevix Digital campaigns convert and hit the metrics.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 7 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// CREATIVE</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Copywriter</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Write copy that converts across every client touchpoint &mdash; blog posts, email sequences, landing pages, ad scripts, and social captions.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 8 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// GROWTH</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Digital Marketing Executive</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Execute SEO and digital marketing tasks for Elevix Digital client accounts &mdash; on-page optimization, keyword research, technical audits, blog briefs, Google Business Profile management, and web development support.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 9 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// CREATIVE</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Senior Graphic Designer</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Own the creative output for Elevix Digital client accounts.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 10 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// CREATIVE</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Junior Graphic Designer</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Execute design tasks from briefs.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 11 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// CREATIVE</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Video Editor & AI Specialist</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Edit video, produce AI-generated content, and build motion graphics for Elevix Digital client accounts.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 12 -->
+                <div class="group border-t border-white/10 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// OPERATIONS</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Growth & Operations Manager</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Own client success, sales support, and the operations rhythm that keeps delivery shipping.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
+                    </div>
+                </div>
+
+                <!-- Role Item 13 -->
+                <div class="group border-t border-white/10 border-b py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 hover:bg-[#0A0A0A] hover:pl-4 transition-all duration-300 cursor-pointer -mx-4 px-4 rounded-xl">
+                    <div class="flex-1 w-full md:w-1/3">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold block mb-3">// OPERATIONS</span>
+                        <h3 class="font-display text-[28px] font-bold text-white group-hover:text-kinetic-red transition-colors">Accounts & Admin Executive</h3>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex flex-col gap-2">
+                        <span class="font-mono text-[12px] text-white/60 tracking-[0.1em] font-medium">FULL-TIME &middot; IN-PERSON</span>
+                        <span class="font-mono text-[12px] text-[#888] tracking-[0.1em]">GULBERG LAHORE</span>
+                        <span class="font-mono text-[12px] text-kinetic-red tracking-[0.1em]">MARKET-BASED</span>
+                    </div>
+                    <div class="flex-1 w-full md:w-1/3 flex items-center justify-between gap-8">
+                        <p class="font-display text-[14px] text-white/70 max-w-[200px] group-hover:text-white transition-colors">Handle daily bookkeeping, invoice processing, payroll preparation, office management, and statutory compliance.</p>
+                        <a href="#" class="font-mono text-[12px] font-bold text-white tracking-[0.2em] flex items-center gap-2 group-hover:text-kinetic-red transition-colors whitespace-nowrap">APPLY &nearr;</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- How we actually hire -->
     
-<section id="the-work" class="py-32 px-6 bg-deep-obsidian relative">
+
+<section class="py-24 px-6 bg-[#050505] border-t border-white/5 relative">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-20 fade-up">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="w-8 h-[2px] bg-kinetic-red"></span>
-                    <span class="font-mono text-[11px] text-kinetic-red font-bold uppercase tracking-[0.2em]">// 02. THE WORK</span>
-                </div>
-                <h2 class="font-display text-[50px] md:text-[80px] font-bold leading-[1.0] tracking-tight text-stark-white">
-                    Selected client results.
-                </h2>
+            <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
+                // THE TEAM
             </div>
+            <h2 class="font-display font-bold text-[40px] md:text-[50px] text-white leading-[1.1] mb-6">
+                The humans behind the<br/>systems
+            </h2>
+            <p class="font-display text-on-secondary-container text-[16px] leading-[1.6] max-w-2xl mb-16">
+                Small team, big throughput. Every member owns a craft end-to-end and ships directly to clients — no agency layers between you and the people doing the work.
+            </p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Case 1 -->
-                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                            FEATURED • HOME APPLIANCES LAHORE
-                        </span>
-                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-stark-white mb-2 leading-none tracking-tight">41× <span class="text-kinetic-red">peak roas.</span></h3>
-                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">Sept 2025 → Mar 2026.</h4>
-                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
-                            A premium home appliance store in Gulberg, Lahore selling silent chimneys and high-end kitchen systems. Strong offline, zero digital. We built the digital sales engine from scratch across three phases — March 2026 festive peak delivered <strong class="text-stark-white font-semibold">52 Lakh PKR revenue</strong> at 41× ROAS.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Case 2 -->
-                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group" style="transition-delay: 100ms;">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                            HEALTHCARE • MODERN DENTAL CLINIC KARACHI
-                        </span>
-                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-kinetic-red mb-2 leading-none tracking-tight">180 appointments</h3>
-                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">booked.</h4>
-                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
-                            How a modern dental & skin clinic in DHA Karachi turned <strong class="text-stark-white">150K PKR of Meta ad spend</strong> into 1,293 leads and 180 booked appointments in ~3 months. Real numbers, full funnel execution.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <!-- New Card 3: Nayatel Lahore (matching screenshot design) -->
-                <div class="p-10 md:p-14 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group flex flex-col h-full">
-                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <!-- Header -->
-                        <div class="flex justify-between items-start mb-8 font-mono text-[9px] font-bold uppercase tracking-[0.2em]">
-                            <span class="text-kinetic-red">IT & TELECOM , BROADBAND<br/>SERVICES</span>
-                            <span class="text-neutral-500 flex items-center gap-4">
-                                <span class="w-6 h-[1px] bg-neutral-700"></span> SEPT 2025 → MAR<br/>2026
-                            </span>
-                        </div>
-                        
-                        <h3 class="font-display text-3xl font-bold text-white mb-6">Nayatel Lahore</h3>
-                        
-                        <div class="font-display text-[70px] font-black text-kinetic-red leading-none mb-4 flex items-center gap-2 tracking-tighter">
-                            41<span class="text-[50px] tracking-normal">×</span>
-                        </div>
-                        
-                        <p class="font-display text-sm text-stark-white font-bold mb-10 pb-10 border-b border-white/10">March 2026 festive window</p>
-                        
-                        <p class="font-display text-on-secondary-container text-base leading-relaxed mb-12">
-                            Nayatel Lahore provides premium broadband and telecom solutions. Strong corporate presence, but retail was lagging. We built the digital sales engine from scratch across three phases — March 2026 festive peak delivered <strong class="text-stark-white">52 Lakh PKR revenue</strong> at 41× ROAS.
-                        </p>
-                        
-                        <!-- Pills -->
-                        <div class="flex flex-wrap gap-3 mt-auto mb-10">
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DIGITAL MARKETING</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">AI AUTOMATION</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DESIGN & CREATIVES</span>
-                        </div>
-                        
-                        <a href="#" class="font-mono text-[10px] text-white font-bold uppercase tracking-[0.2em] flex justify-between items-center group/btn mt-auto">
-                            READ THE FULL CASE STUDY
-                            <span class="text-kinetic-red group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">↗</span>
-                        </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Team 1 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AC</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">LEADERSHIP</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Aziz Cheema</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Founder & CEO</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Revenue strategy, partnerships, and the business engine behind Elevix growth.</p>
                     </div>
                 </div>
 
-                <!-- New Card 4: EME (Electromech Enterprises) -->
-                <div class="p-10 md:p-14 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group flex flex-col h-full mt-8 md:mt-0">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <!-- Header -->
-                        <div class="flex justify-between items-start mb-8 font-mono text-[9px] font-bold uppercase tracking-[0.2em]">
-                            <span class="text-kinetic-red">EDUCATION . SAP CERTIFICATION</span>
-                            <span class="text-neutral-500 flex items-center gap-4">
-                                <span class="w-6 h-[1px] bg-neutral-700"></span> 2023 → 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="font-display text-3xl font-bold text-white mb-6">EME (Electromech Enterprises)</h3>
-                        
-                        <div class="font-display text-[70px] font-black text-kinetic-red leading-none mb-4 tracking-tighter">
-                            450L<span class="text-[30px] font-bold ml-2 tracking-normal">PKR</span>
-                        </div>
-                        
-                        <p class="font-display text-sm text-stark-white font-bold mb-10 pb-10 border-b border-white/10">Sustained across 24 months</p>
-                        
-                        <p class="font-display text-on-secondary-container text-base leading-relaxed mb-12">
-                            EME sells premium SAP consultant-level programs (₹2L) alongside lower-tier end-user certs. We rebuilt the enrollment engine — precision Meta ads, AI lead qualification, and a webinar-first funnel. 237 leads closed on <strong class="text-stark-white">17.18L ad spend</strong>.
-                        </p>
-                        
-                        <!-- Pills -->
-                        <div class="flex flex-wrap gap-3 mt-auto mb-10">
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DIGITAL MARKETING</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">AI AUTOMATION</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">GOHIGHLEVEL</span>
-                        </div>
-                        
-                        <a href="#" class="font-mono text-[10px] text-white font-bold uppercase tracking-[0.2em] flex justify-between items-center group/btn mt-auto">
-                            READ THE FULL CASE STUDY
-                            <span class="text-kinetic-red group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">↗</span>
-                        </a>
+                <!-- Team 2 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AR</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">OPERATIONS</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Ali Raja</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Manager & Vibe Coder</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Operations, delivery systems, and the rhythm that keeps every client engagement on track.</p>
+                    </div>
+                </div>
+
+                <!-- Team 3 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AH</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">OPERATIONS</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Ahad</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">HR & Admin Executive</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">HR, talent acquisition, and office administration &mdash; building the culture and back-office spine of the agency.</p>
+                    </div>
+                </div>
+
+                <!-- Team 4 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AM</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">GROWTH</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Ahmed</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Marketer</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Crafting campaigns, managing ad spend, and driving targeted traffic to maximize client ROI.</p>
+                    </div>
+                </div>
+
+                <!-- Team 5 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">FT</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">GROWTH</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Fatima</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Digital Marketer</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Executing comprehensive digital strategies, social media management, and online brand growth.</p>
+                    </div>
+                </div>
+
+                <!-- Team 6 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">SD</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">CREATIVE</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Saad</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Video Editor</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Editing high-retention video content, motion graphics, and visual storytelling for client campaigns.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- HR Desk Section -->
+    
 
-    <!-- New CTA Section: Receipts -->
-    <section class="py-32 px-6 bg-[#0A0A0A] relative z-10 border-t border-white/5 overflow-hidden">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
+
+
+
+
+<section class="py-24 px-6 bg-[#050505] border-t border-white/5 relative z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(232,40,43,0.03)_0%,transparent_70%)] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="mb-16">
+            <div class="flex items-center gap-2 inline-block py-1 px-3 border border-white/10 rounded-full bg-white/5 mb-6 w-max">
+                <div class="w-2 h-2 rounded-full bg-kinetic-red"></div>
+                <span class="font-mono text-stark-white text-[10px] font-bold tracking-[0.2em] uppercase">
+                    Proof, not promises
+                </span>
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] max-w-3xl">
+                Results that speak for themselves.
+            </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Left Side -->
-            <div class="w-full md:w-1/2">
-                <div class="flex items-center gap-3 mb-8 px-4 py-2 border border-white/10 rounded-full w-max">
-                    <span class="w-2 h-2 rounded-full bg-kinetic-red"></span>
-                    <span class="font-mono text-[10px] text-white uppercase tracking-[0.2em] font-bold">NEXT STEP</span>
+            <div class="bg-[#111]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-kinetic-red/30 transition-colors duration-500 group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="mb-8 flex justify-between items-start relative z-10">
+                    <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold">SOFTWARE COMPANIES</span>
                 </div>
-                <h2 class="font-display font-bold text-[50px] md:text-[60px] leading-[1.1] tracking-tight text-white mb-8">
-                    Want receipts like<br/>these on your<br/>account?
-                </h2>
-                <p class="font-display text-[16px] text-on-secondary-container leading-[1.6] mb-12 max-w-md">
-                    Book a 30-minute audit call. We'll pull your current numbers, show you where the leaks are, and tell you honestly whether we can move them.
+                <div class="mb-8 relative z-10">
+                    <div class="font-display text-5xl font-black text-white mb-2 tracking-tighter">63 Lakh<span class="text-kinetic-red text-3xl">PKR</span></div>
+                    <div class="text-on-secondary-container font-mono text-xs uppercase tracking-wider">Generated in 1 Year</div>
+                </div>
+                <p class="text-sm text-neutral-400 font-display leading-relaxed relative z-10">
+                    Scaled their pipeline and automated their backend infrastructure, resulting in massive yearly growth in the Pakistani tech sector.
                 </p>
-                <a href="#contact" class="inline-flex items-center gap-4 bg-kinetic-red text-white px-8 py-5 rounded-[30px] font-display font-bold text-[16px] hover:bg-[#ff3333] transition-all shadow-[0_0_20px_rgba(232,40,43,0.3)] hover:shadow-[0_0_35px_rgba(232,40,43,0.6)] mb-12">
-                    <span class="border border-white/30 rounded-full w-8 h-8 flex items-center justify-center">↗</span>
-                    Book a Strategy Call
-                </a>
-                <div class="font-mono text-[10px] text-on-secondary-container tracking-[0.2em] uppercase font-bold flex flex-wrap gap-4">
-                    <span>30 MIN</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>FREE AUDIT</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>NO DECK</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>NO OBLIGATION</span>
-                </div>
             </div>
 
-            <!-- Right Side -->
-            <div class="w-full md:w-1/2 md:border-l border-white/5 md:pl-20">
-                <div class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.2em] font-bold mb-12">
-                    // WHAT YOU WALK AWAY WITH
+            <div class="bg-[#111]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-kinetic-red/30 transition-colors duration-500 group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="mb-8 flex justify-between items-start relative z-10">
+                    <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold">ECOMMERCE AUTOMATION</span>
                 </div>
-                
-                <div class="space-y-10">
-                    <!-- Item 1 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">01</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">A map of every manual task worth automating</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 2 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">02</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">Ballpark ROI on your top 3 automation opportunities</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">03</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">Honest read on whether we are a fit — or who is</p>
-                        </div>
-                    </div>
+                <div class="mb-8 relative z-10">
+                    <div class="font-display text-5xl font-black text-white mb-2 tracking-tighter">300<span class="text-kinetic-red text-3xl">%</span></div>
+                    <div class="text-on-secondary-container font-mono text-xs uppercase tracking-wider">Increase in efficiency</div>
                 </div>
-
-                <div class="mt-16 pt-8 border-t border-white/5 flex items-center gap-3 font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] font-bold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                    USUALLY RESPONDS WITHIN 24 HOURS
-                </div>
+                <p class="text-sm text-neutral-400 font-display leading-relaxed relative z-10">
+                    Replaced manual data entry with custom AI workflows, freeing up 40+ hours a week for the operations team.
+                </p>
             </div>
+
+            <div class="bg-[#111]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-kinetic-red/30 transition-colors duration-500 group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="mb-8 flex justify-between items-start relative z-10">
+                    <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] uppercase font-bold">B2B LEAD GEN</span>
+                </div>
+                <div class="mb-8 relative z-10">
+                    <div class="font-display text-5xl font-black text-white mb-2 tracking-tighter">45<span class="text-kinetic-red text-3xl">+</span></div>
+                    <div class="text-on-secondary-container font-mono text-xs uppercase tracking-wider">Qualified appointments</div>
+                </div>
+                <p class="text-sm text-neutral-400 font-display leading-relaxed relative z-10">
+                    Built a hyper-personalized outreach system that booked more sales calls in 30 days than the previous two quarters combined.
+                </p>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-<!-- Huge CTA Banner -->
-    <section class="py-32 px-6 bg-[#050505] relative z-10 border-t border-white/5 overflow-hidden">
+
+<!-- NEW CTA SECTION -->
+<section class="py-32 px-6 bg-[#050505] relative z-10 border-t border-white/5 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-10 font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 fade-up">
                 <div class="flex items-center gap-3">
@@ -791,7 +985,7 @@
         </div>
     </section>
 
-<footer id="footer" class="bg-[#050505] relative z-10 border-t border-white/10">
+    <footer id="footer" class="bg-[#050505] relative z-10 border-t border-white/10">
         <!-- Top Info Row -->
         <div class="grid grid-cols-1 md:grid-cols-3 border-b border-white/10">
             <!-- HQ -->

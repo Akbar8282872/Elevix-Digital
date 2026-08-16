@@ -300,8 +300,16 @@
             100% { transform: translateY(100%); }
         }
         /* ===== SERVICES MEGA MENU ===== */
-        @keyframes megaFadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        #services-trigger-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0; }
+        @keyframes megaFadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        #services-trigger-btn {
+            background: none; border: none; cursor: pointer;
+            display: flex; align-items: center; gap: 4px;
+            color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0;
+        }
         #services-trigger-btn:hover, #services-trigger-btn.active { color: #FDFDFD; }
         .mega-chevron-icon { display: inline-block; transition: transform 0.3s ease; }
         #services-trigger-btn.active .mega-chevron-icon { transform: rotate(180deg); }
@@ -366,7 +374,7 @@
             </button>
         </div>
 
-    <!-- SERVICES MEGA MENU — FULL WIDTH -->
+    <!-- ===== SERVICES MEGA MENU — FULL WIDTH ===== -->
     <div id="services-mega-panel" style="display:none; position:fixed; top:104px; left:0; right:0; z-index:9999;">
         <div style="background:rgba(8,8,8,0.98); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid rgba(255,255,255,0.07); box-shadow:0 20px 60px rgba(0,0,0,0.85);">
             <div style="padding:12px 48px; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; gap:12px;">
@@ -375,22 +383,36 @@
                 <a href="services.html" style="margin-left:auto;font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.15em;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#E8282B'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">VIEW ALL &#8599;</a>
             </div>
             <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap: 15px 40px; padding: 16px 32px 24px 32px;">
-                <div class="mega-col"><div class="mega-col-num">01 / 06</div><h3 class="mega-col-title" onclick="window.location.href='services%20sub%20folder/web-development.html'" style="cursor: pointer;" title="Go to Web Development">WEB DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NEXT.JS DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> WORDPRESS WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> E-COMMERCE WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> LANDING PAGES</li><li class="mega-col-item"><span class="mega-dash"></span> MAINTENANCE &amp; SUPPORT</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">02 / 06</div><h3 class="mega-col-title" onclick="window.location.href='services%20sub%20folder/app-development.html'" style="cursor: pointer;" title="Go to App Development">APP DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NATIVE IOS &amp; ANDROID</li><li class="mega-col-item"><span class="mega-dash"></span> REACT NATIVE APPS</li><li class="mega-col-item"><span class="mega-dash"></span> FLUTTER DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> UI/UX APP DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> SCALABLE ARCHITECTURE</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">03 / 06</div><h3 class="mega-col-title" onclick="window.location.href='services%20sub%20folder/ai-automation.html'" style="cursor: pointer;" title="Go to AI Automation">AI AUTOMATION</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> AI VOICE AGENTS</li><li class="mega-col-item"><span class="mega-dash"></span> WHATSAPP AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> AI WEBSITE CHATBOTS</li><li class="mega-col-item"><span class="mega-dash"></span> CRM &amp; LEAD AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> CUSTOM N8N WORKFLOWS</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">04 / 06</div><h3 class="mega-col-title" onclick="window.location.href='services%20sub%20folder/design%20creative.html'" style="cursor: pointer;" title="Go to Design &amp; Creatives">DESIGN &amp; CREATIVES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> BRANDING &amp; IDENTITY</li><li class="mega-col-item"><span class="mega-dash"></span> GRAPHIC DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> MOTION GRAPHICS</li><li class="mega-col-item"><span class="mega-dash"></span> AI VIDEO PRODUCTION</li><li class="mega-col-item"><span class="mega-dash"></span> PRINT &amp; PACKAGING</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">05 / 06</div><h3 class="mega-col-title" onclick="window.location.href='services%20sub%20folder/SEO%20services.html'" style="cursor: pointer;" title="Go to SEO Services">SEO SERVICES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> SEO STRATEGY &amp; ROADMAP</li><li class="mega-col-item"><span class="mega-dash"></span> SEO AUDIT &amp; GROWTH PLAN</li><li class="mega-col-item"><span class="mega-dash"></span> LOCAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> TECHNICAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> AI SEARCH OPTIMIZATION</li></ul></div>
-                <div class="mega-col"><div class="mega-col-num">06 / 06</div><h3 class="mega-col-title" onclick="window.location.href='services%20sub%20folder/digital-marketing.html'" style="cursor: pointer;" title="Go to Digital Marketing">DIGITAL MARKETING</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> PERFORMANCE MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> SOCIAL MEDIA MANAGEMENT</li><li class="mega-col-item"><span class="mega-dash"></span> EMAIL MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> CONVERSION RATE OPTIMIZATION</li><li class="mega-col-item"><span class="mega-dash"></span> MARKETING FUNNELS</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">01 / 06</div><h3 class="mega-col-title">WEB DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NEXT.JS DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> WORDPRESS WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> E-COMMERCE WEBSITES</li><li class="mega-col-item"><span class="mega-dash"></span> LANDING PAGES</li><li class="mega-col-item"><span class="mega-dash"></span> MAINTENANCE &amp; SUPPORT</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">02 / 06</div><h3 class="mega-col-title">APP DEVELOPMENT</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> NATIVE IOS &amp; ANDROID</li><li class="mega-col-item"><span class="mega-dash"></span> REACT NATIVE APPS</li><li class="mega-col-item"><span class="mega-dash"></span> FLUTTER DEVELOPMENT</li><li class="mega-col-item"><span class="mega-dash"></span> UI/UX APP DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> SCALABLE ARCHITECTURE</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">03 / 06</div><h3 class="mega-col-title">AI AUTOMATION</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> AI VOICE AGENTS</li><li class="mega-col-item"><span class="mega-dash"></span> WHATSAPP AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> AI WEBSITE CHATBOTS</li><li class="mega-col-item"><span class="mega-dash"></span> CRM &amp; LEAD AUTOMATION</li><li class="mega-col-item"><span class="mega-dash"></span> CUSTOM N8N WORKFLOWS</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">04 / 06</div><h3 class="mega-col-title">DESIGN &amp; CREATIVES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> BRANDING &amp; IDENTITY</li><li class="mega-col-item"><span class="mega-dash"></span> GRAPHIC DESIGN</li><li class="mega-col-item"><span class="mega-dash"></span> MOTION GRAPHICS</li><li class="mega-col-item"><span class="mega-dash"></span> AI VIDEO PRODUCTION</li><li class="mega-col-item"><span class="mega-dash"></span> PRINT &amp; PACKAGING</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">05 / 06</div><h3 class="mega-col-title">SEO SERVICES</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> SEO STRATEGY &amp; ROADMAP</li><li class="mega-col-item"><span class="mega-dash"></span> SEO AUDIT &amp; GROWTH PLAN</li><li class="mega-col-item"><span class="mega-dash"></span> LOCAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> TECHNICAL SEO</li><li class="mega-col-item"><span class="mega-dash"></span> AI SEARCH OPTIMIZATION</li></ul></div>
+                <div class="mega-col"><div class="mega-col-num">06 / 06</div><h3 class="mega-col-title">DIGITAL MARKETING</h3><ul class="mega-col-list"><li class="mega-col-item"><span class="mega-dash"></span> PERFORMANCE MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> SOCIAL MEDIA MANAGEMENT</li><li class="mega-col-item"><span class="mega-dash"></span> EMAIL MARKETING</li><li class="mega-col-item"><span class="mega-dash"></span> CONVERSION RATE OPTIMIZATION</li><li class="mega-col-item"><span class="mega-dash"></span> MARKETING FUNNELS</li></ul></div>
             </div>
         </div>
     </div>
 
 
-    <script>(function(){var t=document.getElementById('services-trigger-btn'),p=document.getElementById('services-mega-panel');if(!t||!p)return;var h;function s(){clearTimeout(h);p.style.display='block';p.style.animation='none';p.offsetHeight;p.style.animation='megaFadeIn 0.2s ease forwards';t.classList.add('active');}function d(){h=setTimeout(function(){p.style.display='none';t.classList.remove('active');},180);}t.addEventListener('mouseenter',s);t.addEventListener('mouseleave',d);p.addEventListener('mouseenter',s);p.addEventListener('mouseleave',d);})();</script>
+    <script>
+        (function() {
+            var trigger = document.getElementById('services-trigger-btn');
+            var panel   = document.getElementById('services-mega-panel');
+            if (!trigger || !panel) return;
+            var hideTimer;
+            function showMega() { clearTimeout(hideTimer); panel.style.display = 'block'; panel.style.animation = 'none'; panel.offsetHeight; panel.style.animation = 'megaFadeIn 0.2s ease forwards'; trigger.classList.add('active'); }
+            function hideMega() { hideTimer = setTimeout(function() { panel.style.display = 'none'; trigger.classList.remove('active'); }, 180); }
+            trigger.addEventListener('mouseenter', showMega);
+            trigger.addEventListener('mouseleave', hideMega);
+            panel.addEventListener('mouseenter', showMega);
+            panel.addEventListener('mouseleave', hideMega);
+        })();
+    </script>
 
     </nav>
-    <!-- MAIN HERO (WITH ORB BG) -->
-    <header class="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 min-h-[70vh] flex items-center overflow-hidden">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] pt-32 pb-16 px-6 overflow-hidden flex items-center">
         <!-- Animated Background Mesh/Orb -->
         <div class="absolute inset-0 z-0 pointer-events-none">
             <!-- Pulsing Red Core -->
@@ -403,378 +425,432 @@
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent h-[200%] animate-[scan_6s_linear_infinite]"></div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pointer-events-auto">
-            
-            <!-- Left Column: Hero Text -->
-            <div class="lg:col-span-7">
-                
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16 relative z-10 w-full mt-12">
+            <!-- Left Side -->
+            <div class="w-full md:w-[60%] hero-content-left perspective-1000">
                 <div class="flex items-center gap-4 text-on-secondary-container text-sm font-mono tracking-widest mb-12">
                     <a href="index.html" class="hover:text-white transition-colors">Home</a>
                     <span class="text-white/30">/</span>
-                    <span class="text-white">Case Studies</span>
-                </div>
-            
-                <div class="flex items-center gap-2 inline-block py-1 px-3 border border-white/10 rounded-full bg-white/5 mb-6 w-max">
-                    <div class="w-2 h-2 rounded-full bg-kinetic-red"></div>
-                    <span class="font-mono text-stark-white text-[10px] font-bold tracking-[0.2em] uppercase">
-                        PROOF
-                    </span>
-                </div>
-                <h1 class="font-display font-black text-5xl md:text-7xl lg:text-[70px] xl:text-[85px] leading-[1.0] tracking-tighter text-white mb-6">
-                    <span class="whitespace-nowrap">Results we can ship</span><br />on a screenshot.
-                </h1>
-                <p class="text-lg text-on-secondary-container font-display leading-relaxed max-w-2xl mb-10">
-                    Campaigns, builds, and automation systems that moved real numbers — with the numbers still attached.
-                </p>
-                <div class="flex flex-wrap items-center gap-6">
-                    <a href="#contact" class="px-8 py-4 bg-kinetic-red text-white font-display font-bold text-sm tracking-wide hover:bg-red-600 transition-colors rounded-[24px] flex items-center gap-2">
-                        Book a Strategy Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-                    </a>
-                    <a href="#the-work" class="text-neutral-400 font-display font-medium text-sm hover:text-white transition-colors flex items-center gap-2">
-                        See case studies <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Column: Status Widget -->
-            <div class="lg:col-span-5 relative">
-                <div class="absolute inset-0 bg-kinetic-red/10 blur-[100px] rounded-full pointer-events-none"></div>
-                
-                <div class="relative border border-white/5 bg-[#111] p-8 rounded-[16px] shadow-2xl pointer-events-auto">
-                    <!-- Rows -->
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em] flex items-center gap-4">
-                            <span class="w-8 h-[1px] bg-kinetic-red/50"></span> STATE
-                        </span>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></div>
-                            <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.2em]">LIVE</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">FEATURED</span>
-                        <span class="font-mono text-sm text-white">2</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">TOTAL ATTRIBUTED</span>
-                        <span class="font-mono text-sm text-kinetic-red font-bold">$2M+</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">PEAK ROAS</span>
-                        <span class="font-mono text-sm text-white">41x</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">SECTORS</span>
-                        <span class="font-mono text-[10px] font-bold text-white uppercase tracking-[0.2em]">ECOMMERCE • SAAS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-
-    <!-- PORTFOLIO METRICS SECTION (SCREENSHOT 1) -->
-    <section class="w-full bg-[#0a0a0a] border-t border-kinetic-red border-b border-white/5 relative z-10">
-        <div class="max-w-[1400px] mx-auto">
-            <!-- Top Bar -->
-            <div class="flex justify-between items-center py-4 px-8 border-b border-white/5 text-[10px] font-mono tracking-[0.2em] uppercase">
-                <div class="flex items-center gap-3 text-neutral-500">
-                    <span class="w-2 h-2 rounded-full bg-kinetic-red shadow-[0_0_10px_rgba(232,40,43,0.8)]"></span> LIVE // PORTFOLIO METRICS
-                </div>
-                <div class="text-neutral-600 font-bold">
-                    ELEVIX DIGITAL • 2026
-                </div>
-            </div>
-            
-            <!-- 4 Grid Columns -->
-            <div class="grid grid-cols-1 md:grid-cols-4">
-                <!-- Col 1 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 01</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        23.75x
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ROAS • EME EDUCATION
-                    </div>
-                </div>
-
-                <!-- Col 2 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 02</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        41x
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ROAS • NAYATEL LAHORE
-                    </div>
-                </div>
-
-                <!-- Col 3 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 03</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        450L+
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ATTRIBUTED REVENUE
-                    </div>
-                </div>
-
-                <!-- Col 4 -->
-                <div class="p-10 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 04</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        53K
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        AD SPEND → 22L RETURN
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-<section id="the-work" class="py-32 px-6 bg-deep-obsidian relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-20 fade-up">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="w-8 h-[2px] bg-kinetic-red"></span>
-                    <span class="font-mono text-[11px] text-kinetic-red font-bold uppercase tracking-[0.2em]">// 02. THE WORK</span>
-                </div>
-                <h2 class="font-display text-[50px] md:text-[80px] font-bold leading-[1.0] tracking-tight text-stark-white">
-                    Selected client results.
-                </h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Case 1 -->
-                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                            FEATURED • HOME APPLIANCES LAHORE
-                        </span>
-                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-stark-white mb-2 leading-none tracking-tight">41× <span class="text-kinetic-red">peak roas.</span></h3>
-                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">Sept 2025 → Mar 2026.</h4>
-                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
-                            A premium home appliance store in Gulberg, Lahore selling silent chimneys and high-end kitchen systems. Strong offline, zero digital. We built the digital sales engine from scratch across three phases — March 2026 festive peak delivered <strong class="text-stark-white font-semibold">52 Lakh PKR revenue</strong> at 41× ROAS.
-                        </p>
-                    </div>
+                    <span class="text-white">Our Story</span>
                 </div>
                 
-                <!-- Case 2 -->
-                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group" style="transition-delay: 100ms;">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                            HEALTHCARE • MODERN DENTAL CLINIC KARACHI
-                        </span>
-                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-kinetic-red mb-2 leading-none tracking-tight">180 appointments</h3>
-                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">booked.</h4>
-                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
-                            How a modern dental & skin clinic in DHA Karachi turned <strong class="text-stark-white">150K PKR of Meta ad spend</strong> into 1,293 leads and 180 booked appointments in ~3 months. Real numbers, full funnel execution.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <!-- New Card 3: Nayatel Lahore (matching screenshot design) -->
-                <div class="p-10 md:p-14 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group flex flex-col h-full">
-                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <!-- Header -->
-                        <div class="flex justify-between items-start mb-8 font-mono text-[9px] font-bold uppercase tracking-[0.2em]">
-                            <span class="text-kinetic-red">IT & TELECOM , BROADBAND<br/>SERVICES</span>
-                            <span class="text-neutral-500 flex items-center gap-4">
-                                <span class="w-6 h-[1px] bg-neutral-700"></span> SEPT 2025 → MAR<br/>2026
-                            </span>
-                        </div>
-                        
-                        <h3 class="font-display text-3xl font-bold text-white mb-6">Nayatel Lahore</h3>
-                        
-                        <div class="font-display text-[70px] font-black text-kinetic-red leading-none mb-4 flex items-center gap-2 tracking-tighter">
-                            41<span class="text-[50px] tracking-normal">×</span>
-                        </div>
-                        
-                        <p class="font-display text-sm text-stark-white font-bold mb-10 pb-10 border-b border-white/10">March 2026 festive window</p>
-                        
-                        <p class="font-display text-on-secondary-container text-base leading-relaxed mb-12">
-                            Nayatel Lahore provides premium broadband and telecom solutions. Strong corporate presence, but retail was lagging. We built the digital sales engine from scratch across three phases — March 2026 festive peak delivered <strong class="text-stark-white">52 Lakh PKR revenue</strong> at 41× ROAS.
-                        </p>
-                        
-                        <!-- Pills -->
-                        <div class="flex flex-wrap gap-3 mt-auto mb-10">
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DIGITAL MARKETING</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">AI AUTOMATION</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DESIGN & CREATIVES</span>
-                        </div>
-                        
-                        <a href="#" class="font-mono text-[10px] text-white font-bold uppercase tracking-[0.2em] flex justify-between items-center group/btn mt-auto">
-                            READ THE FULL CASE STUDY
-                            <span class="text-kinetic-red group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">↗</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- New Card 4: EME (Electromech Enterprises) -->
-                <div class="p-10 md:p-14 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group flex flex-col h-full mt-8 md:mt-0">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <!-- Header -->
-                        <div class="flex justify-between items-start mb-8 font-mono text-[9px] font-bold uppercase tracking-[0.2em]">
-                            <span class="text-kinetic-red">EDUCATION . SAP CERTIFICATION</span>
-                            <span class="text-neutral-500 flex items-center gap-4">
-                                <span class="w-6 h-[1px] bg-neutral-700"></span> 2023 → 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="font-display text-3xl font-bold text-white mb-6">EME (Electromech Enterprises)</h3>
-                        
-                        <div class="font-display text-[70px] font-black text-kinetic-red leading-none mb-4 tracking-tighter">
-                            450L<span class="text-[30px] font-bold ml-2 tracking-normal">PKR</span>
-                        </div>
-                        
-                        <p class="font-display text-sm text-stark-white font-bold mb-10 pb-10 border-b border-white/10">Sustained across 24 months</p>
-                        
-                        <p class="font-display text-on-secondary-container text-base leading-relaxed mb-12">
-                            EME sells premium SAP consultant-level programs (₹2L) alongside lower-tier end-user certs. We rebuilt the enrollment engine — precision Meta ads, AI lead qualification, and a webinar-first funnel. 237 leads closed on <strong class="text-stark-white">17.18L ad spend</strong>.
-                        </p>
-                        
-                        <!-- Pills -->
-                        <div class="flex flex-wrap gap-3 mt-auto mb-10">
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DIGITAL MARKETING</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">AI AUTOMATION</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">GOHIGHLEVEL</span>
-                        </div>
-                        
-                        <a href="#" class="font-mono text-[10px] text-white font-bold uppercase tracking-[0.2em] flex justify-between items-center group/btn mt-auto">
-                            READ THE FULL CASE STUDY
-                            <span class="text-kinetic-red group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">↗</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- New CTA Section: Receipts -->
-    <section class="py-32 px-6 bg-[#0A0A0A] relative z-10 border-t border-white/5 overflow-hidden">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
-            
-            <!-- Left Side -->
-            <div class="w-full md:w-1/2">
-                <div class="flex items-center gap-3 mb-8 px-4 py-2 border border-white/10 rounded-full w-max">
+                <div class="flex items-center gap-3 mb-8">
                     <span class="w-2 h-2 rounded-full bg-kinetic-red"></span>
-                    <span class="font-mono text-[10px] text-white uppercase tracking-[0.2em] font-bold">NEXT STEP</span>
-                </div>
-                <h2 class="font-display font-bold text-[50px] md:text-[60px] leading-[1.1] tracking-tight text-white mb-8">
-                    Want receipts like<br/>these on your<br/>account?
-                </h2>
-                <p class="font-display text-[16px] text-on-secondary-container leading-[1.6] mb-12 max-w-md">
-                    Book a 30-minute audit call. We'll pull your current numbers, show you where the leaks are, and tell you honestly whether we can move them.
-                </p>
-                <a href="#contact" class="inline-flex items-center gap-4 bg-kinetic-red text-white px-8 py-5 rounded-[30px] font-display font-bold text-[16px] hover:bg-[#ff3333] transition-all shadow-[0_0_20px_rgba(232,40,43,0.3)] hover:shadow-[0_0_35px_rgba(232,40,43,0.6)] mb-12">
-                    <span class="border border-white/30 rounded-full w-8 h-8 flex items-center justify-center">↗</span>
-                    Book a Strategy Call
-                </a>
-                <div class="font-mono text-[10px] text-on-secondary-container tracking-[0.2em] uppercase font-bold flex flex-wrap gap-4">
-                    <span>30 MIN</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>FREE AUDIT</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>NO DECK</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>NO OBLIGATION</span>
-                </div>
-            </div>
-
-            <!-- Right Side -->
-            <div class="w-full md:w-1/2 md:border-l border-white/5 md:pl-20">
-                <div class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.2em] font-bold mb-12">
-                    // WHAT YOU WALK AWAY WITH
+                    <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] font-bold">OUR STORY</span>
                 </div>
                 
-                <div class="space-y-10">
-                    <!-- Item 1 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">01</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">A map of every manual task worth automating</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 2 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">02</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">Ballpark ROI on your top 3 automation opportunities</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">03</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">Honest read on whether we are a fit — or who is</p>
-                        </div>
+                <h1 id="banner-glitch" class="font-display font-black text-[50px] md:text-[70px] lg:text-[100px] leading-[0.9] tracking-tighter mb-8">
+                    <div class="glitch-text text-white" data-text="Automating the impossible,">Automating the impossible,</div>
+                    <div class="text-kinetic-red drop-shadow-[0_0_15px_rgba(232,40,43,0.5)] mt-2">daily.</div>
+                </h1>
+                
+                <p class="font-display text-on-secondary-container text-[16px] md:text-[18px] leading-[1.6] max-w-xl">
+                    Elevix Digital is an AI automation and growth agency built to replace fragmented vendors with one system that ships — performance marketing, CRM, AI chatbots, and automation, engineered as a single revenue engine for ambitious businesses.
+                </p>
+                
+                <div class="mt-12 flex items-center gap-6">
+                    <button class="bg-kinetic-red text-white px-8 py-3 rounded-full text-[14px] font-bold hover:bg-[#ff3333] transition-all flex items-center gap-2">
+                        Book a Strategy Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-widest cursor-pointer hover:text-white transition-colors">See what we ship ↘</span>
+                </div>
+            </div>
+            
+            <!-- Right Side (At A Glance) -->
+            <div class="w-full md:w-[35%] border border-white/10 bg-[#050505]/80 backdrop-blur-xl p-10 rounded-2xl hero-content-right relative overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div class="flex justify-between items-center mb-10 pb-6 border-b border-white/10">
+                    <span class="font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em]">— ELEVIX // AT A GLANCE</span>
+                    <div class="flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></span>
+                        <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-widest font-bold">LIVE</span>
                     </div>
                 </div>
-
-                <div class="mt-16 pt-8 border-t border-white/5 flex items-center gap-3 font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] font-bold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                    USUALLY RESPONDS WITHIN 24 HOURS
+                
+                <div class="space-y-6 font-mono text-[11px] uppercase tracking-widest text-on-secondary-container">
+                    <div class="flex justify-between items-center">
+                        <span>FOUNDED</span>
+                        <span class="text-white">2026</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>TEAM</span>
+                        <span class="text-white">8</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>HQ</span>
+                        <span class="text-white">LAHORE</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>CLIENTS SHIPPED</span>
+                        <span class="text-white">75+</span>
+                    </div>
+                </div>
+                
+                <div class="mt-12 pt-6 border-t border-white/10">
+                    <a href="#" class="font-mono text-[10px] text-white uppercase tracking-[0.2em] hover:text-kinetic-red transition-colors flex items-center justify-between">
+                        BOOK A 30-MIN AUDIT <span>↗</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Huge CTA Banner -->
+    <!-- Why Elevix exists -->
+    <section class="py-24 px-6 border-t border-white/5 relative bg-[#050505]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16">
+            <div class="w-full md:w-1/3">
+                <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
+                    // 01. ORIGIN
+                </div>
+                <h2 class="font-display font-bold text-[40px] md:text-[50px] text-white leading-[1.1] mb-12">
+                    Why Elevix<br/>exists.
+                </h2>
+                
+                <!-- Graphic -->
+                <div class="border border-white/10 bg-[#0A0A0A] p-8">
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="font-display font-bold text-white text-[20px]">One team. One system.</span>
+                        <div class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#10b981]"></span>
+                            <span class="font-mono text-[9px] text-[#10b981] uppercase tracking-widest font-bold">INTEGRATED</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between gap-2 mb-6">
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">ADS</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">DESIGN</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">WEB</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">SEO</div>
+                        <div class="w-10 h-10 border border-white/10 bg-white/5 flex items-center justify-center font-mono text-[9px] text-white/50">CRM</div>
+                        <div class="w-10 h-10 border border-kinetic-red/30 bg-kinetic-red/10 flex items-center justify-center font-mono text-[9px] text-kinetic-red font-bold">AI</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-mono text-[9px] text-kinetic-red uppercase tracking-widest font-bold">1 ACCOUNTABILITY LINE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-[60%] space-y-6 font-display text-[16px] text-on-secondary-container leading-[1.8]">
+                <p>
+                    It started with a pattern I kept seeing: fragmented marketing tools, zero automation in growth, and businesses quietly leaving money on the table every month. An agency for ads. A freelancer for design. Someone's cousin on the website. No CRM. No follow-up. Nothing connected.
+                </p>
+                <p>
+                    The obvious answer wasn't another vendor in the stack — it was to build the partner that didn't exist yet. One team that owns performance marketing, CRM, AI chatbots, and automation as a single integrated system. Not five agencies pretending to coordinate. One accountability line, one revenue target, one operating cadence.
+                </p>
+                <p>
+                    Elevix is AI-first from day zero. Automation isn't a module bolted on — it's the operating system the agency runs on. That conviction lets a small team do the output of a big one, and lets clients compound results instead of rebuilding every quarter.
+                    <br/><br/>
+                    That's the promise: <strong class="text-white">automating the impossible, <span class="text-kinetic-red">daily.</span></strong>
+                </p>
+                <div class="pt-8">
+                    <span class="font-mono text-[10px] text-white uppercase tracking-widest">— AKBAR ALI, FOUNDER</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Refuse to compromise -->
+    <section class="py-24 px-6 bg-[#0A0A0A] border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-6">
+                        // 04 VALUES, 0 SLOGANS
+                    </div>
+                    <h2 class="font-display font-bold text-[40px] md:text-[50px] text-white leading-[1.1]">
+                        What we refuse to<br/>compromise on.
+                    </h2>
+                </div>
+                <div class="hidden md:block font-mono text-[10px] text-on-secondary-container uppercase tracking-widest">
+                    ELEVIX OPERATING PRINCIPLES
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-white/10">
+                <!-- Value 1 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 01</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Automation Over Manual</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Systems beat busy work. Every repeatable task gets a workflow — voice agent, n8n flow, CRM routine — so the team compounds instead of burning out.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 02</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Outcomes Over Outputs</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">We measure revenue impact, not deliverables shipped. A campaign that books zero leads is failed work, regardless of how polished the asset deck looks.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 03</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Systems Over Hustle</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Reliability comes from documented processes, not from heroics. If a win can't be repeated next quarter, it wasn't really a win.</p>
+                </div>
+                <!-- Value 4 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="w-3 h-3 border-t border-l border-kinetic-red absolute top-0 left-0"></div>
+                    <div class="w-3 h-3 border-b border-r border-kinetic-red absolute bottom-0 right-0"></div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 04</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Radical Ownership</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Responsibility without excuses. Client numbers miss, we own it. A deadline slips, we own it. No finger-pointing at platforms, vendors, or algorithms.</p>
+                </div>
+                <!-- Value 5 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="w-3 h-3 border-t border-l border-kinetic-red absolute top-0 left-0"></div>
+                    <div class="w-3 h-3 border-b border-r border-kinetic-red absolute bottom-0 right-0"></div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 05</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Transparent Partnership</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Honest communication on progress and ROI. If the campaign isn't working, you hear it from us before you notice it in the dashboard.</p>
+                </div>
+                <!-- Value 6 -->
+                <div class="p-10 border-r border-b border-white/10 relative">
+                    <div class="w-3 h-3 border-t border-l border-kinetic-red absolute top-0 left-0"></div>
+                    <div class="w-3 h-3 border-b border-r border-kinetic-red absolute bottom-0 right-0"></div>
+                    <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">// 06</div>
+                    <h3 class="font-display text-[24px] font-bold text-white mb-4">Relentless Improvement</h3>
+                    <p class="font-display text-on-secondary-container text-[14px] leading-[1.8]">Compounding systems that improve monthly. Every retrospective ships at least one process upgrade into the next sprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Team -->
+    <section class="py-24 px-6 bg-[#050505] border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8">
+                // THE TEAM
+            </div>
+            <h2 class="font-display font-bold text-[40px] md:text-[50px] text-white leading-[1.1] mb-6">
+                The humans behind the<br/>systems
+            </h2>
+            <p class="font-display text-on-secondary-container text-[16px] leading-[1.6] max-w-2xl mb-16">
+                Small team, big throughput. Every member owns a craft end-to-end and ships directly to clients — no agency layers between you and the people doing the work.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Team 1 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AC</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">LEADERSHIP</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Aziz Cheema</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Founder & CEO</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Revenue strategy, partnerships, and the business engine behind Elevix growth.</p>
+                    </div>
+                </div>
+
+                <!-- Team 2 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AR</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">OPERATIONS</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Ali Raja</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Manager & Vibe Coder</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Operations, delivery systems, and the rhythm that keeps every client engagement on track.</p>
+                    </div>
+                </div>
+
+                <!-- Team 3 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AH</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">OPERATIONS</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Ahad</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">HR & Admin Executive</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">HR, talent acquisition, and office administration &mdash; building the culture and back-office spine of the agency.</p>
+                    </div>
+                </div>
+
+                <!-- Team 4 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">AM</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">GROWTH</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Ahmed</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Marketer</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Crafting campaigns, managing ad spend, and driving targeted traffic to maximize client ROI.</p>
+                    </div>
+                </div>
+
+                <!-- Team 5 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">FT</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">GROWTH</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Fatima</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Digital Marketer</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Executing comprehensive digital strategies, social media management, and online brand growth.</p>
+                    </div>
+                </div>
+
+                <!-- Team 6 -->
+                <div class="bg-[#111] border border-white/5 rounded-[12px] p-6 md:p-8 flex flex-row items-start gap-6 hover:bg-[#150a0a] hover:border-kinetic-red/30 transition-all duration-300 group shadow-lg hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-full border border-kinetic-red/30 text-kinetic-red font-mono text-[14px] font-bold flex items-center justify-center flex-shrink-0 group-hover:border-kinetic-red group-hover:shadow-[0_0_15px_rgba(232,40,43,0.3)] transition-all">SD</div>
+                    <div class="flex flex-col">
+                        <span class="font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase font-bold mb-2">CREATIVE</span>
+                        <h3 class="font-display text-[22px] font-bold text-white mb-1 group-hover:text-kinetic-red transition-colors">Saad</h3>
+                        <p class="font-display text-[14px] text-kinetic-red mb-4">Video Editor</p>
+                        <p class="font-display text-[13px] text-white/50 leading-[1.6]">Editing high-retention video content, motion graphics, and visual storytelling for client campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Force Multiplier Section -->
+    <section class="py-32 px-6 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="font-mono text-kinetic-red text-[11px] font-bold tracking-[0.2em] uppercase mb-8 flex items-center gap-4 fade-up">
+                <div class="w-8 h-[1px] bg-kinetic-red"></div> // 02. FORCE MULTIPLIER
+            </div>
+            
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24">
+                <div class="w-full lg:w-3/4">
+                    <h2 class="font-display font-bold text-[50px] md:text-[70px] lg:text-[90px] text-white leading-[1.05] tracking-tighter fade-up" style="font-weight: 800;">
+                        Six humans. A hundred agents. One operating system.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="mb-24 fade-up">
+                <p class="font-display text-on-secondary-container text-[18px] md:text-[22px] leading-[1.6] max-w-4xl font-medium">
+                    We built 100+ custom AI agents for ourselves. Every operator commands a squad of them — research, drafting, QA, reporting, follow-up, analytics. Humans bring strategy and taste. Agents handle the grind at machine speed. That's how two of us deliver like a hundred.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Humans Box -->
+                <div class="border border-white/10 bg-[#0A0A0A] p-10 md:p-12 rounded-2xl relative overflow-hidden group fade-up transition-all duration-700 hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] hover:-translate-y-2">
+                    <div class="flex justify-between items-center mb-16 font-mono text-[10px] tracking-[0.2em] uppercase text-kinetic-red font-bold">
+                        <div>// HUMANS • 6</div>
+                        <div class="text-on-secondary-container">LAHORE • PAKISTAN</div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 mb-20 justify-center md:justify-start">
+                        <!-- AC -->
+                        <div class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[16px] md:text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:-translate-y-2 cursor-pointer flex-shrink-0">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20" style="animation-delay: 0s;"></div>
+                            AC
+                        </div>
+                        <!-- AR -->
+                        <div class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[16px] md:text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:-translate-y-2 cursor-pointer flex-shrink-0">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20" style="animation-delay: 0.5s;"></div>
+                            AR
+                        </div>
+                        <!-- AH -->
+                        <div class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[16px] md:text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:-translate-y-2 cursor-pointer flex-shrink-0">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20" style="animation-delay: 1.0s;"></div>
+                            AH
+                        </div>
+                        <!-- AM -->
+                        <div class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[16px] md:text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:-translate-y-2 cursor-pointer flex-shrink-0">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20" style="animation-delay: 1.5s;"></div>
+                            AM
+                        </div>
+                        <!-- FT -->
+                        <div class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[16px] md:text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:-translate-y-2 cursor-pointer flex-shrink-0">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20" style="animation-delay: 2.0s;"></div>
+                            FT
+                        </div>
+                        <!-- SD -->
+                        <div class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px] rounded-full border border-kinetic-red/30 flex items-center justify-center text-white font-display font-bold text-[16px] md:text-[18px] relative group-hover:shadow-[0_0_30px_rgba(232,40,43,0.4)] transition-all duration-500 bg-black z-10 hover:-translate-y-2 cursor-pointer flex-shrink-0">
+                            <div class="absolute inset-0 rounded-full border border-kinetic-red animate-ping opacity-20" style="animation-delay: 2.5s;"></div>
+                            SD
+                        </div>
+                    </div>
+                    
+                    <p class="font-display text-[15px] text-on-secondary-container leading-[1.7] max-w-sm">
+                        Strategy, taste, accountability. Every operator runs 12+ agents in parallel across their client portfolio.
+                    </p>
+                </div>
+                
+                <!-- AI Agents Box -->
+                <div class="border border-white/10 bg-[#0A0A0A] p-10 md:p-12 rounded-2xl relative overflow-hidden group fade-up transition-all duration-700 hover:border-kinetic-red/30 hover:shadow-[0_0_40px_rgba(232,40,43,0.1)] hover:-translate-y-2">
+                    <div class="flex justify-between items-center mb-12 font-mono text-[10px] tracking-[0.2em] uppercase text-kinetic-red font-bold">
+                        <div>// AI AGENTS • 100+</div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse shadow-[0_0_8px_rgba(232,40,43,0.8)]"></div>
+                            LIVE • 24 / 7
+                        </div>
+                    </div>
+                    
+                    <!-- 64 Squares Grid -->
+                    <div class="grid grid-cols-8 gap-2 w-full max-w-[320px]">
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/30 shadow-[0_0_10px_rgba(232,40,43,0.4)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/50 bg-kinetic-red/40 shadow-[0_0_10px_rgba(232,40,43,0.5)]"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                        <div class="aspect-square rounded-sm border border-kinetic-red/20 bg-kinetic-red/5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Huge CTA Banner -->
     <section class="py-32 px-6 bg-[#050505] relative z-10 border-t border-white/5 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-10 font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 fade-up">
@@ -791,7 +867,10 @@
         </div>
     </section>
 
-<footer id="footer" class="bg-[#050505] relative z-10 border-t border-white/10">
+    
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#050505] relative z-10 border-t border-white/10">
         <!-- Top Info Row -->
         <div class="grid grid-cols-1 md:grid-cols-3 border-b border-white/10">
             <!-- HQ -->

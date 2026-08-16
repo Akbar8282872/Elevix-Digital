@@ -4,7 +4,6 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>ELEVIX DIGITAL | AI-Powered Marketing & Automation in Lahore, Pakistan</title>
-    
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -40,100 +39,6 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-        }
-
-
-
-        /* 5D Full Screen Red Wave Animation */
-        .waves-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-            background: radial-gradient(circle at center, #140505 0%, #0A0A0A 100%);
-            opacity: 0.6;
-        }
-
-        .wave-layer {
-            position: absolute;
-            bottom: -5%;
-            left: 0;
-            width: 200%;
-            height: 100%;
-            background-repeat: repeat-x;
-            background-position: bottom center;
-            transform-origin: bottom center;
-            will-change: transform;
-        }
-
-        .wave-1 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%234A0000" fill-opacity="0.3" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: 50% 120%;
-            animation: waveAnim 35s linear infinite;
-            z-index: 1;
-            bottom: -5%;
-            filter: blur(8px);
-        }
-
-        .wave-2 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%237A0000" fill-opacity="0.25" d="M0,96L60,112C120,128,240,160,360,170.7C480,181,600,171,720,154.7C840,139,960,117,1080,128C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>');
-            background-size: 50% 115%;
-            animation: waveAnim 28s linear infinite reverse;
-            z-index: 2;
-            bottom: -10%;
-            filter: blur(6px);
-        }
-
-        .wave-3 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23A30000" fill-opacity="0.15" d="M0,160L80,170.7C160,181,320,203,480,192C640,181,800,139,960,133.3C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
-            background-size: 50% 110%;
-            animation: waveAnim 22s linear infinite;
-            z-index: 3;
-            bottom: -15%;
-            filter: blur(4px);
-        }
-
-        .wave-4 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23CC1111" fill-opacity="0.1" d="M0,64L80,90.7C160,117,320,171,480,176C640,181,800,139,960,112C1120,85,1280,75,1360,69.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
-            background-size: 50% 105%;
-            animation: waveAnim 18s linear infinite reverse;
-            z-index: 4;
-            bottom: -20%;
-            filter: blur(2px);
-        }
-
-        .wave-5 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF2222" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,181.3C384,160,480,96,576,96C672,96,768,160,864,181.3C960,203,1056,181,1152,149.3C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: 50% 125%;
-            animation: waveAnim 15s linear infinite reverse;
-            z-index: 5;
-            bottom: -25%;
-            filter: blur(1px);
-        }
-
-        .wave-6 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23E8282B" fill-opacity="0.08" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: 50% 130%;
-            animation: waveAnim 12s linear infinite;
-            z-index: 6;
-            bottom: -30%;
-        }
-
-        .wave-7 {
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF6666" fill-opacity="0.03" d="M0,128L80,144C160,160,320,192,480,197.3C640,203,800,181,960,149.3C1120,117,1280,75,1360,53.3L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
-            background-size: 50% 90%;
-            animation: waveAnim 7s linear infinite;
-            z-index: 7;
-            bottom: -35%;
-        }
-
-        @keyframes waveAnim {
-            0% { transform: translateX(0) translateZ(0) scaleY(1); }
-            50% { transform: translateX(-25%) translateZ(0) scaleY(1.05); }
-            100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
         }
 
         @keyframes marquee {
@@ -299,6 +204,18 @@
             0% { transform: translateY(-100%); }
             100% { transform: translateY(100%); }
         }
+
+        /* 9D Grid Hyper Move */
+        @keyframes gridHyperMove {
+            0% { transform: rotateX(70deg) translateY(0) translateZ(-200px); }
+            100% { transform: rotateX(70deg) translateY(60px) translateZ(-200px); }
+        }
+
+        /* Floating Particles */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
         /* ===== SERVICES MEGA MENU ===== */
         @keyframes megaFadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
         #services-trigger-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0; }
@@ -357,12 +274,12 @@
                 <a href="case-studies.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Case Studies</a>
                 <a href="blog.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Blogs</a>
                 <a href="careers.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Careers</a>
-                <a href="contact.html" class="text-on-secondary-container text-[14px] font-medium hover:text-white transition-colors">Contact Us</a>
+                <a href="#" class="text-white text-[14px] font-medium transition-colors">Contact Us</a>
             </div>
 
             <!-- Let's Talk CTA Button -->
-            <button onclick="window.location.href='contact.html'" class="bg-kinetic-red text-white px-8 py-3 rounded-full text-[14px] font-bold hover:bg-[#ff3333] transition-all shadow-[0_0_15px_rgba(232,40,43,0.3)] hover:shadow-[0_0_25px_rgba(232,40,43,0.5)]">
-                Let\'s Talk
+            <button class="bg-kinetic-red text-white px-8 py-3 rounded-full text-[14px] font-bold hover:bg-[#ff3333] transition-all shadow-[0_0_15px_rgba(232,40,43,0.3)] hover:shadow-[0_0_25px_rgba(232,40,43,0.5)]">
+                Let's Talk
             </button>
         </div>
 
@@ -389,9 +306,11 @@
     <script>(function(){var t=document.getElementById('services-trigger-btn'),p=document.getElementById('services-mega-panel');if(!t||!p)return;var h;function s(){clearTimeout(h);p.style.display='block';p.style.animation='none';p.offsetHeight;p.style.animation='megaFadeIn 0.2s ease forwards';t.classList.add('active');}function d(){h=setTimeout(function(){p.style.display='none';t.classList.remove('active');},180);}t.addEventListener('mouseenter',s);t.addEventListener('mouseleave',d);p.addEventListener('mouseenter',s);p.addEventListener('mouseleave',d);})();</script>
 
     </nav>
-    <!-- MAIN HERO (WITH ORB BG) -->
-    <header class="relative pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 min-h-[70vh] flex items-center overflow-hidden">
-        <!-- Animated Background Mesh/Orb -->
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-[#0a0a0a] z-10">
+        
+        <!-- Animated Background Mesh/Orb (exactly like Services) -->
         <div class="absolute inset-0 z-0 pointer-events-none">
             <!-- Pulsing Red Core -->
             <div class="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-kinetic-red rounded-full mix-blend-screen filter blur-[150px] opacity-20 animate-[pulse_4s_ease-in-out_infinite]"></div>
@@ -402,396 +321,445 @@
             <!-- Scanline -->
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent h-[200%] animate-[scan_6s_linear_infinite]"></div>
         </div>
+        </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pointer-events-auto">
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col justify-center">
             
-            <!-- Left Column: Hero Text -->
+            <!-- Breadcrumb -->
+            <div class="font-display text-[14px] font-medium text-[#666] mb-12 flex items-center gap-2">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a> 
+                <span>/</span> 
+                <span class="text-white">Contact</span>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+                <!-- Left Content -->
+                <div class="flex-1 lg:w-1/2">
+                    <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 mb-8">
+                        <div class="w-2 h-2 rounded-full bg-kinetic-red shadow-[0_0_8px_rgba(232,40,43,0.8)]"></div>
+                        <span class="font-mono text-[10px] text-white/70 tracking-[0.2em] font-bold uppercase">LET'S TALK</span>
+                    </div>
+                    
+                    <h1 class="font-display font-bold text-[40px] md:text-[50px] lg:text-[60px] text-white leading-[1.05] tracking-tight mb-8">
+                        Tell us what you<br/>
+                        want to scale.
+                    </h1>
+                    
+                    <p class="font-display text-[17px] text-[#999] leading-[1.6] max-w-xl mb-12 font-medium">
+                        This isn't an automated intake form. A founder reads every inbound, replies inside 4 business hours, and either books a call &mdash; or tells you honestly we're not the right fit. No sequences, no SDR follow-ups, no noise.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-6">
+                        <a href="#intake" class="bg-kinetic-red text-white px-8 py-4 rounded-full font-display font-bold text-[16px] hover:bg-[#d42023] transition-colors shadow-[0_0_30px_rgba(232,40,43,0.3)] flex items-center gap-3 group">
+                            Jump to the form
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                        </a>
+                        <a href="case-studies.html" class="text-white/60 hover:text-white font-display font-medium text-[16px] flex items-center gap-2 transition-colors group">
+                            See case studies
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content (Intake Box) -->
+                <div class="flex-1 lg:w-1/2 w-full mt-12 lg:mt-0 relative" id="intake">
+                    <!-- Red Circular button on bottom right matching the screenshot slightly -->
+                    <div class="absolute -bottom-6 -right-6 w-16 h-16 bg-kinetic-red rounded-full flex items-center justify-center text-white shadow-[0_0_30px_rgba(232,40,43,0.4)] z-20 hover:scale-105 transition-transform cursor-pointer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    </div>
+
+                    <div class="bg-[#0e0e0e] border border-white/5 rounded-2xl p-8 md:p-12 relative shadow-[0_0_50px_rgba(0,0,0,0.5)] z-10">
+                        <div class="flex justify-between items-center mb-10">
+                            <div class="font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase flex items-center gap-4">
+                                <div class="w-6 h-[1px] bg-kinetic-red"></div> INTAKE
+                            </div>
+                            <div class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red shadow-[0_0_8px_rgba(232,40,43,0.8)]"></div> LIVE
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Row 1 -->
+                            <div class="flex justify-between items-center border-b border-white/5 pb-6">
+                                <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">RESPONSE</span>
+                                <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">&lt; 4 HRS</span>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="flex justify-between items-center border-b border-white/5 pb-6">
+                                <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">CHANNELS</span>
+                                <span class="font-mono text-[10px] text-white tracking-[0.2em] font-bold uppercase">CALL &bull; WA &bull; EMAIL</span>
+                            </div>
+                            <!-- Row 3 -->
+                            <div class="flex justify-between items-center border-b border-white/5 pb-6">
+                                <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">HQ</span>
+                                <span class="font-mono text-[10px] text-white tracking-[0.2em] font-bold uppercase">GULBERG, LAHORE, PAKISTAN</span>
+                            </div>
+                            <!-- Row 4 -->
+                            <div class="flex justify-between items-center border-b border-white/5 pb-6">
+                                <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">TIMEZONE</span>
+                                <span class="font-mono text-[10px] text-white tracking-[0.2em] font-bold uppercase">PKT (GMT+5)</span>
+                            </div>
+                            <!-- Row 5 -->
+                            <div class="flex justify-between items-center border-b border-white/5 pb-6">
+                                <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">INTAKE</span>
+                                <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">OPEN</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="mt-8 font-mono text-[10px] text-[#888] hover:text-white transition-colors tracking-[0.2em] font-bold uppercase flex justify-between items-center w-full group">
+                            <span>JUMP TO THE FORM</span>
+                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Combined Form & Direct Line Section -->
+    <section class="relative bg-deep-obsidian py-32 overflow-hidden z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+            
+            <!-- Left Column: The Form (Col span 7) -->
             <div class="lg:col-span-7">
-                
-                <div class="flex items-center gap-4 text-on-secondary-container text-sm font-mono tracking-widest mb-12">
-                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
-                    <span class="text-white/30">/</span>
-                    <span class="text-white">Case Studies</span>
-                </div>
-            
-                <div class="flex items-center gap-2 inline-block py-1 px-3 border border-white/10 rounded-full bg-white/5 mb-6 w-max">
-                    <div class="w-2 h-2 rounded-full bg-kinetic-red"></div>
-                    <span class="font-mono text-stark-white text-[10px] font-bold tracking-[0.2em] uppercase">
-                        PROOF
-                    </span>
-                </div>
-                <h1 class="font-display font-black text-5xl md:text-7xl lg:text-[70px] xl:text-[85px] leading-[1.0] tracking-tighter text-white mb-6">
-                    <span class="whitespace-nowrap">Results we can ship</span><br />on a screenshot.
-                </h1>
-                <p class="text-lg text-on-secondary-container font-display leading-relaxed max-w-2xl mb-10">
-                    Campaigns, builds, and automation systems that moved real numbers — with the numbers still attached.
-                </p>
-                <div class="flex flex-wrap items-center gap-6">
-                    <a href="#contact" class="px-8 py-4 bg-kinetic-red text-white font-display font-bold text-sm tracking-wide hover:bg-red-600 transition-colors rounded-[24px] flex items-center gap-2">
-                        Book a Strategy Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-                    </a>
-                    <a href="#the-work" class="text-neutral-400 font-display font-medium text-sm hover:text-white transition-colors flex items-center gap-2">
-                        See case studies <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Column: Status Widget -->
-            <div class="lg:col-span-5 relative">
-                <div class="absolute inset-0 bg-kinetic-red/10 blur-[100px] rounded-full pointer-events-none"></div>
-                
-                <div class="relative border border-white/5 bg-[#111] p-8 rounded-[16px] shadow-2xl pointer-events-auto">
-                    <!-- Rows -->
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em] flex items-center gap-4">
-                            <span class="w-8 h-[1px] bg-kinetic-red/50"></span> STATE
-                        </span>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red animate-pulse"></div>
-                            <span class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.2em]">LIVE</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">FEATURED</span>
-                        <span class="font-mono text-sm text-white">2</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">TOTAL ATTRIBUTED</span>
-                        <span class="font-mono text-sm text-kinetic-red font-bold">$2M+</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">PEAK ROAS</span>
-                        <span class="font-mono text-sm text-white">41x</span>
-                    </div>
-
-                    <div class="flex items-center justify-between py-4 border-b border-white/5">
-                        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.2em]">SECTORS</span>
-                        <span class="font-mono text-[10px] font-bold text-white uppercase tracking-[0.2em]">ECOMMERCE • SAAS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-
-    <!-- PORTFOLIO METRICS SECTION (SCREENSHOT 1) -->
-    <section class="w-full bg-[#0a0a0a] border-t border-kinetic-red border-b border-white/5 relative z-10">
-        <div class="max-w-[1400px] mx-auto">
-            <!-- Top Bar -->
-            <div class="flex justify-between items-center py-4 px-8 border-b border-white/5 text-[10px] font-mono tracking-[0.2em] uppercase">
-                <div class="flex items-center gap-3 text-neutral-500">
-                    <span class="w-2 h-2 rounded-full bg-kinetic-red shadow-[0_0_10px_rgba(232,40,43,0.8)]"></span> LIVE // PORTFOLIO METRICS
-                </div>
-                <div class="text-neutral-600 font-bold">
-                    ELEVIX DIGITAL • 2026
-                </div>
-            </div>
-            
-            <!-- 4 Grid Columns -->
-            <div class="grid grid-cols-1 md:grid-cols-4">
-                <!-- Col 1 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 01</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        23.75x
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ROAS • EME EDUCATION
-                    </div>
-                </div>
-
-                <!-- Col 2 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 02</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        41x
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ROAS • NAYATEL LAHORE
-                    </div>
-                </div>
-
-                <!-- Col 3 -->
-                <div class="p-10 border-b md:border-b-0 md:border-r border-white/5 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 03</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        450L+
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        ATTRIBUTED REVENUE
-                    </div>
-                </div>
-
-                <!-- Col 4 -->
-                <div class="p-10 group hover:bg-[#111] transition-colors relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-kinetic-red/30 group-hover:border-kinetic-red transition-colors"></div>
-                    
-                    <div class="flex justify-between items-center mb-6 font-mono text-[10px] tracking-[0.2em] font-bold">
-                        <span class="text-kinetic-red/80">// 04</span>
-                        <span class="w-6 h-[1px] bg-kinetic-red/50"></span>
-                    </div>
-                    <div class="font-display font-black text-[50px] lg:text-[70px] text-white leading-none tracking-tighter mb-6 group-hover:-translate-y-1 transition-transform">
-                        53K
-                    </div>
-                    <div class="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold group-hover:text-white transition-colors">
-                        AD SPEND → 22L RETURN
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-<section id="the-work" class="py-32 px-6 bg-deep-obsidian relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-20 fade-up">
+                <!-- Header -->
                 <div class="flex items-center gap-4 mb-6">
-                    <span class="w-8 h-[2px] bg-kinetic-red"></span>
-                    <span class="font-mono text-[11px] text-kinetic-red font-bold uppercase tracking-[0.2em]">// 02. THE WORK</span>
-                </div>
-                <h2 class="font-display text-[50px] md:text-[80px] font-bold leading-[1.0] tracking-tight text-stark-white">
-                    Selected client results.
-                </h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Case 1 -->
-                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                            FEATURED • HOME APPLIANCES LAHORE
-                        </span>
-                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-stark-white mb-2 leading-none tracking-tight">41× <span class="text-kinetic-red">peak roas.</span></h3>
-                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">Sept 2025 → Mar 2026.</h4>
-                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
-                            A premium home appliance store in Gulberg, Lahore selling silent chimneys and high-end kitchen systems. Strong offline, zero digital. We built the digital sales engine from scratch across three phases — March 2026 festive peak delivered <strong class="text-stark-white font-semibold">52 Lakh PKR revenue</strong> at 41× ROAS.
-                        </p>
-                    </div>
+                    <div class="w-12 h-[1px] bg-kinetic-red"></div>
+                    <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 01. START A PROJECT</span>
                 </div>
                 
-                <!-- Case 2 -->
-                <div class="p-12 md:p-16 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group" style="transition-delay: 100ms;">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10">
-                        <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-[0.2em] border border-kinetic-red/30 bg-kinetic-red/5 px-4 py-2 rounded-full mb-10 flex items-center w-fit gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                            HEALTHCARE • MODERN DENTAL CLINIC KARACHI
-                        </span>
-                        <h3 class="font-display text-[60px] md:text-[80px] font-bold text-kinetic-red mb-2 leading-none tracking-tight">180 appointments</h3>
-                        <h4 class="font-display text-[32px] md:text-[40px] font-semibold text-stark-white mb-10 tracking-tight">booked.</h4>
-                        <p class="font-display text-on-secondary-container text-lg leading-relaxed">
-                            How a modern dental & skin clinic in DHA Karachi turned <strong class="text-stark-white">150K PKR of Meta ad spend</strong> into 1,293 leads and 180 booked appointments in ~3 months. Real numbers, full funnel execution.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <!-- New Card 3: Nayatel Lahore (matching screenshot design) -->
-                <div class="p-10 md:p-14 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group flex flex-col h-full">
-                    <div class="absolute inset-0 bg-gradient-to-br from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <!-- Header -->
-                        <div class="flex justify-between items-start mb-8 font-mono text-[9px] font-bold uppercase tracking-[0.2em]">
-                            <span class="text-kinetic-red">IT & TELECOM , BROADBAND<br/>SERVICES</span>
-                            <span class="text-neutral-500 flex items-center gap-4">
-                                <span class="w-6 h-[1px] bg-neutral-700"></span> SEPT 2025 → MAR<br/>2026
-                            </span>
-                        </div>
-                        
-                        <h3 class="font-display text-3xl font-bold text-white mb-6">Nayatel Lahore</h3>
-                        
-                        <div class="font-display text-[70px] font-black text-kinetic-red leading-none mb-4 flex items-center gap-2 tracking-tighter">
-                            41<span class="text-[50px] tracking-normal">×</span>
-                        </div>
-                        
-                        <p class="font-display text-sm text-stark-white font-bold mb-10 pb-10 border-b border-white/10">March 2026 festive window</p>
-                        
-                        <p class="font-display text-on-secondary-container text-base leading-relaxed mb-12">
-                            Nayatel Lahore provides premium broadband and telecom solutions. Strong corporate presence, but retail was lagging. We built the digital sales engine from scratch across three phases — March 2026 festive peak delivered <strong class="text-stark-white">52 Lakh PKR revenue</strong> at 41× ROAS.
-                        </p>
-                        
-                        <!-- Pills -->
-                        <div class="flex flex-wrap gap-3 mt-auto mb-10">
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DIGITAL MARKETING</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">AI AUTOMATION</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DESIGN & CREATIVES</span>
-                        </div>
-                        
-                        <a href="#" class="font-mono text-[10px] text-white font-bold uppercase tracking-[0.2em] flex justify-between items-center group/btn mt-auto">
-                            READ THE FULL CASE STUDY
-                            <span class="text-kinetic-red group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">↗</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- New Card 4: EME (Electromech Enterprises) -->
-                <div class="p-10 md:p-14 rounded-[2rem] border border-white/5 bg-[#111111] hover:border-kinetic-red/50 transition-all duration-500 fade-up relative overflow-hidden group flex flex-col h-full mt-8 md:mt-0">
-                    <div class="absolute inset-0 bg-gradient-to-bl from-kinetic-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <!-- Header -->
-                        <div class="flex justify-between items-start mb-8 font-mono text-[9px] font-bold uppercase tracking-[0.2em]">
-                            <span class="text-kinetic-red">EDUCATION . SAP CERTIFICATION</span>
-                            <span class="text-neutral-500 flex items-center gap-4">
-                                <span class="w-6 h-[1px] bg-neutral-700"></span> 2023 → 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="font-display text-3xl font-bold text-white mb-6">EME (Electromech Enterprises)</h3>
-                        
-                        <div class="font-display text-[70px] font-black text-kinetic-red leading-none mb-4 tracking-tighter">
-                            450L<span class="text-[30px] font-bold ml-2 tracking-normal">PKR</span>
-                        </div>
-                        
-                        <p class="font-display text-sm text-stark-white font-bold mb-10 pb-10 border-b border-white/10">Sustained across 24 months</p>
-                        
-                        <p class="font-display text-on-secondary-container text-base leading-relaxed mb-12">
-                            EME sells premium SAP consultant-level programs (₹2L) alongside lower-tier end-user certs. We rebuilt the enrollment engine — precision Meta ads, AI lead qualification, and a webinar-first funnel. 237 leads closed on <strong class="text-stark-white">17.18L ad spend</strong>.
-                        </p>
-                        
-                        <!-- Pills -->
-                        <div class="flex flex-wrap gap-3 mt-auto mb-10">
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">DIGITAL MARKETING</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">AI AUTOMATION</span>
-                            <span class="font-mono text-[9px] text-white/50 border border-white/10 rounded-full px-4 py-2 uppercase tracking-[0.2em]">GOHIGHLEVEL</span>
-                        </div>
-                        
-                        <a href="#" class="font-mono text-[10px] text-white font-bold uppercase tracking-[0.2em] flex justify-between items-center group/btn mt-auto">
-                            READ THE FULL CASE STUDY
-                            <span class="text-kinetic-red group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">↗</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- New CTA Section: Receipts -->
-    <section class="py-32 px-6 bg-[#0A0A0A] relative z-10 border-t border-white/5 overflow-hidden">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
-            
-            <!-- Left Side -->
-            <div class="w-full md:w-1/2">
-                <div class="flex items-center gap-3 mb-8 px-4 py-2 border border-white/10 rounded-full w-max">
-                    <span class="w-2 h-2 rounded-full bg-kinetic-red"></span>
-                    <span class="font-mono text-[10px] text-white uppercase tracking-[0.2em] font-bold">NEXT STEP</span>
-                </div>
-                <h2 class="font-display font-bold text-[50px] md:text-[60px] leading-[1.1] tracking-tight text-white mb-8">
-                    Want receipts like<br/>these on your<br/>account?
+                <h2 class="font-display font-bold text-[40px] md:text-[55px] text-white leading-[1.05] tracking-tight mb-6">
+                    Tell us the shape of the<br/>problem.
                 </h2>
-                <p class="font-display text-[16px] text-on-secondary-container leading-[1.6] mb-12 max-w-md">
-                    Book a 30-minute audit call. We'll pull your current numbers, show you where the leaks are, and tell you honestly whether we can move them.
+                
+                <p class="font-display text-[16px] text-[#999] leading-[1.7] max-w-xl mb-12 font-medium">
+                    Six fields, under two minutes. Share the revenue goal you're chasing and what's blocking it &mdash; we'll come back with either a strategy call or a clear referral.
                 </p>
-                <a href="#contact" class="inline-flex items-center gap-4 bg-kinetic-red text-white px-8 py-5 rounded-[30px] font-display font-bold text-[16px] hover:bg-[#ff3333] transition-all shadow-[0_0_20px_rgba(232,40,43,0.3)] hover:shadow-[0_0_35px_rgba(232,40,43,0.6)] mb-12">
-                    <span class="border border-white/30 rounded-full w-8 h-8 flex items-center justify-center">↗</span>
-                    Book a Strategy Call
-                </a>
-                <div class="font-mono text-[10px] text-on-secondary-container tracking-[0.2em] uppercase font-bold flex flex-wrap gap-4">
-                    <span>30 MIN</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>FREE AUDIT</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>NO DECK</span>
-                    <span class="text-kinetic-red">•</span>
-                    <span>NO OBLIGATION</span>
-                </div>
-            </div>
-
-            <!-- Right Side -->
-            <div class="w-full md:w-1/2 md:border-l border-white/5 md:pl-20">
-                <div class="font-mono text-[10px] text-kinetic-red uppercase tracking-[0.2em] font-bold mb-12">
-                    // WHAT YOU WALK AWAY WITH
-                </div>
                 
-                <div class="space-y-10">
-                    <!-- Item 1 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">01</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">A map of every manual task worth automating</p>
-                        </div>
+                <!-- Form Box -->
+                <div class="bg-[#0e0e0e] border border-white/5 rounded-2xl p-8 md:p-10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                    <!-- Form Inner Header -->
+                    <div class="flex justify-between items-center mb-10 pb-6 border-b border-white/5">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// START A PROJECT</span>
+                        <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">~4 HR RESPONSE</span>
                     </div>
                     
-                    <!-- Item 2 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <!-- Form Fields -->
+                    <form class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Full Name -->
+                            <div>
+                                <label class="block font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase mb-3">FULL NAME</label>
+                                <input type="text" placeholder="e.g. Ahmed Ali" class="w-full bg-[#141414] border border-white/5 rounded-md px-5 py-4 text-[14px] text-white font-medium placeholder-[#555] focus:outline-none focus:border-kinetic-red focus:ring-1 focus:ring-kinetic-red transition-all">
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label class="block font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase mb-3">EMAIL</label>
+                                <input type="email" placeholder="you@company.com" class="w-full bg-[#141414] border border-white/5 rounded-md px-5 py-4 text-[14px] text-white font-medium placeholder-[#555] focus:outline-none focus:border-kinetic-red focus:ring-1 focus:ring-kinetic-red transition-all">
+                            </div>
+                            <!-- Phone -->
+                            <div>
+                                <label class="block font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase mb-3">PHONE</label>
+                                <input type="tel" placeholder="+92 300 0000000" class="w-full bg-[#141414] border border-white/5 rounded-md px-5 py-4 text-[14px] text-white font-medium placeholder-[#555] focus:outline-none focus:border-kinetic-red focus:ring-1 focus:ring-kinetic-red transition-all">
+                            </div>
+                            <!-- Company -->
+                            <div>
+                                <label class="block font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase mb-3">COMPANY</label>
+                                <input type="text" placeholder="Your brand or business" class="w-full bg-[#141414] border border-white/5 rounded-md px-5 py-4 text-[14px] text-white font-medium placeholder-[#555] focus:outline-none focus:border-kinetic-red focus:ring-1 focus:ring-kinetic-red transition-all">
+                            </div>
                         </div>
+                        
+                        <!-- Service Interested In -->
                         <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">02</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">Ballpark ROI on your top 3 automation opportunities</p>
+                            <label class="block font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase mb-3">SERVICE INTERESTED IN</label>
+                            <select class="w-full bg-[#141414] border border-white/5 rounded-md px-5 py-4 text-[14px] text-white font-medium focus:outline-none focus:border-kinetic-red focus:ring-1 focus:ring-kinetic-red transition-all appearance-none">
+                                <option>AI Automation</option>
+                                <option>Web Development</option>
+                                <option>Digital Marketing</option>
+                                <option>App Development</option>
+                                <option>SEO Services</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Textarea -->
+                        <div>
+                            <label class="block font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase mb-3">WHAT ARE YOU TRYING TO SCALE? (OPTIONAL)</label>
+                            <textarea rows="4" placeholder="Revenue goal, what you have tried, what blocking you right now." class="w-full bg-[#141414] border border-white/5 rounded-md px-5 py-4 text-[14px] text-white font-medium placeholder-[#555] focus:outline-none focus:border-kinetic-red focus:ring-1 focus:ring-kinetic-red transition-all resize-none"></textarea>
+                        </div>
+                        
+                        <!-- Submit Area -->
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-white/5">
+                            <span class="font-mono text-[10px] text-[#666] tracking-[0.1em] font-bold uppercase text-center md:text-left leading-relaxed">
+                                WE NEVER SPAM. YOUR DETAILS REACH THE FOUNDER DIRECTLY.
+                            </span>
+                            <button type="submit" class="bg-kinetic-red text-white px-8 py-4 rounded-md font-display font-bold text-[14px] hover:bg-[#d42023] transition-colors shadow-[0_0_20px_rgba(232,40,43,0.3)] flex items-center gap-2 group whitespace-nowrap">
+                                Send it 
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Privacy Disclaimer -->
+                <p class="font-mono text-[9px] text-[#555] tracking-[0.1em] font-bold uppercase mt-8 leading-relaxed max-w-xl">
+                    BY SUBMITTING, YOU AGREE TO OUR <a href="#" class="text-white hover:text-kinetic-red transition-colors underline decoration-white/20 underline-offset-4">PRIVACY POLICY</a>. WE NEVER SHARE YOUR DETAILS WITH THIRD PARTIES.
+                </p>
+            </div>
+            
+            
+            <!-- Right Column: Direct Line (Col span 5) -->
+            <div class="lg:col-span-5">
+                <!-- Header -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-[1px] bg-kinetic-red"></div>
+                    <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 02. DIRECT LINE</span>
+                </div>
+                
+                <h3 class="font-display font-bold text-[30px] md:text-[35px] text-white leading-[1.1] tracking-tight mb-4">
+                    Prefer not to fill a form?
+                </h3>
+                
+                <p class="font-display text-[15px] text-[#999] leading-[1.6] mb-10 font-medium">
+                    Pick the channel that suits you. All three reach a human on the Elevix team &mdash; not a ticketing queue.
+                </p>
+                
+                <div class="space-y-4">
+                    <!-- WhatsApp Card -->
+                    <div class="bg-[#0e0e0e] border border-white/5 rounded-xl p-6 hover:border-white/20 transition-all cursor-pointer group relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                <span class="font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase">WHATSAPP</span>
+                            </div>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="group-hover:stroke-white transition-colors"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                        </div>
+                        <h4 class="font-display font-bold text-[22px] text-white mb-2 tracking-tight">+92 300 000</h4>
+                        <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">FASTEST - REPLIES WITHIN THE HOUR</span>
+                    </div>
+                    
+                    <!-- Call Card -->
+                    <div class="bg-[#0e0e0e] border border-white/5 rounded-xl p-6 hover:border-white/20 transition-all cursor-pointer group relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span class="font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase">CALL</span>
+                            </div>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="group-hover:stroke-white transition-colors"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                        </div>
+                        <h4 class="font-display font-bold text-[22px] text-white mb-2 tracking-tight">+92 300 000</h4>
+                        <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">MON-SAT &bull; 09:30-18:00 PKT</span>
+                    </div>
+                    
+                    <!-- Email Card -->
+                    <div class="bg-[#0e0e0e] border border-white/5 rounded-xl p-6 hover:border-white/20 transition-all cursor-pointer group relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 4l10 8 10-8"></path></svg>
+                                <span class="font-mono text-[10px] text-[#666] tracking-[0.2em] font-bold uppercase">EMAIL</span>
+                            </div>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="group-hover:stroke-white transition-colors"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                        </div>
+                        <h4 class="font-display font-bold text-[22px] text-white mb-2 tracking-tight">info@elevix.com</h4>
+                        <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">FOUNDER-READ &bull; ~4 HR REPLY</span>
+                    </div>
+                    
+                    <!-- Testimonial -->
+                    <div class="bg-[#0e0e0e] border border-white/5 rounded-xl p-8 mt-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[#1a1a1a] border border-white/10 overflow-hidden flex items-center justify-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-display font-bold text-white text-[15px]">Safwan Rasheed</h5>
+                                    <span class="font-mono text-[9px] text-[#666] tracking-[0.1em] font-bold uppercase">HEAD OF OPERATIONS &bull; PAKISTAN</span>
+                                </div>
+                            </div>
+                            <!-- 5 Stars -->
+                            <div class="flex gap-1">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                        </div>
+                        <p class="font-display text-[14px] text-[#ccc] leading-[1.6] font-medium mb-6">
+                            "We got Elevix on board and they've easily been the best AI automation agency in Pakistan for us. They set up our complete digital sales system and we've been hitting an incredible ROI. The Return On Investment was way beyond what we expected. If you want an agency that actually gets you results, just go with Elevix. Highly recommended!"
+                        </p>
+                        <div class="inline-block border border-kinetic-red/30 rounded-full px-3 py-1">
+                            <span class="font-mono text-[9px] text-kinetic-red tracking-[0.2em] font-bold uppercase">20X ROAS</span>
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
-                    <div class="flex gap-6">
-                        <div class="w-10 h-10 rounded-full border border-kinetic-red/30 flex items-center justify-center flex-shrink-0">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <div>
-                            <div class="font-mono text-[10px] text-on-secondary-container mb-2">03</div>
-                            <p class="font-display text-white text-[16px] font-medium leading-relaxed">Honest read on whether we are a fit — or who is</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- What Happens Next Section -->
+    <section class="relative bg-deep-obsidian py-24 overflow-hidden z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <!-- Header -->
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-[1px] bg-kinetic-red"></div>
+                <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 03. WHAT HAPPENS NEXT</span>
+            </div>
+            
+            <h2 class="font-display font-bold text-[45px] md:text-[60px] text-white leading-[1.05] tracking-tight mb-6">
+                After you hit send.
+            </h2>
+            
+            <p class="font-display text-[16px] text-[#999] leading-[1.7] max-w-2xl mb-16 font-medium">
+                Four steps between your inbound and a signed plan. No black box. No "we'll be in touch" and silence.
+            </p>
+            
+            <!-- 4 Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-[#0a0a0a] border border-white/5 rounded-xl p-8 hover:border-kinetic-red/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(232,40,43,0.1)] transition-all duration-300 group">
+                    <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 01</span>
+                        <div class="w-4 h-4 rounded-full border border-kinetic-red flex items-center justify-center">
+                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                         </div>
                     </div>
+                    <span class="font-mono text-[9px] text-[#666] tracking-[0.1em] font-bold uppercase mb-4 block">WITHIN MINUTES</span>
+                    <h4 class="font-display font-bold text-[22px] text-white leading-tight mb-4 group-hover:text-kinetic-red transition-colors">Founder reads the inbound</h4>
+                    <p class="font-display text-[14px] text-[#888] leading-relaxed">
+                        Akbar or someone on the leadership bench reads it personally. No SDR, no ticket queue, no auto-router.
+                    </p>
                 </div>
-
-                <div class="mt-16 pt-8 border-t border-white/5 flex items-center gap-3 font-mono text-[10px] text-on-secondary-container uppercase tracking-[0.2em] font-bold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span>
-                    USUALLY RESPONDS WITHIN 24 HOURS
+                
+                <!-- Card 2 -->
+                <div class="bg-[#0a0a0a] border border-white/5 rounded-xl p-8 hover:border-kinetic-red/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(232,40,43,0.1)] transition-all duration-300 group">
+                    <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 02</span>
+                        <div class="w-4 h-4 rounded-full border border-kinetic-red flex items-center justify-center">
+                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <span class="font-mono text-[9px] text-[#666] tracking-[0.1em] font-bold uppercase mb-4 block">< 4 BUSINESS HOURS</span>
+                    <h4 class="font-display font-bold text-[22px] text-white leading-tight mb-4 group-hover:text-kinetic-red transition-colors">We reply</h4>
+                    <p class="font-display text-[14px] text-[#888] leading-relaxed">
+                        Either a direct email with sharpened questions, or a booking link for a 30-min call. If we're not the right fit we tell you honestly.
+                    </p>
                 </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-[#0a0a0a] border border-white/5 rounded-xl p-8 hover:border-kinetic-red/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(232,40,43,0.1)] transition-all duration-300 group">
+                    <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 03</span>
+                        <div class="w-4 h-4 rounded-full border border-kinetic-red flex items-center justify-center">
+                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <span class="font-mono text-[9px] text-[#666] tracking-[0.1em] font-bold uppercase mb-4 block">DAY 1-3</span>
+                    <h4 class="font-display font-bold text-[22px] text-white leading-tight mb-4 group-hover:text-kinetic-red transition-colors">Strategy call</h4>
+                    <p class="font-display text-[14px] text-[#888] leading-relaxed">
+                        Half an hour, honest. We pull context on your funnel, your numbers, your constraints. You walk out with at least one tactical unlock even if we never work together.
+                    </p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-[#0a0a0a] border border-white/5 rounded-xl p-8 hover:border-kinetic-red/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(232,40,43,0.1)] transition-all duration-300 group">
+                    <div class="flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+                        <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 04</span>
+                        <div class="w-4 h-4 rounded-full border border-kinetic-red flex items-center justify-center">
+                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#E8282B" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                    </div>
+                    <span class="font-mono text-[9px] text-[#666] tracking-[0.1em] font-bold uppercase mb-4 block">DAY 3-7</span>
+                    <h4 class="font-display font-bold text-[22px] text-white leading-tight mb-4 group-hover:text-kinetic-red transition-colors">Plan in writing</h4>
+                    <p class="font-display text-[14px] text-[#888] leading-relaxed">
+                        If there's a fit, you get a scoped proposal &mdash; deliverables, timelines, pricing, and exit terms. Signed, starts the next week.
+                    </p>
+                </div>
+                
             </div>
         </div>
     </section>
 
-<!-- Huge CTA Banner -->
-    <section class="py-32 px-6 bg-[#050505] relative z-10 border-t border-white/5 overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-center mb-10 font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 fade-up">
-                <div class="flex items-center gap-3">
-                    <div class="w-2 h-2 bg-kinetic-red shadow-[0_0_10px_rgba(232,40,43,0.8)] animate-pulse"></div>
-                    ACCEPTING CLIENTS • 2026
-                </div>
-                <div>LAHORE, PAKISTAN</div>
+    <!-- By The Numbers Section -->
+    <section class="relative bg-deep-obsidian pt-12 pb-32 overflow-hidden z-10 border-t border-white/5">
+        <style>
+            @keyframes marqueeLoop {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+                display: flex;
+                width: max-content;
+                animation: marqueeLoop 30s linear infinite;
+            }
+        </style>
+        
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+            <!-- Header -->
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-12 h-[1px] bg-kinetic-red"></div>
+                <span class="font-mono text-[10px] text-kinetic-red tracking-[0.2em] font-bold uppercase">// 04. BY THE NUMBERS</span>
             </div>
-            <h1 class="font-display font-black text-[60px] sm:text-[90px] md:text-[130px] lg:text-[150px] leading-[0.85] tracking-tighter text-white uppercase glitch-text fade-up" data-text="READY TO AUTOMATE THE IMPOSSIBLE?">
-                READY TO <span class="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">AUTOMATE</span><br/>
-                THE <span class="text-kinetic-red drop-shadow-[0_0_20px_rgba(232,40,43,0.5)]">IMPOSSIBLE?</span>
-            </h1>
+            
+            <!-- Numbers Box -->
+            <div class="bg-[#080808] border border-white/5 rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/5 mb-24 shadow-[0_0_40px_rgba(0,0,0,0.4)]">
+                
+                <!-- Stat 1 -->
+                <div class="p-10 flex flex-col justify-center">
+                    <h3 class="font-display font-bold text-[50px] md:text-[60px] text-white tracking-tight mb-2">14.5x</h3>
+                    <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">ROAS &bull; EME EDUCATION</span>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="p-10 flex flex-col justify-center">
+                    <h3 class="font-display font-bold text-[50px] md:text-[60px] text-white tracking-tight mb-2">21x</h3>
+                    <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">ROAS &bull; GULBERG</span>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="p-10 flex flex-col justify-center">
+                    <h3 class="font-display font-bold text-[50px] md:text-[60px] text-white tracking-tight mb-2">150M+</h3>
+                    <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">ATTRIBUTED REVENUE PKR</span>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="p-10 flex flex-col justify-center">
+                    <h3 class="font-display font-bold text-[50px] md:text-[60px] text-white tracking-tight mb-2">30+</h3>
+                    <span class="font-mono text-[10px] text-[#555] tracking-[0.2em] font-bold uppercase">AI AGENTS IN THE STACK</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Scrolling Brands Marquee -->
+        <div class="w-full overflow-hidden border-y border-white/5 py-10 bg-[#050505]">
+            <div class="animate-marquee gap-16 md:gap-32 px-8 flex items-center">
+                <!-- Group 1 -->
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">NETSOL</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">ARBISOFT</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">ZAMEEN</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">SYSTEMS LTD</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">TECHLOGIX</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">DEVINC</span>
+                
+                <!-- Group 2 (Duplicate for seamless loop) -->
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">NETSOL</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">ARBISOFT</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">ZAMEEN</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">SYSTEMS LTD</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">TECHLOGIX</span>
+                <span class="font-display text-[40px] font-bold text-white/10 uppercase tracking-tighter hover:text-kinetic-red hover:opacity-100 transition-all cursor-default">DEVINC</span>
+            </div>
         </div>
     </section>
 
-<footer id="footer" class="bg-[#050505] relative z-10 border-t border-white/10">
+<!-- Footer -->
+    <footer id="footer" class="bg-[#050505] relative z-10 border-t border-white/10">
         <!-- Top Info Row -->
         <div class="grid grid-cols-1 md:grid-cols-3 border-b border-white/10">
             <!-- HQ -->
@@ -1004,5 +972,6 @@
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
     </div>
+
 </body>
 </html>
