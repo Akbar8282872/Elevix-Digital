@@ -1,0 +1,38 @@
+MATCH 1:
+nsition-colors">READ ↗</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HUGE Pre-Footer Banner -->
+    <section class="py-24 px-6 bg-[#050505] border-t border-white/5 overflow-hidden">
+        <div class="max-w-[1400px] mx-auto w-full relative">
+            <div class="flex justify-between items-center mb-8 font-mono text-[10px] text-kinetic-red uppercase tracking-widest">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-kinetic-red animate-pulse"></span> ACCEPTING CLIENTS — 2026</span>
+                <span>LAHORE, PAKISTAN</span>
+            </div>
+            <h2 id="banner-glitch" class="glitch-text font-display font-black text-[60px] sm:text-[80px] md:text-[120px] lg:text-[160px] leading-[0.85] tracking-tighter text-white uppercase break-words w-full" style="word-spacing: -2vw;" data-text="AUTOMATING">
+                AUTOMATING<br/>
+         
+====================
+MATCH 2:
+ew Massive Grid Footer -->
+    
+
+<!-- NEW CTA SECTION -->
+<section class="py-32 px-6 bg-[#050505] relative z-10 border-t border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-10 font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 fade-up">
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-kinetic-red shadow-[0_0_10px_rgba(232,40,43,0.8)] animate-pulse"></div>
+                    ACCEPTING CLIENTS • 2026
+                </div>
+                <div>LAHORE, PAKISTAN</div>
+            </div>
+            <h1 class="font-display font-black text-[60px] sm:text-[90px] md:text-[130px] lg:text-[150px] leading-[0.85] tracking-tighter text-white uppercase glitch-text fade-up" data-text="READY TO AUTOMATE THE IMPOSSIBLE?">
+                READY TO <span class="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">AUTOMATE</span><br/>
+                THE <span 
+====================
