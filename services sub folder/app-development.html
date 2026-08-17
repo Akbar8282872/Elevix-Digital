@@ -371,34 +371,26 @@
                 <!-- BACKGROUND GLOW -->
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-kinetic-red/20 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] blur-[100px] rounded-full animate-pulse z-0"></div>
 
-                <!-- 1. Small Code Block (Top Left) -->
-                <div class="absolute -top-16 left-4 md:left-4 w-[85%] max-w-[300px] bg-[#0A0A0A]/95 backdrop-blur-2xl border border-white/10 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.8)] overflow-hidden z-20 transform md:rotate-y-[5deg] md:rotate-x-[2deg] hover:rotate-0 transition-transform duration-700 animate-[float_5s_ease-in-out_infinite]">
-                    <div class="h-7 border-b border-white/10 flex items-center px-3 justify-between bg-white/5">
-                        <div class="flex gap-1.5">
-                            <div class="w-2 h-2 rounded-full bg-[#FF5F56]"></div>
-                            <div class="w-2 h-2 rounded-full bg-[#FFBD2E]"></div>
-                            <div class="w-2 h-2 rounded-full bg-[#27C93F]"></div>
+                <!-- 1. App Performance HUD Image (Top Left) -->
+                <div class="absolute -top-16 left-4 md:left-4 w-[85%] max-w-[300px] z-20 animate-[float_5s_ease-in-out_infinite]">
+                    <div class="relative bg-white/5 border border-white/10 rounded-3xl p-2 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.8)] transform md:rotate-y-[5deg] md:rotate-x-[2deg] hover:rotate-0 transition-transform duration-700">
+                        <img src="app_dev_hud.jpg" alt="App Performance HUD" class="w-full h-auto rounded-[20px] shadow-inner" style="filter: drop-shadow(0 0 15px rgba(232,40,43,0.2));" />
+                        <!-- Decorative floating badge -->
+                        <div class="absolute -left-4 top-1/2 -translate-y-1/2 bg-[#050505] border border-kinetic-red/30 px-3 py-1.5 rounded-full flex items-center gap-2 shadow-[0_0_15px_rgba(232,40,43,0.4)] z-20">
+                            <span class="w-1.5 h-1.5 bg-[#27C93F] rounded-full animate-pulse"></span>
+                            <span class="text-[9px] font-mono text-white/70 uppercase tracking-widest">60FPS_LOCKED</span>
                         </div>
-                        <span class="text-[8px] font-mono tracking-widest text-white/40 uppercase">main.js</span>
-                    </div>
-                    <div class="p-4 font-mono text-[10px] leading-[2] text-white/70 overflow-x-auto whitespace-pre">
-<span class="text-[#E8282B] font-bold">import</span> { App } <span class="text-[#E8282B] font-bold">from</span> <span class="text-[#A3A3A3]">'@elevix/core'</span>;
-<span class="text-[#E8282B] font-bold">const</span> ui = <span class="text-[#E8282B] font-bold">new</span> <span class="text-white">App</span>({
-  engine: <span class="text-[#A3A3A3]">'React Native'</span>,
-  scale: <span class="text-[#A3A3A3]">'Infinite'</span>
-});
-<span class="text-kinetic-red font-bold">></span> <span class="text-white font-bold tracking-widest">MOUNTED</span><span class="animate-pulse bg-white w-1.5 h-2.5 inline-block ml-1 align-middle"></span>
                     </div>
                 </div>
 
-                <!-- 2. Defining 3D Web Dev Image (Bottom Right) -->
+                <!-- 2. Defining 3D App Dev Image (Bottom Right) -->
                 <div class="absolute -bottom-16 right-4 md:right-4 w-[90%] max-w-[420px] z-10 animate-[float_6s_ease-in-out_infinite_1s]">
                     <div class="relative bg-white/5 border border-white/10 rounded-3xl p-3 backdrop-blur-md shadow-[0_40px_80px_rgba(0,0,0,0.9)] transform md:rotate-y-[-5deg] md:rotate-x-[2deg] hover:rotate-0 transition-transform duration-700">
-                        <img src="web_dev_4d_concept_wide.jpg" alt="App Dev 3D Concept" class="w-full h-auto rounded-2xl shadow-inner" style="filter: drop-shadow(0 0 20px rgba(232,40,43,0.3));" />
+                        <img src="app_dev_diagram.jpg" alt="App Dev 3D Concept" class="w-full h-auto rounded-[20px] shadow-inner" style="filter: drop-shadow(0 0 20px rgba(232,40,43,0.3));" />
                         <!-- Decorative floating badge -->
                         <div class="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#050505] border border-kinetic-red/30 px-3 py-1.5 rounded-full flex items-center gap-2 shadow-[0_0_15px_rgba(232,40,43,0.4)] z-20">
                             <span class="w-1.5 h-1.5 bg-kinetic-red rounded-full animate-pulse"></span>
-                            <span class="text-[9px] font-mono text-white/70 uppercase tracking-widest">Live_Render</span>
+                            <span class="text-[9px] font-mono text-white/70 uppercase tracking-widest">NATIVE_RENDER</span>
                         </div>
                     </div>
                 </div>
