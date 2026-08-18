@@ -216,6 +216,20 @@
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-20px) scale(1.1); }
         }
+
+        /* N8N Agent Animations */
+        @keyframes agentFloat1 {
+            0%, 100% { transform: translateY(0) rotateX(2deg) rotateY(5deg); }
+            50% { transform: translateY(-25px) rotateX(0deg) rotateY(0deg) scale(1.05); }
+        }
+        @keyframes agentFloat2 {
+            0%, 100% { transform: translateY(0) rotateX(2deg) rotateY(-5deg); }
+            50% { transform: translateY(-30px) rotateX(0deg) rotateY(0deg) scale(1.08); filter: drop-shadow(0 20px 40px rgba(232,40,43,0.6)); }
+        }
+        @keyframes nodeDataPulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 15px rgba(232,40,43,0.9)); }
+        }
         /* ===== SERVICES MEGA MENU ===== */
         @keyframes megaFadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
         #services-trigger-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; color: #A3A3A3; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 500; transition: color 0.2s; padding: 0; }
@@ -331,25 +345,25 @@
                     <span class="text-white/30">/</span>
                     <a href="../services.html" class="hover:text-white transition-colors cursor-pointer relative z-[100]">Services</a>
                     <span class="text-white/30">/</span>
-                    <span class="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">Web Development</span>
+                    <span class="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">AI Automation</span>
                 </div>
 
                 <!-- Red Dot Pill Button from Screenshot -->
                 <button onclick="window.location.href='#'" class="flex items-center gap-3 w-fit px-5 py-2.5 bg-transparent border border-white/20 rounded-[100px] hover:bg-white/10 transition-all mb-6 relative z-50">
                     <span class="w-2 h-2 rounded-full bg-kinetic-red animate-pulse shadow-[0_0_10px_rgba(232,40,43,1)]"></span>
-                    <span class="font-display text-[10px] text-white font-bold uppercase tracking-[0.2em]">WEBSITE DEVELOPMENT COMPANY • GULBERG, LAHORE</span>
+                    <span class="font-display text-[10px] text-white font-bold uppercase tracking-[0.2em]">AI AUTOMATION AGENCY • GULBERG, LAHORE</span>
                 </button>
 
                 <!-- Main Headline -->
                 <h1 class="font-display font-black text-white text-[56px] md:text-[60px] leading-[1.05] tracking-tight mt-4 max-w-xl relative z-10">
-                    The website development company<br>
+                    The AI automation agency<br>
                     engineered to scale,<br>
                     <span class="text-kinetic-red drop-shadow-[0_0_20px_rgba(232,40,43,0.3)]">Elevix Digital.</span>
                 </h1>
 
                 <!-- NEW PARAGRAPH FROM SCREENSHOT -->
                 <p class="text-white/60 font-display text-[15px] leading-[1.8] mt-4 max-w-xl">
-                    Web development Lahore — a Gulberg-based website development company shipping Next.js, WordPress, Shopify, and custom web development. Engineered for Core Web Vitals, SEO, and conversion from day one. No plugin bloat, no template churn, no rip-and-replace at scale. Every build ships to a Lighthouse 90+ performance budget.
+                    AI automation Lahore — a Gulberg-based agency shipping custom n8n workflows, AI voice agents, and chatbots. Engineered for efficiency, scalability, and 24/7 lead generation. No manual data entry, no missed leads. Every workflow saves 40+ hours per week.
                 </p>
 
                 <!-- NEW BUTTONS FROM SCREENSHOT -->
@@ -372,33 +386,18 @@
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-kinetic-red/20 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] blur-[100px] rounded-full animate-pulse z-0"></div>
 
                 <!-- 1. Small Code Block (Top Left) -->
-                <div class="absolute -top-16 left-4 md:left-4 w-[85%] max-w-[300px] bg-[#0A0A0A]/95 backdrop-blur-2xl border border-white/10 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.8)] overflow-hidden z-20 transform md:rotate-y-[5deg] md:rotate-x-[2deg] hover:rotate-0 transition-transform duration-700 animate-[float_5s_ease-in-out_infinite]">
-                    <div class="h-7 border-b border-white/10 flex items-center px-3 justify-between bg-white/5">
-                        <div class="flex gap-1.5">
-                            <div class="w-2 h-2 rounded-full bg-[#FF5F56]"></div>
-                            <div class="w-2 h-2 rounded-full bg-[#FFBD2E]"></div>
-                            <div class="w-2 h-2 rounded-full bg-[#27C93F]"></div>
-                        </div>
-                        <span class="text-[8px] font-mono tracking-widest text-white/40 uppercase">main.js</span>
-                    </div>
-                    <div class="p-4 font-mono text-[10px] leading-[2] text-white/70 overflow-x-auto whitespace-pre">
-<span class="text-[#E8282B] font-bold">import</span> { App } <span class="text-[#E8282B] font-bold">from</span> <span class="text-[#A3A3A3]">'@elevix/core'</span>;
-<span class="text-[#E8282B] font-bold">const</span> ui = <span class="text-[#E8282B] font-bold">new</span> <span class="text-white">App</span>({
-  engine: <span class="text-[#A3A3A3]">'Next.js'</span>,
-  scale: <span class="text-[#A3A3A3]">'Infinite'</span>
-});
-<span class="text-kinetic-red font-bold">></span> <span class="text-white font-bold tracking-widest">MOUNTED</span><span class="animate-pulse bg-white w-1.5 h-2.5 inline-block ml-1 align-middle"></span>
-                    </div>
+                <div class="absolute -top-16 left-4 md:left-4 w-[85%] max-w-[300px] bg-[#0A0A0A]/95 backdrop-blur-2xl border border-white/10 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.8)] overflow-hidden z-20 transition-transform duration-700 cursor-pointer" style="animation: agentFloat1 6s ease-in-out infinite;">
+                    <img src="n8n_agent_hud.jpg" alt="n8n Agent HUD" class="w-full h-auto transition-transform duration-500 hover:scale-110" style="filter: drop-shadow(0 0 15px rgba(232,40,43,0.4));" />
                 </div>
 
                 <!-- 2. Defining 3D Web Dev Image (Bottom Right) -->
-                <div class="absolute -bottom-16 right-4 md:right-4 w-[90%] max-w-[420px] z-10 animate-[float_6s_ease-in-out_infinite_1s]">
-                    <div class="relative bg-white/5 border border-white/10 rounded-3xl p-3 backdrop-blur-md shadow-[0_40px_80px_rgba(0,0,0,0.9)] transform md:rotate-y-[-5deg] md:rotate-x-[2deg] hover:rotate-0 transition-transform duration-700">
-                        <img src="ai_dev_diagram.jpg" alt="Web Dev 3D Concept" class="w-full h-auto rounded-2xl shadow-inner" style="filter: drop-shadow(0 0 20px rgba(232,40,43,0.3));" />
+                <div class="absolute -bottom-16 right-4 md:right-4 w-[90%] max-w-[420px] z-10" style="animation: agentFloat2 7s ease-in-out infinite 1s;">
+                    <div class="relative bg-white/5 border border-white/10 rounded-3xl p-3 backdrop-blur-md shadow-[0_40px_80px_rgba(0,0,0,0.9)] transition-transform duration-700 cursor-pointer hover:shadow-[0_0_50px_rgba(232,40,43,0.5)]">
+                        <img src="n8n_agent_diagram.jpg" alt="n8n AI Workflow Automation" class="w-full h-auto rounded-2xl shadow-inner transition-transform duration-500 hover:scale-105" style="filter: drop-shadow(0 0 25px rgba(232,40,43,0.4));" />
                         <!-- Decorative floating badge -->
-                        <div class="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#050505] border border-kinetic-red/30 px-3 py-1.5 rounded-full flex items-center gap-2 shadow-[0_0_15px_rgba(232,40,43,0.4)] z-20">
-                            <span class="w-1.5 h-1.5 bg-kinetic-red rounded-full animate-pulse"></span>
-                            <span class="text-[9px] font-mono text-white/70 uppercase tracking-widest">Live_Render</span>
+                        <div class="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#050505] border border-kinetic-red/30 px-3 py-1.5 rounded-full flex items-center gap-2 shadow-[0_0_15px_rgba(232,40,43,0.4)] z-20" style="animation: nodeDataPulse 2s ease-in-out infinite;">
+                            <span class="w-1.5 h-1.5 bg-kinetic-red rounded-full"></span>
+                            <span class="text-[9px] font-mono text-white/70 uppercase tracking-widest">N8N_Active</span>
                         </div>
                     </div>
                 </div>
@@ -435,11 +434,12 @@
         <section class="max-w-7xl mx-auto px-6 py-24 border-b border-white/5">
             <div class="flex flex-col gap-4">
                 <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold uppercase">// IN SHORT</span>
-                <h2 class="font-display font-bold text-white text-[40px] md:text-[52px] leading-tight max-w-4xl tracking-tight">
-                    What does a website development company in Lahore do?
+                <h2 class="font-display font-bold text-white text-[32px] md:text-[40px] leading-tight mb-8 max-w-2xl">
+                    What does an AI automation agency in Lahore do?
                 </h2>
-                <p class="text-white/60 font-display text-[15px] leading-relaxed max-w-4xl mt-6">
-                    Elevix Digital is a website development company in Lahore, Pakistan that engineers sites to rank, convert, and scale. We build on Next.js, WordPress, and Shopify — 15+ websites shipped at a 85+ average Lighthouse score, with SEO and CRO baked in from the first commit rather than retrofitted. You own the code, hosting, and design files on day one. Whether it's a custom web app, a WordPress build, an e-commerce store, or a campaign landing page, performance and search visibility are engineered in, not bolted on later.
+                
+                <p class="text-white/60 font-display text-[15px] leading-relaxed mb-6">
+                    Elevix Digital is an AI automation agency in Lahore, Pakistan that engineers workflows to scale, convert, and eliminate manual work. We build on n8n, OpenAI, and Make — 50+ custom workflows shipped with an average 40+ hours saved weekly. Whether it's an AI voice agent, a WhatsApp chatbot, or CRM lead automation, efficiency is engineered in, not bolted on later.
                 </p>
             </div>
         </section>
@@ -452,36 +452,38 @@
                     <div class="w-8 h-[1px] bg-kinetic-red"></div>
                     <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold uppercase">// 01. DEFINITION</span>
                 </div>
-                <h2 class="font-display font-bold text-white text-[40px] md:text-[48px] leading-tight tracking-tight mt-2">
-                    What makes a high-performance website in 2026?
-                </h2>
-                <p class="text-white/50 font-display text-[14px] leading-relaxed mt-6">
-                    A high-performance website in 2026 is engineered, not templated. It loads under 2.5 seconds on a mid-tier Android phone (the <span class="text-white border-b border-white/30">Core Web Vitals</span> LCP threshold), hits CLS under 0.1 and INP under 200ms, ranks on Google because the markup is semantic and the schema is correct, and converts because the funnel was designed before a single component was coded. As a website development company in Lahore, every Elevix Digital build runs on the <span class="text-white font-semibold">Elevix Web Stack — Next.js 15</span>, headless CMS, edge rendering on Vercel, and a Core Web Vitals budget enforced in CI from day one.
+                <h3 class="font-display font-bold text-white text-[24px] mb-4 mt-12">
+                    What makes high-performance AI automation in 2026?
+                </h3>
+                
+                <p class="text-white/60 font-display text-[15px] leading-relaxed mb-8">
+                    High-performance AI automation in 2026 is custom engineered, not off-the-shelf. It responds in under 1 second (the AI voice agent latency threshold), handles thousands of simultaneous conversations seamlessly, and converts leads because the logic was mapped before a single node was connected. As an AI automation agency in Lahore, every Elevix Digital system runs on the Elevix AI Stack — n8n, OpenAI/Anthropic, vector databases, and highly redundant serverless functions.
                 </p>
             </div>
             
             <!-- Right Side (Card) -->
             <div class="w-full md:w-[40%]">
-                <div class="bg-[#111] border border-white/5 rounded-2xl p-8 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
-                    <div class="flex items-center gap-3 mb-8">
-                        <span class="w-2 h-2 rounded-full bg-kinetic-red"></span>
-                        <span class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">THE ELEVIX WEB STACK</span>
-                    </div>
-                    <p class="text-white font-display text-[15px] leading-relaxed font-medium mb-12">
-                        "Next.js 15 + headless CMS + a Core Web Vitals budget enforced in CI. SEO and conversion are baked into the architecture, not bolted on after launch."
+                <div class="col-span-1 lg:col-span-4 bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <span class="font-mono text-[10px] text-kinetic-red font-bold uppercase tracking-widest mb-6 block">THE ELEVIX AI STACK</span>
+                    <p class="text-white font-display text-[18px] leading-relaxed">
+                        n8n + OpenAI + custom logic. Efficiency and lead capture are baked into the workflows, not bolted on after launch.
                     </p>
-                    <div class="flex gap-16 border-b border-white/10 pb-8 mb-6">
-                        <div class="flex flex-col gap-2">
-                            <span class="text-kinetic-red font-display font-bold text-[32px]">85+</span>
-                            <span class="font-mono text-white/30 text-[9px] tracking-widest font-bold uppercase">LIGHTHOUSE SCORE*</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <span class="text-kinetic-red font-display font-bold text-[32px]">&lt;2.5s</span>
-                            <span class="font-mono text-white/30 text-[9px] tracking-widest font-bold uppercase">LCP TARGET*</span>
-                        </div>
+                </div>
+                
+                <div class="mt-12 space-y-8">
+                    <div>
+                        <div class="font-display font-black text-white text-[48px] leading-none mb-2">40+</div>
+                        <div class="font-mono text-[10px] text-white/50 tracking-widest uppercase">HOURS SAVED/WK*</div>
                     </div>
-                    <p class="text-white/20 font-display text-[10px] leading-relaxed">
-                        *Median outcomes across Elevix Digital production builds, measured on Mobile Slow 4G.
+                    <div class="w-full h-[1px] bg-white/10"></div>
+                    <div>
+                        <div class="font-display font-black text-white text-[48px] leading-none mb-2">&lt;1s</div>
+                        <div class="font-mono text-[10px] text-white/50 tracking-widest uppercase">AI RESPONSE TIME*</div>
+                    </div>
+                    
+                    <p class="font-mono text-[9px] text-white/30 uppercase tracking-wide leading-relaxed mt-8">
+                        *Median outcomes across Elevix Digital automation builds, measured in active business environments.
                     </p>
                 </div>
             </div>
@@ -507,8 +509,8 @@
                         <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold">// 01</span>
                         <div class="w-4 h-[1px] bg-kinetic-red"></div>
                     </div>
-                    <div class="font-display font-bold text-white text-[56px] leading-none mb-4">15+</div>
-                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">WEBSITES SHIPPED</div>
+                    <div class="font-display font-bold text-white text-[56px] leading-none mb-4">50+</div>
+                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">WORKFLOWS SHIPPED</div>
                 </div>
 
                 <!-- Metric 2 -->
@@ -519,8 +521,8 @@
                         <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold">// 02</span>
                         <div class="w-4 h-[1px] bg-kinetic-red"></div>
                     </div>
-                    <div class="font-display font-bold text-white text-[56px] leading-none mb-4">85+</div>
-                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">AVG LIGHTHOUSE SCORE</div>
+                    <div class="font-display font-bold text-white text-[56px] leading-none mb-4">98%</div>
+                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">AUTOMATION UPTIME</div>
                 </div>
 
                 <!-- Metric 3 -->
@@ -531,8 +533,8 @@
                         <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold">// 03</span>
                         <div class="w-4 h-[1px] bg-kinetic-red"></div>
                     </div>
-                    <div class="font-display font-bold text-white text-[56px] leading-none mb-4">10+</div>
-                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">DOMAINS UNDER MANAGEMENT</div>
+                    <div class="font-display font-bold text-white text-[56px] leading-none mb-4">30+</div>
+                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">AGENTS DEPLOYED</div>
                 </div>
 
                 <!-- Metric 4 -->
@@ -544,7 +546,7 @@
                         <div class="w-4 h-[1px] bg-kinetic-red"></div>
                     </div>
                     <div class="font-display font-bold text-white text-[56px] leading-none mb-4 tracking-tighter">2 yrs</div>
-                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">BUILDING FOR THE WEB</div>
+                    <div class="font-mono text-white/40 text-[9px] tracking-widest font-bold uppercase">BUILDING AI SYSTEMS</div>
                 </div>
 
             </div>
@@ -570,9 +572,9 @@
                         <div class="w-8 h-[1px] bg-kinetic-red/30 group-hover:bg-kinetic-red transition-colors"></div>
                         <span class="font-mono text-white/30 text-[9px] tracking-widest font-bold">01 / 05</span>
                     </div>
-                    <h3 class="font-display font-bold text-white text-[22px] mb-4">Custom Next.js Apps</h3>
+                    <h3 class="font-display font-bold text-white text-[22px] mb-4">AI Voice Agents</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed mb-12">
-                        High-performance, edge-rendered web applications built for speed and infinite scalability.
+                        Custom AI voice callers capable of handling inbound and outbound sales calls 24/7.
                     </p>
                     <div class="mt-auto flex items-center gap-2 font-mono text-white/30 text-[10px] tracking-widest uppercase font-bold group-hover:text-white transition-colors">
                         LEARN MORE <svg class="transform group-hover:translate-x-1 transition-transform" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -586,9 +588,9 @@
                         <div class="w-8 h-[1px] bg-kinetic-red/30 group-hover:bg-kinetic-red transition-colors"></div>
                         <span class="font-mono text-white/30 text-[9px] tracking-widest font-bold">02 / 05</span>
                     </div>
-                    <h3 class="font-display font-bold text-white text-[22px] mb-4">E-Commerce Stores</h3>
+                    <h3 class="font-display font-bold text-white text-[22px] mb-4">WhatsApp Automation</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed mb-12 lg:max-w-md">
-                        Scalable Shopify and custom commerce solutions built to convert and handle high traffic volumes across global markets.
+                        Intelligent WhatsApp chatbots that qualify leads, process orders, and provide instant customer support.
                     </p>
                     <div class="mt-auto flex items-center gap-2 font-mono text-white/30 text-[10px] tracking-widest uppercase font-bold group-hover:text-white transition-colors">
                         LEARN MORE <svg class="transform group-hover:translate-x-1 transition-transform" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -602,9 +604,9 @@
                         <div class="w-8 h-[1px] bg-kinetic-red/30 group-hover:bg-kinetic-red transition-colors"></div>
                         <span class="font-mono text-white/30 text-[9px] tracking-widest font-bold">03 / 05</span>
                     </div>
-                    <h3 class="font-display font-bold text-white text-[22px] mb-4">WordPress Websites</h3>
+                    <h3 class="font-display font-bold text-white text-[22px] mb-4">AI Website Chatbots</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed mb-12">
-                        Custom WordPress builds on Bricks, Breakdance, or block themes — fast, secure, and editable by non-technical teams.
+                        Smart website assistants trained on your company data to answer queries and capture leads instantly.
                     </p>
                     <div class="mt-auto flex items-center gap-2 font-mono text-white/30 text-[10px] tracking-widest uppercase font-bold group-hover:text-white transition-colors">
                         LEARN MORE <svg class="transform group-hover:translate-x-1 transition-transform" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -618,9 +620,9 @@
                         <div class="w-8 h-[1px] bg-kinetic-red/30 group-hover:bg-kinetic-red transition-colors"></div>
                         <span class="font-mono text-white/30 text-[9px] tracking-widest font-bold">04 / 05</span>
                     </div>
-                    <h3 class="font-display font-bold text-white text-[22px] mb-4">Landing Pages</h3>
+                    <h3 class="font-display font-bold text-white text-[22px] mb-4">CRM & Lead Automation</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed mb-12">
-                        Campaign-grade landing pages built for one job — convert. CRO framework, speed budget, A/B variants shipped.
+                        Seamlessly route leads from ads directly into your CRM, categorized and prioritized by AI.
                     </p>
                     <div class="mt-auto flex items-center gap-2 font-mono text-white/30 text-[10px] tracking-widest uppercase font-bold group-hover:text-white transition-colors">
                         LEARN MORE <svg class="transform group-hover:translate-x-1 transition-transform" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -634,9 +636,9 @@
                         <div class="w-8 h-[1px] bg-kinetic-red/30 group-hover:bg-kinetic-red transition-colors"></div>
                         <span class="font-mono text-white/30 text-[9px] tracking-widest font-bold">05 / 05</span>
                     </div>
-                    <h3 class="font-display font-bold text-white text-[22px] mb-4">Website Maintenance</h3>
+                    <h3 class="font-display font-bold text-white text-[22px] mb-4">Custom n8n Workflows</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed mb-12">
-                        Security patches, uptime monitoring, content updates, and speed tuning — a retained team for the site you already have.
+                        End-to-end business automation connecting all your apps, saving your team dozens of hours weekly.
                     </p>
                     <div class="mt-auto flex items-center gap-2 font-mono text-white/30 text-[10px] tracking-widest uppercase font-bold group-hover:text-white transition-colors">
                         LEARN MORE <svg class="transform group-hover:translate-x-1 transition-transform" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -654,10 +656,10 @@
                     <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold uppercase">// 03. PROCESS</span>
                 </div>
                 <h2 class="font-display font-bold text-white text-[40px] md:text-[52px] leading-tight tracking-tight mt-2 max-w-2xl">
-                    How does an Elevix Digital website actually get built?
+                    How does an Elevix Digital AI system actually get built?
                 </h2>
                 <p class="text-white/50 font-display text-[15px] leading-relaxed max-w-2xl mt-4">
-                    Discovery to launch typically runs 6 to 9 weeks for a mid-sized Next.js build, 4 to 6 for a focused WordPress or Shopify project. Each phase has a deliverable, a sign-off, and a clear hand-off — no scope creep, no surprise invoices, no "we'll fix it in v2" debt.
+                    Discovery to launch typically runs 3 to 5 weeks for a mid-sized AI agent, 2 to 3 for a focused n8n workflow project. Each phase has a deliverable, a sign-off, and a clear hand-off — no scope creep, no surprise invoices, no "we'll fix it in v2" debt.
                 </p>
             </div>
 
@@ -673,14 +675,14 @@
                         <div class="step-num font-display font-black text-[64px] leading-none text-[#1a1a1a] select-none">01</div>
                         <div class="flex-1 flex flex-col gap-4">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-display font-bold text-white text-[24px]">Discovery + sitemap</h3>
+                                <h3 class="font-display font-bold text-white text-[24px]">Discovery + logic mapping</h3>
                                 <div class="shrink-0 rounded-full border border-white/10 px-3 py-1 flex items-center gap-2">
                                     <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></div>
                                     <span class="font-mono text-white/50 text-[9px] tracking-widest uppercase font-bold">1 WEEK</span>
                                 </div>
                             </div>
                             <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                                Stakeholder interviews, audience mapping, competitor teardown. We translate the brief into a sitemap, content model, and a measurable success spec — what conversion rate, what page-speed budget, what ranking goals.
+                                Stakeholder interviews, operational teardown. We translate the brief into a logic flow, data model, and a measurable success spec — what hours saved, what API latency, what lead conversion rate.
                             </p>
                         </div>
                     </div>
@@ -690,14 +692,14 @@
                         <div class="step-num font-display font-black text-[64px] leading-none text-[#1a1a1a] select-none">02</div>
                         <div class="flex-1 flex flex-col gap-4">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-display font-bold text-white text-[24px]">UX + design system</h3>
+                                <h3 class="font-display font-bold text-white text-[24px]">Prompt Engineering + AI Training</h3>
                                 <div class="shrink-0 rounded-full border border-white/10 px-3 py-1 flex items-center gap-2">
                                     <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></div>
                                     <span class="font-mono text-white/50 text-[9px] tracking-widest uppercase font-bold">2-3 WEEKS</span>
                                 </div>
                             </div>
                             <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                                Wireframes for every template, then high-fidelity design in Figma using a real design system — tokens, typography scale, motion language, component library. Nothing ships to dev that has not been pressure-tested for clarity and conversion.
+                                Knowledge base creation, system prompts, and training data preparation. We build the decision trees and vector embeddings. Nothing ships to dev that has not been pressure-tested for hallucination reduction.
                             </p>
                         </div>
                     </div>
@@ -707,14 +709,14 @@
                         <div class="step-num font-display font-black text-[64px] leading-none text-[#1a1a1a] select-none">03</div>
                         <div class="flex-1 flex flex-col gap-4">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-display font-bold text-white text-[24px]">Build + CRO + performance budget</h3>
+                                <h3 class="font-display font-bold text-white text-[24px]">Build + n8n + API integration</h3>
                                 <div class="shrink-0 rounded-full border border-white/10 px-3 py-1 flex items-center gap-2">
                                     <div class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></div>
                                     <span class="font-mono text-white/50 text-[9px] tracking-widest uppercase font-bold">3-5 WEEKS</span>
                                 </div>
                             </div>
                             <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                                Engineered in Next.js 15 (or WordPress / Shopify when that's the right call), with a hard performance budget — LCP under 2.5s, INP under 200ms, CLS under 0.1. CRO patterns baked in: clear primary CTAs, single-column forms, social proof at decision points.
+                                Engineered in n8n (or Make / custom Python when that's the right call), with a hard efficiency focus — latency under 1s, 99.9% uptime, zero data loss. Lead routing and fallback logic baked in from day one.
                             </p>
                         </div>
                     </div>
@@ -731,7 +733,7 @@
                                 </div>
                             </div>
                             <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                                Rigorous cross-device testing, SEO technical audit, and final Lighthouse verification. We handle the deployment and provide you with complete code ownership, hosting access, and a recorded training session.
+                                Rigorous edge-case testing, latency audit, and final logic verification. We handle the deployment and provide you with complete workflow ownership, server access, and a recorded training session.
                             </p>
                         </div>
                     </div>
@@ -778,10 +780,10 @@
                     <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold uppercase">// 04. WHY ELEVIX DIGITAL</span>
                 </div>
                 <h2 class="font-display font-bold text-white text-[40px] md:text-[52px] leading-tight tracking-tight mt-2 max-w-3xl">
-                    Why teams pick Elevix Digital over generic web agencies
+                    Why teams pick Elevix Digital over generic AI agencies
                 </h2>
                 <p class="text-white/50 font-display text-[15px] leading-relaxed max-w-2xl mt-4">
-                    We engineer production-grade websites that survive traffic spikes, Google core updates, and three years of content additions without a rebuild. Four reasons clients move to us.
+                    We engineer production-grade AI systems that survive API changes, scale infinitely, and automate processes without breaking. Four reasons clients move to us.
                 </p>
             </div>
 
@@ -809,9 +811,9 @@
                             <div class="absolute left-0 top-0 h-full w-0 bg-kinetic-red group-hover:w-full transition-all duration-700 ease-out"></div>
                         </div>
                     </div>
-                    <h3 class="font-display font-bold text-white text-[24px] mb-4">Performance by default</h3>
+                    <h3 class="font-display font-bold text-white text-[24px] mb-4">Efficiency by default</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                        Lighthouse 90+ is the baseline, not a stretch goal. Speed budgets enforced in CI, image pipelines tuned, third-party scripts ruthlessly audited.
+                        Sub-second latency is the baseline, not a stretch goal. Rate limits handled, API payloads tuned, third-party integrations ruthlessly tested for reliability.
                     </p>
                 </div>
 
@@ -823,9 +825,9 @@
                             <div class="absolute left-0 top-0 h-full w-0 bg-kinetic-red group-hover:w-full transition-all duration-700 ease-out"></div>
                         </div>
                     </div>
-                    <h3 class="font-display font-bold text-white text-[24px] mb-4">SEO-native architecture</h3>
+                    <h3 class="font-display font-bold text-white text-[24px] mb-4">Secure-by-design architecture</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                        Semantic HTML, schema.org markup, server-rendered metadata, sitemap automation, llms.txt — every site ships ready for Google + AI Overviews.
+                        Data privacy, SOC2 compliant workflows, encrypted API keys, local LLM deployments when required — every system ships ready for enterprise security audits.
                     </p>
                 </div>
 
@@ -839,7 +841,7 @@
                     </div>
                     <h3 class="font-display font-bold text-white text-[24px] mb-4">Post-launch partnership</h3>
                     <p class="text-white/40 font-display text-[14px] leading-relaxed lg:max-w-xl">
-                        Most agencies disappear after invoice three. We retain you — security patches, uptime monitoring, conversion experiments, content updates. The site keeps compounding.
+                        Most agencies disappear after invoice three. We retain you — API updates, uptime monitoring, prompt tuning, logic expansions. The automation keeps compounding.
                     </p>
                 </div>
 
@@ -854,7 +856,7 @@
                     <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold uppercase">// 05. TECHNOLOGY</span>
                 </div>
                 <h2 class="font-display font-bold text-white text-[40px] md:text-[52px] leading-tight tracking-tight mt-2 max-w-2xl">
-                    The Elevix Digital Web Stack
+                    The Elevix Digital AI Stack
                 </h2>
                 <p class="text-white/50 font-display text-[15px] leading-relaxed max-w-2xl mt-4">
                     The same stack we use to ship our own product runs every client build. Production-grade, AI-native where it helps, boring where boring works. No shiny-object syndrome, no rip and replace at scale.
@@ -871,9 +873,9 @@
                             <div class="w-6 h-[1px] bg-kinetic-red"></div>
                             <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold uppercase">LAYER</span>
                         </div>
-                        <h3 class="font-display font-bold text-white text-[20px] mb-4">AI Frameworks</h3>
+                        <h3 class="font-display font-bold text-white text-[20px] mb-4">LLMs & Frameworks</h3>
                         <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                            Next.js 15 (App Router, RSC, edge runtime), TypeScript strict, Tailwind v4, shadcn/ui primitives, Framer Motion + GSAP for motion.
+                            OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, LangChain, LlamaIndex, Pinecone for vector search.
                         </p>
                     </div>
 
@@ -883,9 +885,9 @@
                             <div class="w-6 h-[1px] bg-kinetic-red"></div>
                             <span class="font-mono text-kinetic-red text-[10px] tracking-widest font-bold uppercase">LAYER</span>
                         </div>
-                        <h3 class="font-display font-bold text-white text-[20px] mb-4">CMS + Storefront</h3>
+                        <h3 class="font-display font-bold text-white text-[20px] mb-4">Automation Engines</h3>
                         <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                            Sanity, Payload, or Strapi for headless content. Shopify Hydrogen + WooCommerce for commerce. WordPress when editing UX trumps everything else.
+                            n8n (self-hosted), Make, Zapier, Voiceflow, and Retool for internal dashboards.
                         </p>
                     </div>
 
@@ -897,7 +899,7 @@
                         </div>
                         <h3 class="font-display font-bold text-white text-[20px] mb-4">Infrastructure</h3>
                         <p class="text-white/40 font-display text-[14px] leading-relaxed">
-                            Vercel, Dokploy, and Railway for deployment, Cloudflare for edge delivery, GitHub Actions for CI, Sentry for error tracking, Plausible / GA4 for analytics, GHL for forms and CRM.
+                            AWS, DigitalOcean, Railway for deployment, PostgreSQL, Pinecone, and GHL for CRM.
                         </p>
                     </div>
 
@@ -1025,19 +1027,19 @@
                     </div>
                     
                     <h2 class="font-display font-bold text-white text-[40px] md:text-[52px] leading-tight tracking-tight mt-2 mb-8">
-                        Web Development in Lahore
+                        AI Automation in Lahore
                     </h2>
                     
                     <p class="text-white/50 font-display text-[15px] leading-relaxed mb-16">
-                        Elevix Digital builds production websites for businesses across Lahore, the rest of Pakistan, and the GCC — out of our HQ in Gulberg, Lahore. We work with founders shipping their first serious website, growth-stage brands replacing a slow legacy build, and enterprise teams that need an engineering partner who understands both Pakistani-market UX and global performance benchmarks.
+                        Elevix Digital builds production AI workflows for businesses across Lahore, the rest of Pakistan, and the GCC — out of our HQ in Gulberg, Lahore. We work with founders shipping their first custom AI agent, growth-stage brands replacing slow manual ops, and enterprise teams that need an engineering partner who understands both local business nuances and global efficiency benchmarks.
                     </p>
 
                     <h3 class="font-display font-bold text-white text-[28px] mb-6">
-                        Built for Pakistani buyers, ranked for Pakistani search
+                        Built for Pakistani teams, engineered for scalable automation
                     </h3>
                     
                     <p class="text-white/50 font-display text-[15px] leading-relaxed">
-                        Mobile-first by default — most of our client traffic is Android on 4G. Schema, hreflang, and local SEO wired in. Safepay, JazzCash, Easypaisa, Stripe — or any payments provider of your choice — COD, WhatsApp Business, and GHL integrations are baseline, not extras. The site reads as built for the buyer, not retrofitted from a US template.
+                        WhatsApp-first by default — most local commerce happens on WhatsApp. AI routing, conversational memory, and LLM training wired in. Seamless API integrations with CRMs, Sheets, and local payment notifications are baseline, not extras. The system reads as custom-engineered for your operations, not a generic pre-built template.
                     </p>
                 </div>
 
@@ -1145,7 +1147,7 @@
                     </div>
                     <div class="flex gap-1 text-[#FFD700] mb-4 text-sm">★★★★★</div>
                     <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">
-                        "Elevix built our new AI integration and we couldn't be happier. As a software development company in Lahore they're on a different level. This wasn't a template, it was proper custom development built around how our projects & infrastructure actually sells. The site is fast, looks premium, and started converting visitors into enquiries from month one. Communication was clear throughout."
+                        "Elevix built our new AI integration and we couldn't be happier. As an AI automation agency in Lahore they're on a different level. This wasn't a template, it was proper custom development built around how our team & infrastructure actually works. The automation is fast, handles leads instantly, and started converting visitors into enquiries from month one. Communication was clear throughout."
                     </p>
                     <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center">
                         <span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> Automation • Leads
@@ -1245,7 +1247,7 @@
                         <div class="text-white opacity-50"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
                     </div>
                     <div class="flex gap-1 text-[#FFD700] mb-4 text-sm">★★★★★</div>
-                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">"As a real estate startup in Lahore, we needed digital presence that matched our brand. Elevix delivered a stunning website, SEO setup, and full CRM automation pipeline. Our inquiry-to-booking rate improved 3x within 2 months. Absolutely top-tier."</p>
+                    <p class="font-display text-[15px] text-white/80 leading-relaxed mb-8">"As a real estate startup in Lahore, we needed automation that matched our scale. Elevix delivered a stunning voice agent and full CRM automation pipeline. Our inquiry-to-booking rate improved 3x within 2 months. Absolutely top-tier."</p>
                     <div class="inline-flex border border-white/10 rounded-full px-4 py-1.5 bg-white/5 font-mono text-[10px] text-on-secondary-container uppercase tracking-widest gap-2 items-center"><span class="w-1.5 h-1.5 rounded-full bg-kinetic-red"></span> Real Estate • CRM</div>
                 </div>
 
@@ -1279,7 +1281,7 @@
             </div>
             
             <h2 class="font-display font-bold text-white text-[48px] md:text-[64px] leading-[1.1] tracking-tight text-center mb-24 max-w-4xl mx-auto">
-                Web development — your<br/>questions, answered.
+                AI Automation — your<br/>questions, answered.
             </h2>
 
             <div class="max-w-4xl mx-auto flex flex-col gap-4">
@@ -1288,12 +1290,12 @@
                     <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-white/5 transition-colors">
                         <div class="flex items-center gap-6">
                             <span class="font-mono text-kinetic-red text-[11px] font-bold">01</span>
-                            <span class="font-display text-white text-[18px] font-bold">What does a website development company in Lahore actually deliver?</span>
+                            <span class="font-display text-white text-[18px] font-bold">What does an AI automation agency in Lahore actually deliver?</span>
                         </div>
                         <svg class="w-5 h-5 text-white/50 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-6 pb-6 pt-2 text-white/60 font-display text-[15px] leading-relaxed ml-[46px]">
-                        We deliver high-performance, custom-coded storefronts and business sites. No off-the-shelf templates. Everything is built to maximize conversions and load instantly across Pakistan.
+                        We deliver custom-built AI agents and automation workflows that save hours of manual work. No off-the-shelf templates. Everything is built to maximize efficiency and scale with your business.
                     </div>
                 </details>
 
@@ -1302,12 +1304,12 @@
                     <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-white/5 transition-colors">
                         <div class="flex items-center gap-6">
                             <span class="font-mono text-kinetic-red text-[11px] font-bold">02</span>
-                            <span class="font-display text-white text-[18px] font-bold">Next.js, WordPress, or Shopify — which is right for us?</span>
+                            <span class="font-display text-white text-[18px] font-bold">n8n, Make, or Zapier — which is right for us?</span>
                         </div>
                         <svg class="w-5 h-5 text-white/50 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-6 pb-6 pt-2 text-white/60 font-display text-[15px] leading-relaxed ml-[46px]">
-                        It depends on your traffic and scale. We'll audit your goals and recommend the exact tech stack that fits your market, whether it's headless Next.js for speed, Shopify for pure e-commerce, or WordPress for deep content marketing.
+                        It depends on your complexity and scale. We'll audit your operations and recommend the exact automation stack that fits your market, whether it's n8n for enterprise scale, custom Python scripts for speed, or Zapier for quick wins.
                     </div>
                 </details>
 
@@ -1316,12 +1318,12 @@
                     <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-white/5 transition-colors">
                         <div class="flex items-center gap-6">
                             <span class="font-mono text-kinetic-red text-[11px] font-bold">03</span>
-                            <span class="font-display text-white text-[18px] font-bold">How long does a custom web development project take?</span>
+                            <span class="font-display text-white text-[18px] font-bold">How long does a custom AI automation project take?</span>
                         </div>
                         <svg class="w-5 h-5 text-white/50 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-6 pb-6 pt-2 text-white/60 font-display text-[15px] leading-relaxed ml-[46px]">
-                        Typically 4 to 8 weeks, depending on the complexity of the integrations (e.g., custom animations, backend databases, or local payment gateways).
+                        Typically 2 to 6 weeks, depending on the complexity of the integrations (e.g., custom LLM training, CRM connections, or WhatsApp API approval).
                     </div>
                 </details>
 
@@ -1330,12 +1332,12 @@
                     <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-white/5 transition-colors">
                         <div class="flex items-center gap-6">
                             <span class="font-mono text-kinetic-red text-[11px] font-bold">04</span>
-                            <span class="font-display text-white text-[18px] font-bold">What is included in a Core Web Vitals / Lighthouse 90+ guarantee?</span>
+                            <span class="font-display text-white text-[18px] font-bold">What is included in an automation success guarantee?</span>
                         </div>
                         <svg class="w-5 h-5 text-white/50 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-6 pb-6 pt-2 text-white/60 font-display text-[15px] leading-relaxed ml-[46px]">
-                        We guarantee your site will load blazingly fast on both 3G and 4G networks across Pakistan and globally. We optimize every image, script, and database call so Google ranks you higher and users don't bounce.
+                        We guarantee your workflows will run flawlessly with near 100% uptime. We handle all edge cases, API limits, and fallback logic so your business operations never halt.
                     </div>
                 </details>
 
@@ -1349,7 +1351,7 @@
                         <svg class="w-5 h-5 text-white/50 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-6 pb-6 pt-2 text-white/60 font-display text-[15px] leading-relaxed ml-[46px]">
-                        Yes, we offer dedicated retainers to handle security updates, content changes, server scaling, and continuous conversion rate optimization.
+                        Yes, we offer dedicated retainers to handle API updates, prompt tuning, system scaling, and continuous workflow optimization.
                     </div>
                 </details>
 
@@ -1358,12 +1360,12 @@
                     <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-white/5 transition-colors">
                         <div class="flex items-center gap-6">
                             <span class="font-mono text-kinetic-red text-[11px] font-bold">06</span>
-                            <span class="font-display text-white text-[18px] font-bold">Can you integrate local Pakistani payment gateways?</span>
+                            <span class="font-display text-white text-[18px] font-bold">Can you integrate local Pakistani CRMs and payment gateways?</span>
                         </div>
                         <svg class="w-5 h-5 text-white/50 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-6 pb-6 pt-2 text-white/60 font-display text-[15px] leading-relaxed ml-[46px]">
-                        Absolutely. We specialize in seamless, secure integrations for Easypaisa, JazzCash, and Safepay, alongside Stripe and PayPal for your global customers.
+                        Absolutely. We specialize in seamless, secure integrations for local platforms, Easypaisa, JazzCash, and Safepay, alongside Stripe and HubSpot for your global customers.
                     </div>
                 </details>
 
@@ -1372,12 +1374,12 @@
                     <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-white/5 transition-colors">
                         <div class="flex items-center gap-6">
                             <span class="font-mono text-kinetic-red text-[11px] font-bold">07</span>
-                            <span class="font-display text-white text-[18px] font-bold">Will our new website be mobile-first?</span>
+                            <span class="font-display text-white text-[18px] font-bold">Will our new AI system work with WhatsApp?</span>
                         </div>
                         <svg class="w-5 h-5 text-white/50 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
                     <div class="px-6 pb-6 pt-2 text-white/60 font-display text-[15px] leading-relaxed ml-[46px]">
-                        Yes. Since over 80% of local traffic is mobile, we design and code exclusively for a flawless mobile experience first, then scale it beautifully to desktop.
+                        Yes. Since over 80% of local business happens on WhatsApp, we build natively for the WhatsApp Business API, then connect it seamlessly to your internal dashboards.
                     </div>
                 </details>
             </div>
@@ -1392,7 +1394,7 @@
             
             <div class="flex justify-between items-end mb-16">
                 <h2 class="font-display font-bold text-white text-[48px] md:text-[64px] leading-[1.1] tracking-tight max-w-xl">
-                    Deeper reading on web development
+                    Deeper reading on AI automation
                 </h2>
                 <a href="#" class="font-display font-bold text-[15px] text-white hover:text-kinetic-red transition-colors flex items-center gap-2 pb-4">
                     View all articles
@@ -1407,7 +1409,7 @@
                     <div class="flex justify-between items-center mb-8">
                         <div class="px-4 py-1.5 rounded-full border border-kinetic-red/30 bg-kinetic-red/5 flex items-center gap-2">
                             <div class="w-1.5 h-1.5 bg-kinetic-red rounded-full"></div>
-                            <span class="font-mono text-kinetic-red text-[9px] tracking-widest font-bold uppercase">WEBSITE MAINTENANCE & SUPPORT</span>
+                            <span class="font-mono text-kinetic-red text-[9px] tracking-widest font-bold uppercase">CUSTOM N8N WORKFLOWS</span>
                         </div>
                         <div class="flex items-center gap-2 text-white/40">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -1416,11 +1418,11 @@
                     </div>
                     
                     <h3 class="font-display font-bold text-white text-[22px] leading-snug mb-4 group-hover:text-kinetic-red transition-colors">
-                        WordPress Maintenance Plans: What Separates a Rs. 5K/mo From a Rs. 25K/mo Retainer
+                        n8n vs Zapier: What Separates a Rs. 5K/mo From a Rs. 25K/mo Retainer
                     </h3>
                     
                     <p class="text-white/50 font-display text-[15px] leading-relaxed mb-12">
-                        The price gap between maintenance retainers is process, not margin. Patch cadence, staging, rollback plans, backup drills and SLAs, compared tier by tier.
+                        The price gap between automation tools is scalability, not margin. Rate limits, custom nodes, secure data handling, and SLAs, compared tier by tier.
                     </p>
                     
                     <div class="mt-auto flex items-center gap-3 text-white/30 group-hover:text-white transition-colors">
@@ -1434,7 +1436,7 @@
                     <div class="flex justify-between items-center mb-8">
                         <div class="px-4 py-1.5 rounded-full border border-kinetic-red/30 bg-kinetic-red/5 flex items-center gap-2">
                             <div class="w-1.5 h-1.5 bg-kinetic-red rounded-full"></div>
-                            <span class="font-mono text-kinetic-red text-[9px] tracking-widest font-bold uppercase">LANDING PAGES</span>
+                            <span class="font-mono text-kinetic-red text-[9px] tracking-widest font-bold uppercase">AI VOICE AGENTS</span>
                         </div>
                         <div class="flex items-center gap-2 text-white/40">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -1443,11 +1445,11 @@
                     </div>
                     
                     <h3 class="font-display font-bold text-white text-[22px] leading-snug mb-4 group-hover:text-kinetic-red transition-colors">
-                        Landing Page Builder Comparison: Unbounce vs Webflow vs GHL vs Next.js
+                        AI Voice Agent Comparison: Bland AI vs Vapi vs Retell vs Custom
                     </h3>
                     
                     <p class="text-white/50 font-display text-[15px] leading-relaxed mb-12">
-                        Unbounce, Webflow, GoHighLevel or a coded Next.js page. Four scenarios, four different right answers, from an agency that ships on three of them every month.
+                        Bland AI, Vapi, Retell or a custom Python agent. Four scenarios, four different right answers, from an agency that builds on all of them.
                     </p>
                     
                     <div class="mt-auto flex items-center gap-3 text-white/30 group-hover:text-white transition-colors">
@@ -1461,7 +1463,7 @@
                     <div class="flex justify-between items-center mb-8">
                         <div class="px-4 py-1.5 rounded-full border border-kinetic-red/30 bg-kinetic-red/5 flex items-center gap-2">
                             <div class="w-1.5 h-1.5 bg-kinetic-red rounded-full"></div>
-                            <span class="font-mono text-kinetic-red text-[9px] tracking-widest font-bold uppercase">WORDPRESS WEBSITES</span>
+                            <span class="font-mono text-kinetic-red text-[9px] tracking-widest font-bold uppercase">WHATSAPP AUTOMATION</span>
                         </div>
                         <div class="flex items-center gap-2 text-white/40">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -1470,11 +1472,11 @@
                     </div>
                     
                     <h3 class="font-display font-bold text-white text-[22px] leading-snug mb-4 group-hover:text-kinetic-red transition-colors">
-                        WordPress Website Design That Doesn't Look Like WordPress
+                        WhatsApp Automation That Doesn't Sound Like a Bot
                     </h3>
                     
                     <p class="text-white/50 font-display text-[15px] leading-relaxed mb-12">
-                        Most WordPress sites look like WordPress. Here is how we design fast, modern sites with Bricks, native Gutenberg blocks, a real type scale and restrained motion.
+                        Most WhatsApp bots sound like generic bots. Here is how we design human-like flows with semantic routing, long-term memory, and instant human handoffs.
                     </p>
                     
                     <div class="mt-auto flex items-center gap-3 text-white/30 group-hover:text-white transition-colors">
@@ -1484,12 +1486,7 @@
                 </a>
             </div>
             
-            <!-- Floating Chat Icon from Screenshot (Optional, but accurate to their screenshot) -->
-            <div class="fixed bottom-8 right-8 z-50">
-                <div class="w-14 h-14 bg-[#E8282B] rounded-full shadow-lg shadow-kinetic-red/20 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                </div>
-            </div>
+
         </section>
 
     </div>
